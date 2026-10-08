@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#efeae2">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.22/katex.min.css" crossorigin="anonymous">
+
+<title>第3章力学算符模拟卷 · 上大微电子</title>
+<style>
+  :root{
+    --fg:#1a1f2b; --muted:#5b6470; --line:#e4e6ea; --bg:#ffffff; --soft:#f5f6f7;
+    --brand:#16a34a; --accent:#2563eb;
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+    color:var(--fg); background:#fffdf9; margin:0 auto; line-height:1.75;
+    max-width:880px;
+    padding-left:16px; padding-right:16px; padding-bottom:48px;
+  }
+  .head{border-bottom:2px solid var(--brand);padding-bottom:14px;margin-bottom:24px;}
+  .head h1{font-size:22px;margin:0 0 6px;font-weight:700;}
+  .head .meta{color:var(--muted);font-size:13px;}
+  .head .meta span{margin-right:18px;}
+  .notice{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--brand);
+    border-radius:8px;padding:10px 14px;font-size:13px;color:var(--muted);margin-bottom:26px;}
+  h2.part{font-size:16px;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:baseline;}
+  h2.part .pts{color:var(--muted);font-size:13px;font-weight:500;}
+  .q{margin:18px 0;padding-left:2px;}
+  .q .stem{font-weight:500;margin-bottom:8px;}
+  .q .stem em{color:var(--muted);font-style:normal;font-weight:400;font-size:13px;margin-left:8px;}
+  .q ul,ol{margin:6px 0 6px 22px;padding:0;}
+  li{margin:5px 0;}
+  .blank{display:inline-block;min-width:120px;border-bottom:1px solid var(--muted);}
+  hr.sep{border:none;border-top:2px dashed var(--brand);margin:48px 0 28px;}
+  .keymark{display:inline-block;background:var(--brand);color:#fff;font-size:12px;font-weight:700;
+    padding:2px 10px;border-radius:999px;letter-spacing:.5px;}
+  .sol{margin:14px 0;padding:12px 16px;background:var(--soft);border:1px solid var(--line);
+    border-radius:8px;}
+  .sol .step{margin:8px 0;}
+  .ans{color:var(--brand);font-weight:700;}
+  .foot{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;}
+  @media print{
+    body{padding:18px;max-width:none;}
+    .notice,.keymark{display:none;}
+    hr.sep{page-break-before:always;}
+    .sol{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-top" id="siteTop">
+  <div class="site-top-inner">
+    <a class="site-brand" href="index.html">量子力学复习</a>
+    <button type="button" class="site-menu-btn" aria-expanded="false" aria-controls="siteLinks">菜单</button>
+    <nav class="site-links" id="siteLinks" aria-label="站点导航">
+      <a href="index.html" data-page="index.html">首页</a>
+      <a href="review.html" data-page="review.html">复习课</a>
+      <a href="examples.html" data-page="examples.html">课件例题</a>
+      <a href="exam.html" data-page="exam.html">综合卷</a>
+      <a href="exam-ch3.html" data-page="exam-ch3.html">第3章卷</a>
+      <a href="answers.html" data-page="answers.html">答案</a>
+    </nav>
+  </div>
+</header>
+
+
+<div class="head">
+  <h1>量子力学与固体物理基础 · 第3章 力学算符 模拟卷</h1>
+  <div class="meta">
+    <span>范围：第3章全章（δ函数 / ∇算子 / 算符14性质 / 力学量算符 / 测量与平均 / 动量与角动量算符 / 测不准关系）</span>
+    <span>满分 100 分</span>
+    <span>建议用时 90 分钟</span>
+  </div>
+</div>
+
+<div class="notice">
+  <b>使用说明：</b>本卷难度对标课件例题与课后练习，重点考查"对易关系、厄米性判定、测量三步曲、测不准关系应用"。先独立完成全部题目，再翻到末页核对参考答案。
+</div>
+
+<h2 class="part">一、概念与简答 <span class="pts">共 30 分</span></h2>
+
+<div class="q">
+  <div class="stem">1.（8分）写出 Dirac δ 函数的定义，并说明其"筛选性质"。计算下列积分：</div>
+  $$\int_{-\infty}^{+\infty} f(x)\,\delta(-2x+4)\,dx = \;?$$
+</div>
+
+<div class="q">
+  <div class="stem">2.（8分）量子力学规定"力学量必须用<b>线性厄米</b>算符表示"。请分别说明：</div>
+  <ul>
+    <li>（a）为什么必须是<b>线性</b>算符？（从哪条基本原理出发？）</li>
+    <li>（b）为什么必须是<b>厄米</b>算符？（保证什么物理要求？）</li>
+  </ul>
+</div>
+
+<div class="q">
+  <div class="stem">3.（14分）判断下列算符是否为厄米算符，并简要给出理由。</div>
+  <ol type="1">
+    <li>$\hat{x}\hat{p}_x$（位置算符与动量算符之积）</li>
+    <li>$\hat{H}=\dfrac{\hat{p}^{\,2}}{2m}+U(x)$（$U(x)$ 为实函数）</li>
+    <li>$\dfrac{\partial}{\partial x}$</li>
+    <li>$\,i\dfrac{\partial}{\partial x}$</li>
+  </ol>
+</div>
+
+<h2 class="part">二、证明题 <span class="pts">共 20 分</span></h2>
+
+<div class="q">
+  <div class="stem">4.（10分）已知基本对易关系 $[\hat{x},\hat{p}_x]=i\hbar$。试用"算符作用于任意波函数 $\psi$"的方法，证明：</div>
+  $$[\hat{p}_x,\,f(\hat{x})] = -i\hbar\,\frac{df}{dx}$$
+  <em>提示：先算 $\hat{p}_x\,(f\psi)$，利用莱布尼茨求导法则。</em>
+</div>
+
+<div class="q">
+  <div class="stem">5.（10分）证明动量算符 $\hat{p}_x=-i\hbar\dfrac{\partial}{\partial x}$ 是厄米算符。</div>
+  <em>要求：写出关键的分部积分步骤，并指出证明中用到哪条边界条件。</em>
+</div>
+
+<h2 class="part">三、计算题 <span class="pts">共 35 分</span></h2>
+
+<div class="q">
+  <div class="stem">6.（20分）空间转子处于状态</div>
+  $$\Psi = \frac{1}{2}\,Y_{1,-1}(\theta,\varphi) + \frac{\sqrt{3}}{2}\,Y_{2,1}(\theta,\varphi)$$
+  <em>已知球谐函数 $Y_{lm}$ 是 $\hat{L}^2$ 与 $\hat{L}_z$ 的共同本征态，本征值分别为 $L^2=\hbar^2 l(l+1)$、$L_z=\hbar m$，且 $Y_{lm}$ 正交。</em>
+  <ol type="1">
+    <li>（4分）$\Psi$ 是否已归一化？若否，求归一化常数。</li>
+    <li>（4分）$\Psi$ 是否为 $\hat{L}^2$ 的本征态？是否为 $\hat{L}_z$ 的本征态？</li>
+    <li>（6分）求 $\overline{L^2}$ 与 $\overline{L_z}$。</li>
+    <li>（6分）在 $\Psi$ 态中分别测量 $L^2$ 和 $L_z$，可能得到哪些值？各值的概率是多少？</li>
+  </ol>
+</div>
+
+<div class="q">
+  <div class="stem">7.（15分）关于动量算符：</div>
+  <ol type="1">
+    <li>（6分）写出一维动量算符的本征方程，并说明自由粒子的 de Broglie 平面波为何不能"归一化为1"，而只能"归一化为 δ 函数"。</li>
+    <li>（9分）什么是<b>箱归一化</b>？周期性边界条件 $\psi(x+L)=\psi(x)$ 如何把连续动量谱变成分立谱？当 $L\to\infty$ 时本征值间隔 $\Delta p$ 如何变化？</li>
+  </ol>
+</div>
+
+<h2 class="part">四、测不准关系及其应用 <span class="pts">共 15 分</span></h2>
+
+<div class="q">
+  <div class="stem">8.（15分）利用坐标—动量测不准关系 $\Delta x\cdot\Delta p_x \ge \dfrac{\hbar}{2}$，推导<b>线性谐振子的零点能</b> $E_0=\dfrac{1}{2}\hbar\omega$。</div>
+  <em>提示：①一维无简并束缚定态可取实波函数，故 $\langle x\rangle=\langle p\rangle=0$，从而 $\overline{x^2}=(\Delta x)^2$、$\overline{p^2}=(\Delta p)^2$；②能量 $E=\dfrac{\overline{p^2}}{2m}+\frac12 m\omega^2\overline{x^2}$；③求最小值时取不等式中的等号。</em>
+</div>
+
+<hr class="sep">
+<p><span class="keymark">参考答案</span></p>
+
+<div class="sol">
+  <p><b>1.</b> δ 函数定义：$\delta(x)=0\;(x\ne 0)$，$\delta(0)=\infty$，且 $\displaystyle\int_{-\infty}^{+\infty}\delta(x)\,dx=1$。筛选性质：$\displaystyle\int f(x)\delta(x)\,dx=f(0)$，$\displaystyle\int f(x)\delta(x-a)\,dx=f(a)$。</p>
+  <p>由缩放性质 $\delta(ax)=\dfrac{1}{|a|}\delta(x)$，且 $\delta(-x)=\delta(x)$（偶对称）：</p>
+  <p class="step">$\delta(-2x+4)=\delta\!\big(-2(x-2)\big)=\dfrac{1}{|-2|}\delta(x-2)=\dfrac12\delta(x-2)$</p>
+  <p class="ans">故 $\displaystyle\int f(x)\delta(-2x+4)\,dx=\int f(x)\cdot\tfrac12\delta(x-2)\,dx=\dfrac{f(2)}{2}$。</p>
+</div>
+
+<div class="sol">
+  <p><b>2.</b>（a）线性算符满足 $\hat{F}(c_1\psi_1+c_2\psi_2)=c_1\hat{F}\psi_1+c_2\hat{F}\psi_2$。它源自<b>态叠加原理</b>：若 $\psi_1,\psi_2$ 是体系可能态，则 $c_1\psi_1+c_2\psi_2$ 也必是可能态；为使叠加态下力学量仍可由各分量线性叠加描述，算符必须线性。也正因如此，薛定谔方程才必须是线性方程。</p>
+  <p>（b）可观测量经多次测量得到的平均值<b>必须是实数</b>。厄米算符的本征值全为实数、在任何态下平均值也为实数；非厄米算符会出现复数本征值或复数平均值，不能对应真实可测物理量。故位置、动量、能量、角动量等可观测力学量算符全是厄米算符。</p>
+</div>
+
+<div class="sol">
+  <p><b>3.</b></p>
+  <p class="step">（1）$\hat{x}\hat{p}_x$ <b>不是</b>厄米。$\hat{x}$、$\hat{p}_x$ 均厄米，但二者不对易 $[\hat{x},\hat{p}_x]=i\hbar\ne0$。由 $(\hat{A}\hat{B})^+=\hat{B}^+\hat{A}^+=\hat{p}_x\hat{x}\ne\hat{x}\hat{p}_x$，故乘积非厄米。（两厄密算符之积仅当对易时才厄米。）</p>
+  <p class="step">（2）$\hat{H}$ <b>是</b>厄米。$\hat{p}$ 厄米且 $[\hat{p},\hat{p}]=0$，故 $\hat{p}^2$ 厄米；$U(x)$ 为实函数，乘以波函数的算符厄米；两厄密算符之和仍厄米。</p>
+  <p class="step">（3）$\dfrac{\partial}{\partial x}$ <b>不是</b>厄米。由分部积分可得其转置 $\widetilde{\partial/\partial x}=-\dfrac{\partial}{\partial x}$，于是其厄密共轭 $\left(\dfrac{\partial}{\partial x}\right)^+=\widetilde{\left(\dfrac{\partial}{\partial x}\right)}{}^*=-\dfrac{\partial}{\partial x}\ne\dfrac{\partial}{\partial x}$。</p>
+  <p class="step">（4）$i\dfrac{\partial}{\partial x}$ <b>是</b>厄米。注意 $\hat{p}_x=-i\hbar\dfrac{\partial}{\partial x}$ 厄米，即 $-i\dfrac{\partial}{\partial x}$ 厄米；而 $\dfrac{1}{\hbar}\hat{p}_x=-\dfrac{i}{\hbar}\dfrac{\partial}{\partial x}$，与 $i\dfrac{\partial}{\partial x}$ 仅差常数 $\hbar$ 和符号——直接验证：$\displaystyle\int\psi^*\!\left(i\frac{\partial}{\partial x}\right)\!\phi\,dx=i\!\int\!\psi^*\phi' dx=-i\!\int\!(\psi^*)'\phi\,dx=\int\!\left(i\frac{\partial}{\partial x}\psi\right)^{\!*}\!\phi\,dx$，满足厄米定义。</p>
+</div>
+
+<div class="sol">
+  <p><b>4.</b> 对任意波函数 $\psi$，分别计算两侧作用：</p>
+  <p class="step">$\hat{p}_x\big[f(x)\psi\big]=\left(-i\hbar\dfrac{\partial}{\partial x}\right)(f\psi)=-i\hbar\big(f'\psi+f\psi'\big)$（莱布尼茨法则）</p>
+  <p class="step">$f(x)\big[\hat{p}_x\psi\big]=f(x)\left(-i\hbar\dfrac{\partial}{\partial x}\psi\right)=-i\hbar f\psi'$</p>
+  <p class="step">两式相减：$\big[\hat{p}_x,f(x)\big]\psi=\hat{p}_x(f\psi)-f(\hat{p}_x\psi)=-i\hbar f'\psi=\left(-i\hbar\dfrac{df}{dx}\right)\psi$</p>
+  <p class="ans">因 $\psi$ 任意，故 $[\hat{p}_x,f(\hat{x})]=-i\hbar\dfrac{df}{dx}$。$\square$</p>
+</div>
+
+<div class="sol">
+  <p><b>5.</b> 对任意 $\psi,\phi$：</p>
+  <p class="step">$\displaystyle\int\psi^*\,\hat{p}_x\phi\,dx=\int\psi^*\!\left(-i\hbar\dfrac{\partial}{\partial x}\right)\phi\,dx=-i\hbar\int\psi^*\phi'\,dx$</p>
+  <p class="step">分部积分：$=-i\hbar\Big[\psi^*\phi\Big]_{-\infty}^{+\infty}+i\hbar\int(\psi^*)'\phi\,dx$</p>
+  <p class="step">由波函数归一化要求导出的<b>边界条件</b>：$|x|\to\infty$ 时 $\psi,\phi\to0$，故边界项为零：</p>
+  <p class="step">$=i\hbar\int(\psi^*)'\phi\,dx=\int\!\left(-i\hbar\dfrac{\partial}{\partial x}\psi\right)^{\!*}\!\phi\,dx=\int(\hat{p}_x\psi)^*\phi\,dx$</p>
+  <p class="ans">即 $\hat{p}_x^{\,+}=\hat{p}_x$，故 $\hat{p}_x$ 厄米。<b>关键边界条件</b>：$\psi,\phi\to0\;(|x|\to\infty)$。$\square$</p>
+</div>
+
+<div class="sol">
+  <p><b>6.</b> （1）$Y_{lm}$ 正交归一，故 $|\!|Y_{1,-1}|\!|^2=\big(\frac12\big)^2=\frac14$，$|\!|Y_{2,1}|\!|^2=\big(\frac{\sqrt3}{2}\big)^2=\frac34$，$\frac14+\frac34=1$。<b>已归一化</b>，归一化常数 $C=1$。</p>
+  <p>（2）$\hat{L}^2Y_{1,-1}=2\hbar^2Y_{1,-1}$，$\hat{L}^2Y_{2,1}=6\hbar^2Y_{2,1}$，两本征值不同，叠加后 $\hat{L}^2\Psi\ne\lambda\Psi$；同理 $\hat{L}_zY_{1,-1}=-\hbar Y_{1,-1}$、$\hat{L}_zY_{2,1}=\hbar Y_{2,1}$，两个 $m$ 值不同（$-1$ 与 $1$），叠加后 $\hat{L}_z\Psi\ne\lambda\Psi$。故 $\Psi$ <b>既不是</b> $\hat{L}^2$ 的本征态，<b>也不是</b> $\hat{L}_z$ 的本征态。</p>
+  <p class="step">（3）用概率加权 $\overline{F}=\sum|c_n|^2\lambda_n$：</p>
+  <p class="step">$\overline{L^2}=\frac14\times2\hbar^2+\frac34\times6\hbar^2=\frac{\hbar^2}{2}+\frac{9\hbar^2}{2}=\mathbf{5\hbar^2}$</p>
+  <p class="step">$\overline{L_z}=\frac14\times(-\hbar)+\frac34\times(\hbar)=-\frac{\hbar}{4}+\frac{3\hbar}{4}=\mathbf{\dfrac{\hbar}{2}}$</p>
+  <p class="step">（4）可能值与概率：</p>
+  <p class="ans">$\;L^2$：$2\hbar^2$（概率 $\tfrac14$），$6\hbar^2$（概率 $\tfrac34$）；$\;L_z$：$-\hbar$（概率 $\tfrac14$），$\hbar$（概率 $\tfrac34$）。</p>
+</div>
+
+<div class="sol">
+  <p><b>7.</b> （1）一维动量本征方程：$\hat{p}_x\psi_p(x)=p_x\psi_p(x)$，即 $-i\hbar\dfrac{d\psi_p}{dx}=p_x\psi_p$，解为平面波 $\psi_p(x)=C\,e^{ip_xx/\hbar}$。该解在 $|x|\to\infty$ 不趋于零而是等幅振荡，$\displaystyle\int_{-\infty}^{+\infty}|\psi_p|^2 dx=|C|^2\!\int dx$ 发散，<b>无法归一化为1</b>。利用 $\displaystyle\int e^{i(p-p')x/\hbar}dx=2\pi\hbar\,\delta(p-p')$，取 $C=1/\sqrt{2\pi\hbar}$ 即可<b>归一化为 δ 函数</b>：$\langle p|p'\rangle=\delta(p-p')$。</p>
+  <p>（2）<b>箱归一化</b>：把粒子限制在边长 $L$ 的箱中，要求波函数在两对边对应点相等，即周期性边界条件 $\psi(x+L)=\psi(x)$。代入 $\psi_p=Ce^{ipx/\hbar}$ 得 $e^{ipL/\hbar}=1$，故 $p$ 只能取<b>分立值</b>：$p_n=\dfrac{2\pi\hbar}{L}\,n$（$n$ 为整数）。此时 $\psi$ 在箱内可正常归一化为1。相邻本征值间隔 $\Delta p=\dfrac{2\pi\hbar}{L}$，与 $L$ 成反比；当 $L\to\infty$ 时 $\Delta p\to0$，分立谱<b>过渡回连续谱</b>。周期性边界条件本质上也是动量算符厄米性所要求的边界条件。</p>
+</div>
+
+<div class="sol">
+  <p><b>8.</b> 取实波函数 $\psi_n$，被积函数 $x|\psi_n|^2$、$p_x|\psi_n|^2$ 为奇函数，故 $\langle x\rangle=0$、$\langle p\rangle=0$。于是 $\overline{x^2}=(\Delta x)^2$、$\overline{p^2}=(\Delta p)^2$。能量平均值：</p>
+  <p class="step">$\displaystyle E=\overline{H}=\frac{\overline{p^2}}{2m}+\frac12 m\omega^2\overline{x^2}=\frac{(\Delta p)^2}{2m}+\frac12 m\omega^2(\Delta x)^2$</p>
+  <p class="step">由测不准关系 $(\Delta x)^2(\Delta p)^2\ge\dfrac{\hbar^2}{4}$。均方偏差不能同时为零，$E$ 不能为零；为求最小值取等号：$(\Delta p)^2=\dfrac{\hbar^2}{4(\Delta x)^2}$，代入：</p>
+  <p class="step">$\displaystyle E=\frac{\hbar^2}{8m(\Delta x)^2}+\frac12 m\omega^2(\Delta x)^2$，令 $y=(\Delta x)^2>0$，则 $E(y)=\dfrac{\hbar^2}{8my}+\frac12 m\omega^2 y$。</p>
+  <p class="step">求极值：$\dfrac{dE}{dy}=-\dfrac{\hbar^2}{8my^2}+\frac12 m\omega^2=0\;\Rightarrow\;y=\dfrac{\hbar}{2m\omega}$。</p>
+  <p class="step">代回：$E_{\min}=\dfrac{\hbar^2}{8m\cdot\hbar/(2m\omega)}+\frac12 m\omega^2\cdot\dfrac{\hbar}{2m\omega}=\dfrac{\hbar\omega}{4}+\dfrac{\hbar\omega}{4}$</p>
+  <p class="ans">故线性谐振子零点能 $\boxed{E_0=\dfrac12\hbar\omega}$。它正是测不准关系所强制要求的最小能量。$\square$</p>
+</div>
+
+<div class="foot">
+  本卷依据课件 Chapter 03《力学算符》出题，覆盖 δ 函数、算符性质、厄米性判定、对易关系、测量三步曲、动量/角动量算符与测不准关系。本卷来自第3章模拟卷，已挂到复习站。综合卷和课件例题见顶部导航。
+</div>
+
+
+<footer class="site-footer">上海大学微电子 · 量子力学课件范围复习材料。公式需联网加载；离线时仍可阅读文字与图片。</footer>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+  window.addEventListener("error", function (e) {
+    var t = e && e.target;
+    if (!t || t.tagName !== "SCRIPT") return;
+    if (String(t.src || "").indexOf("katex.min.js") === -1) return;
+    var s1 = document.createElement("script");
+    s1.src = "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.22/katex.min.js";
+    s1.defer = true;
+    document.head.appendChild(s1);
+    var s2 = document.createElement("script");
+    s2.src = "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.22/contrib/auto-render.min.js";
+    s2.defer = true;
+    document.head.appendChild(s2);
+  }, true);
+</script>
+<script defer src="assets/site.js"></script>
+
+</body>
+</html>
