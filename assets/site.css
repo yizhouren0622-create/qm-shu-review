@@ -1,0 +1,195 @@
+/* Shared site chrome — mobile-first, modern browsers */
+:root {
+  color-scheme: light;
+  --bg: #efeae2;
+  --paper: #fffdf9;
+  --ink: #1c1915;
+  --muted: #6d6256;
+  --line: #e4d9c8;
+  --accent: #8a4b12;
+  --nav-h: 52px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
+  line-height: 1.75;
+  padding-top: var(--nav-h);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); }
+
+.site-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: rgba(255, 253, 249, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.site-top-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.site-brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  margin-right: auto;
+}
+
+.site-links {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.site-links a {
+  text-decoration: none;
+  color: #5c4a32;
+  font-size: 0.88rem;
+  padding: 0.35em 0.65em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.site-links a:hover,
+.site-links a:focus-visible {
+  background: #f7f1e7;
+  outline: none;
+}
+
+.site-links a.is-active {
+  background: #f8efe4;
+  border-color: #e8d4b8;
+  color: #8a4b12;
+  font-weight: 650;
+}
+
+.site-menu-btn {
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 8px;
+  padding: 0.35em 0.7em;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .site-menu-btn { display: inline-block; }
+  .site-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    padding: 8px 12px 12px;
+    gap: 4px;
+  }
+  .site-top.open .site-links { display: flex; }
+  .site-links a { padding: 0.65em 0.75em; }
+  .site-brand { font-size: 0.88rem; max-width: 55%; overflow: hidden; text-overflow: ellipsis; }
+}
+
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 16px 40px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* Hub */
+.hub {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 16px 64px;
+}
+
+.hub-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 24px;
+}
+
+.hub h1 { margin: 0 0 0.4rem; font-size: clamp(1.35rem, 4vw, 1.75rem); line-height: 1.3; }
+.hub .lead { color: var(--muted); margin: 0 0 1.4rem; }
+
+.hub-grid {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 560px) {
+  .hub-grid { grid-template-columns: 1fr 1fr; }
+  .hub-grid .span2 { grid-column: 1 / -1; }
+}
+
+.hub-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.hub-link:hover,
+.hub-link:focus-visible {
+  border-color: #d4b896;
+  background: #fbf6ea;
+  outline: none;
+}
+
+.hub-link strong { display: block; font-size: 1.05rem; margin-bottom: 0.25rem; color: #8a4b12; }
+.hub-link span { color: var(--muted); font-size: 0.92rem; }
+
+.hub-note {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: #f7f1e7;
+  border-left: 4px solid #c4a574;
+  padding: 0.65em 0.9em;
+  border-radius: 0 8px 8px 0;
+}
+
+/* KaTeX overflow on phones */
+.katex-display { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+.formula { overflow-x: auto; -webkit-overflow-scrolling: touch; }

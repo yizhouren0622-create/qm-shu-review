@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模拟卷参考答案（详解）</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<style>
+  body { margin: 0; background: #efeae2; color: #1c1915; font-family: "Microsoft YaHei", sans-serif; line-height: 1.75; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 24px 18px 80px; }
+  article { background: #fffdf9; border: 1px solid #e4d9c8; border-radius: 12px; padding: 28px 34px 56px; }
+  h1 { font-size: 1.4rem; margin: 0 0 .4rem; }
+  h2 { font-size: 1.12rem; margin: 2rem 0 .7rem; border-bottom: 1px solid #eadfce; padding-bottom: .25rem; }
+  h3 { font-size: 1.02rem; margin: 1.3rem 0 .45rem; color: #5c4a32; }
+  a { color: #8a4b12; }
+  .block { margin: 0 0 1.4em; padding: 0.85em 1em; border: 1px solid #eadfce; border-radius: 10px; background: #fff; }
+  .key { color: #c45c26; font-weight: 650; }
+  .label { display: inline-block; font-size: .82rem; font-weight: 650; color: #fff; background: #2c5f8a; border-radius: 4px; padding: .05em .45em; margin-right: .35em; }
+  .label.green { background: #2f6b4f; }
+  .label.orange { background: #c45c26; }
+  .label.gold { background: #a07828; }
+  .en { margin-top: .55em; padding-top: .55em; border-top: 1px dashed #e4d9c8; color: #4a433a; font-size: .95rem; }
+  .en::before { content: "EN · "; color: #8a4b12; font-weight: 650; font-size: .85rem; }
+  .formula { overflow-x: auto; margin: .45em 0; }
+  ol.steps { margin: .4em 0; padding-left: 1.25em; }
+  ol.steps li { margin: .25em 0; }
+  .meta { color: #6d6256; font-size: .95rem; margin-bottom: 1.2em; }
+  .nav { position: sticky; top: 0; background: #fffdf9; border-bottom: 1px solid #eadfce; padding: .5em 0; margin: 0 0 1em; font-size: .92rem; z-index: 2; }
+  .nav a { margin-right: .8em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<article>
+
+<h1>模拟卷参考答案（详解版）</h1>
+<p class="meta"><a href="模拟卷.html">返回试卷</a>　·　先自己做完再对　·　数值允许末位有一点四舍五入差别</p>
+<div class="nav">
+  <a href="#sec1">选择</a>
+  <a href="#sec2">填空详解</a>
+  <a href="#sec3">计算详解</a>
+  <a href="#sec4">简答详解</a>
+</div>
+
+<!-- ========== 选择 ========== -->
+<h2 id="sec1">一、选择题</h2>
+
+<div class="block">
+<strong>1.</strong> <span class="key">B</span>
+<p>高频振动方式很多，经典统计仍给每一种分到 $kT$，总能量就发散，叫紫外灾难。普朗克用能量子 $h\nu$ 压住了高频。</p>
+<p class="en">At high frequency there are many modes; classical equipartition still gives each mode $kT$, so the total energy blows up (ultraviolet catastrophe).</p>
+</div>
+
+<div class="block">
+<strong>2.</strong> <span class="key">C</span>
+<p>光强↑ → 光子数↑ → 打出的电子数↑ → 饱和电流↑。红限、最大动能、遏止电压只跟频率有关。</p>
+<p class="en">Intensity changes the number of photons/electrons (saturation current), not the cutoff frequency or the max kinetic energy.</p>
+</div>
+
+<div class="block">
+<strong>3.</strong> <span class="key">D</span>
+<p>玻尔三条是：定态、跃迁、角动量 $L=n\hbar$。他还把电子当经典质点；“概率波”是后来的事。</p>
+<p class="en">Bohr’s three postulates do not include the probability-wave picture; that comes later.</p>
+</div>
+
+<div class="block">
+<strong>4.</strong> <span class="key">B</span>
+<p>电子打到晶体上出现衍射极大，说明电子有波动性，德布罗意关系成立。</p>
+<p class="en">Electron diffraction shows that electrons have wave nature.</p>
+</div>
+
+<div class="block">
+<strong>5.</strong> <span class="key">B</span>
+<p>整体乘非零常数，各点相对概率不变，是同一态。A：是概率密度不是电荷密度；C：经典振幅加倍是另一状态；D：平面波普通归一发散。</p>
+<p class="en">Multiplying $\Psi$ by a nonzero constant does not change relative probabilities. Plane waves cannot be normalized in the ordinary way.</p>
+</div>
+
+<div class="block">
+<strong>6.</strong> <span class="key">B</span>
+<p>先把两缝的振幅（波函数）相加，再取模方，交叉项就是干涉条纹。概率直接相加出不了条纹。</p>
+<p class="en">Interference comes from adding amplitudes first, then squaring; not from adding probabilities.</p>
+</div>
+
+<div class="block">
+<strong>7.</strong> <span class="key">C</span>
+<p>定态 $\Psi=\psi\,\mathrm e^{-\mathrm i Et/\hbar}$ 仍含时间，但 $|\Psi|^2=|\psi|^2$ 不含时间，概率密度稳定。</p>
+<p class="en">A stationary state still has a time factor; only the probability density is time-independent.</p>
+</div>
+
+<div class="block">
+<strong>8.</strong> <span class="key">B</span>
+<p>可观测量对应线性厄米算符，保证本征值、平均值是实数。厄米 ≠ 幺正。</p>
+<p class="en">Observables are represented by linear Hermitian operators.</p>
+</div>
+
+<div class="block">
+<strong>9.</strong> <span class="key">B</span>
+<p>$[x,p_x]=\mathrm i\hbar$。$x$ 与 $p_y$ 对易；各动量分量彼此对易。</p>
+<p class="en">Only a coordinate and its conjugate momentum fail to commute: $[x,p_x]=\mathrm i\hbar$.</p>
+</div>
+
+<div class="block">
+<strong>10.</strong> <span class="key">B</span>
+<p>不确定关系不允许 $\overline{x^2}$ 与 $\overline{p^2}$ 同时为零。取等号对能量求极小，得零点能 $\frac12\hbar\omega$。$\hbar\omega$ 是能级间隔，不是基态。</p>
+<p class="en">Using $\Delta x\,\Delta p\ge\hbar/2$ in the oscillator energy and minimizing gives the zero-point energy $\frac12\hbar\omega$.</p>
+</div>
+
+<!-- ========== 填空 ========== -->
+<h2 id="sec2">二、填空题详解</h2>
+
+<div class="block">
+<h3>11. 答案：<span class="key">$h\nu$</span>（能量子）</h3>
+<p><span class="label">思路</span>黑体曲线两边各对一半。普朗克假设：频率 $\nu$ 的光不能连续吐能量，只能一份一份吐，最小一份叫能量子。</p>
+<p><span class="label green">公式</span> $E=h\nu$（$h$ 为普朗克常量）。</p>
+<p><span class="label orange">解析</span>题干“最小单位发射和吸收”就是这一份 $h\nu$。不要写成 $nh\nu$（那是总能量可以是整数倍），空里填的是“一份”。</p>
+<p class="en">Planck’s quantum of energy for frequency $\nu$ is $h\nu$. Emission/absorption occurs in integer multiples of this unit.</p>
+</div>
+
+<div class="block">
+<h3>12. 答案：<span class="key">$eU_a$</span></h3>
+<p><span class="label">思路</span>遏止电压 $U_a$：反向电场刚好把最快光电子拦下来。电子电荷量 $e$，爬过电压 $U_a$ 要做功 $eU_a$，正好等于最大动能。</p>
+<p><span class="label green">公式</span>
+$$\frac12 m_e v_m^2=eU_a.$$
+</p>
+<p><span class="label orange">解析</span>动能单位焦耳，电压单位伏特，电荷 $e$ 乘电压得焦耳，两边单位一致。不要写成 $U_a$ 或 $h\nu-W_0$（那是另一条爱因斯坦方程，题要求用 $e,U_a$）。</p>
+<p class="en">The stopping potential $U_a$ measures the fastest photoelectrons: their max KE equals $eU_a$.</p>
+</div>
+
+<div class="block">
+<h3>13. 答案：<span class="key">$cp$</span>；<span class="key">$h/\lambda$</span>（或 $\hbar k$）</h3>
+<p><span class="label">思路</span>光子静质量 $m_0=0$。相对论能量–动量关系 $E^2=m_0^2c^4+c^2p^2$ 退化成 $E=cp$。再代入 $E=h\nu$，并用 $c=\lambda\nu$，得到动量。</p>
+<p><span class="label green">公式</span>
+$$E=cp,\qquad p=\frac{E}{c}=\frac{h\nu}{c}=\frac{h}{\lambda}=\hbar k.$$
+</p>
+<p><span class="label orange">解析</span>第一空是 $E$ 与 $p$ 的关系，填 $cp$。第二空题要求用 $h,\lambda$，所以写 $h/\lambda$。$\hbar k$ 也对，但优先按题目字母。</p>
+<p class="en">For a massless photon, $E=cp$. With $E=h\nu$ and $\nu=c/\lambda$, one gets $p=h/\lambda$.</p>
+</div>
+
+<div class="block">
+<h3>14. 答案：<span class="key">有限、连续、单值</span>（次序可调）</h3>
+<p><span class="label">思路</span>概率密度 $|\Psi|^2$ 和概率流要讲得通：同一点概率唯一 → 单值；不能到处无穷 → 有限；流要连续 → 通常要求连续。</p>
+<p><span class="label green">课件用语</span>标准化条件 = 有限性 + 连续性 + 单值性。</p>
+<p><span class="label orange">解析</span>束缚态还常要求无穷远处 $\psi\to 0$，但课件标准三条就是上面这三个词。不要写成“归一化”（归一化是另一条操作）。</p>
+<p class="en">The standard conditions on a wave function are that it be finite, continuous, and single-valued.</p>
+</div>
+
+<div class="block">
+<h3>15. 答案：<span class="key">$-\mathrm i\hbar\nabla$</span></h3>
+<p><span class="label">思路</span>由自由粒子平面波凑薛定谔方程时，动量对应“对空间求导”的运算。</p>
+<p><span class="label green">公式 / 对应规则</span>
+$$\mathbf p\;\longleftrightarrow\;-\mathrm i\hbar\nabla.$$
+分量写法：$\hat p_x=-\mathrm i\hbar\dfrac{\partial}{\partial x}$ 等。</p>
+<p><span class="label orange">解析</span>前面有负号和虚数单位 $\mathrm i$，漏掉就不是厄米的动量算符。$\nabla$ 是梯度算子，不要和能量算符 $\hat H$ 搞混（中文都叫过“哈密顿”）。</p>
+<p class="en">The momentum operator is $\hat{\mathbf p}=-\mathrm i\hbar\nabla$.</p>
+</div>
+
+<div class="block">
+<h3>16. 答案：<span class="key">$\hbar/2$</span></h3>
+<p><span class="label">思路</span>一般式：若 $[\hat F,\hat G]=\mathrm i\hat k$，则 $\overline{(\Delta F)^2}\,\overline{(\Delta G)^2}\ge\bar k^2/4$。对 $x$ 与 $p_x$，$k=\hbar$。</p>
+<p><span class="label green">公式</span>
+$$\overline{(\Delta x)^2}\,\overline{(\Delta p_x)^2}\ge\frac{\hbar^2}{4}\quad\Rightarrow\quad\Delta x\,\Delta p_x\ge\frac{\hbar}{2}.$$
+</p>
+<p><span class="label orange">解析</span>简记用的是均方根形式右边 $\hbar/2$，不是 $\hbar$，也不是 $h/2$。$\hbar=h/(2\pi)$。</p>
+<p class="en">The Heisenberg relation is often written $\Delta x\,\Delta p_x\ge\hbar/2$.</p>
+</div>
+
+<!-- ========== 计算 ========== -->
+<h2 id="sec3">三、计算题详解</h2>
+
+<div class="block">
+<h3>17. 光电效应数字题（10 分）</h3>
+
+<p><span class="label">解题思路</span>红限对应刚好打出电子、动能为 0 → 逸出功 $W_0=h\nu_0$。有光时用爱因斯坦方程 $K=h\nu-W_0$，再 $U_a=K/e$。</p>
+<p><span class="label green">涉及公式</span>
+$$W_0=h\nu_0,\qquad \frac12 m_e v_m^2=h\nu-W_0=eU_a.$$
+</p>
+<p><span class="label gold">解题模式</span>「红限 → 逸出功 → 代频率求动能 → 除以 $e$ 得遏止电压」。光强不进这三个式子。</p>
+
+<p><strong>（1）</strong>
+$$W_0=h\nu_0=(6.63\times10^{-34})\times(5.0\times10^{14})=3.315\times10^{-19}\,\mathrm{J}.$$
+</p>
+<p><strong>（2）</strong>
+$$K=h\nu-W_0=(6.63\times10^{-34})\times(8.0\times10^{14})-3.315\times10^{-19}=1.989\times10^{-19}\,\mathrm{J},$$
+$$U_a=\frac{K}{e}=\frac{1.989\times10^{-19}}{1.60\times10^{-19}}\approx1.24\,\mathrm{V}.$$
+也可一步：$U_a=\dfrac{h}{e}(\nu-\nu_0)$。
+</p>
+<p class="en"><strong>Approach:</strong> threshold → work function $W_0=h\nu_0$; then Einstein’s equation gives max KE; divide by $e$ for stopping voltage. Intensity never enters these formulas.</p>
+</div>
+
+<div class="block">
+<h3>18. 戴维逊–革末（10 分）</h3>
+
+<p><span class="label">解题思路</span>题已给出 $\lambda$ 和 $d$，直接代入布拉格条件求角；再把算出的角和实验极大对比，下结论。</p>
+<p><span class="label green">涉及公式</span>
+$$n\lambda=2d\sin\theta.$$
+</p>
+<p><span class="label gold">解题模式</span>「已知 $\lambda,d,n$ → 算 $\sin\theta$ → 开方得 $\theta$ → 与实验比较 → 电子有波动性」。</p>
+
+<p><strong>计算</strong>
+$$\sin\theta=\frac{n\lambda}{2d}=\frac{2\times0.167}{2\times0.215}=\frac{0.334}{0.430}=0.777,\qquad\theta=\arcsin0.777\approx51^\circ.$$
+实验极大约在 $50^\circ$，与 $51^\circ$ 接近，说明电子确实具有波动性，德布罗意波长公式可用。</p>
+<p>（加速电压 54 V 是用来得到该 $\lambda$ 的实验条件，本题已给 $\lambda$，不必再从电压反推。）</p>
+<p class="en"><strong>Approach:</strong> plug into Bragg’s law $n\lambda=2d\sin\theta$. Agreement with the observed ~$50^\circ$ peak confirms electron wave nature.</p>
+</div>
+
+<div class="block">
+<h3>19. 归一化与概率（12 分）</h3>
+
+<p><span class="label">解题思路</span>课件标准四问：先归一 → 写 $|\psi|^2$ → 找最大 → 积一段区间。用 $\sin^2$ 在整数个半波上平均为 $1/2$。</p>
+<p><span class="label green">涉及公式</span>
+$$\int_0^a|\psi|^2\mathrm dx=1,\qquad w=|\psi|^2,\qquad W=\int_{x_1}^{x_2}w\,\mathrm dx,$$
+$$\sin^2\alpha=\frac{1-\cos2\alpha}{2}.$$
+</p>
+<p><span class="label gold">解题模式</span>「平方可积定 $A$ → $w=|\psi|^2$ → 求导或对称性找最大 → 定积分求区间概率」。</p>
+
+<p><strong>（1）</strong>
+$$\int_0^a A^2\sin^2\frac{\pi x}{a}\,\mathrm dx=A^2\int_0^a\frac{1-\cos(2\pi x/a)}{2}\,\mathrm dx=A^2\cdot\frac{a}{2}=1$$
+$$\Rightarrow\quad A=\sqrt{\frac{2}{a}}\quad(\text{取正}).$$
+</p>
+<p><strong>（2）</strong> $w(x)=\dfrac{2}{a}\sin^2\dfrac{\pi x}{a}$（$0\le x\le a$，外为 0）。$\sin$ 在半个拱的顶点 $x=a/2$ 最大，故 $w$ 也在 $x=a/2$ 最大。</p>
+<p><strong>（3）</strong> $[0,a/2]$ 正好半个拱，左右对称，
+$$W=\int_0^{a/2}w(x)\,\mathrm dx=\frac12.$$
+</p>
+<p class="en"><strong>Approach:</strong> normalize with $\int|\psi|^2=1$; probability density is $|\psi|^2$; integrate over an interval for the probability. For one half-sine hump from $0$ to $a$, half the probability sits in $[0,a/2]$.</p>
+</div>
+
+<div class="block">
+<h3>20. 一维无限深方势阱（12 分）</h3>
+
+<p><span class="label">解题思路</span>课件四步：列方程 → 边界条件 → 定态含时形式（本题只要空间本征） → 归一化。壁无限高 → 外面 $\psi=0$ → 两端必须为零。</p>
+<p><span class="label green">涉及公式</span>
+$$-\frac{\hbar^2}{2m}\frac{\mathrm d^2\psi}{\mathrm dx^2}+V\psi=E\psi,\qquad V=0\ (0&lt;x&lt;L).$$
+令 $k=\sqrt{2mE}/\hbar$，通解 $\psi=A\sin(kx+\delta)$。
+</p>
+<p><span class="label gold">解题模式</strong>「阱内自由粒子方程 → $\psi(0)=\psi(L)=0$ 卡出 $kL=n\pi$ → $E_n\propto n^2$ → 归一化得 $\sqrt{2/L}$」。不要和对称阱 $|x|&lt;a$（能量差因子 4）混用。</p>
+
+<p><strong>（1）</strong> 阱内 $V=0$：
+$$-\frac{\hbar^2}{2m}\psi''=E\psi.$$
+阱外 $V=\infty$，定态方程只有 $\psi=0$ 才能成立，所以 $\psi(0)=\psi(L)=0$。</p>
+
+<p><strong>（2）</strong> $\psi(0)=0\Rightarrow\delta=0$；$\psi(L)=0\Rightarrow\sin(kL)=0\Rightarrow kL=n\pi$，$n=1,2,3,\ldots$（$n=0$ 使 $\psi\equiv0$，弃去）。
+$$E_n=\frac{\hbar^2 k^2}{2m}=\frac{n^2\pi^2\hbar^2}{2mL^2}.$$
+归一化 $\displaystyle\int_0^L|\psi|^2\mathrm dx=1$ 得
+$$\psi_n(x)=\sqrt{\frac{2}{L}}\sin\frac{n\pi x}{L}\qquad(0&lt;x&lt;L).$$
+</p>
+<p class="en"><strong>Approach:</strong> infinite walls force $\psi=0$ outside and at the endpoints. Inside, solve the free-particle ODE; the boundary conditions quantize $k=n\pi/L$ and thus $E_n\propto n^2$; then normalize.</p>
+</div>
+
+<!-- ========== 简答 ========== -->
+<h2 id="sec4">四、简答题详解</h2>
+
+<div class="block">
+<h3>21. 允许跃迁 / 禁止跃迁（5 分）</h3>
+<p><strong>中文。</strong> 电子在两个能级之间，可以通过吸收或放出一个光子完成的跃迁，叫<strong>允许跃迁</strong>。有些能级组合不满足量子选择定则（课件例子：两能级轨道角动量相等，不满足角动量守恒），就不能靠“一个光子”正常跃迁，叫<strong>禁止跃迁</strong>。课件强调：禁止不是绝对概率为零，而是概率极低、谱线很弱，不是“永远不可能”。</p>
+<p class="en"><strong>Allowed transition:</strong> an electron can jump between two levels by absorbing/emitting a photon. <strong>Forbidden transition:</strong> the pair of levels violates a selection rule (e.g. angular-momentum conservation), so the jump via one photon is highly suppressed—not strictly impossible, just very weak.</p>
+</div>
+
+<div class="block">
+<h3>22. 五条基本假设（5 分）</h3>
+<p><strong>中文（各一句）。</strong></p>
+<ol class="steps">
+  <li><strong>波函数假设：</strong> 微观体系的状态用波函数 $\Psi$ 描写；描写的是概率波。</li>
+  <li><strong>算符假设：</strong> 力学量对应线性厄米算符。</li>
+  <li><strong>测量假设：</strong> 单次测量只得到该算符的某个本征值；若 $\psi=\sum c_n\phi_n$，得到 $\lambda_n$ 的概率是 $|c_n|^2$（已归一）。</li>
+  <li><strong>平均值假设：</strong> $\overline F=\int\psi^{*}\hat F\psi\,\mathrm dV$（可不是任何一个本征值）。</li>
+  <li><strong>演化假设：</strong> 状态随时间的变化由薛定谔方程决定。</li>
+</ol>
+<p class="en">Five postulates in one line each: (1) state = wave function / probability amplitude; (2) observables = linear Hermitian operators; (3) measurement outcomes = eigenvalues with probabilities $|c_n|^2$; (4) expectation value $=\int\psi^{*}\hat F\psi\,\mathrm dV$; (5) time evolution = Schrödinger equation.</p>
+</div>
+
+<div class="block">
+<h3>23. 角动量叠加态（5 分）— 含判断用到的本征值</h3>
+<p><span class="label">解题思路</span>球谐函数 $Y_{lm}$：$L^2$ 本征值 $\ell(\ell+1)\hbar^2$，$L_z$ 本征值 $m\hbar$。看叠加里两个分量的本征值是否相同。</p>
+<p><span class="label green">涉及公式</span>
+$$\hat L^2 Y_{\ell m}=\ell(\ell+1)\hbar^2 Y_{\ell m},\qquad \hat L_z Y_{\ell m}=m\hbar\,Y_{\ell m}.$$
+本题：$Y_{11}$ → $\ell=1,m=1$；$Y_{21}$ → $\ell=2,m=1$。
+</p>
+
+<p><strong>中文。</strong></p>
+<ol class="steps">
+  <li>$L^2$：一个分量本征值 $1\cdot2\hbar^2=2\hbar^2$，另一个 $2\cdot3\hbar^2=6\hbar^2$，不相等 → <strong>不是</strong> $\hat L^2$ 的本征态。</li>
+  <li>$L_z$：两个都是 $m=1$，本征值都是 $\hbar$ → <strong>是</strong> $\hat L_z$ 的本征态。</li>
+  <li>因此测 $L_z$ <strong>只可能得到</strong> $\hbar$。</li>
+</ol>
+<p>（本卷不要求概率。若继续算：未归一系数模方 $1/9$ 与 $4/9$，总 $5/9$，归一后概率 $1/5$ 与 $4/5$；$\langle L^2\rangle=\frac15\cdot2\hbar^2+\frac45\cdot6\hbar^2=\frac{26}{5}\hbar^2$。）</p>
+<p class="en">$Y_{11}$ and $Y_{21}$ share $L_z=\hbar$ but have different $L^2$ eigenvalues ($2\hbar^2$ vs $6\hbar^2$). So $\Psi$ is an eigenstate of $\hat L_z$ (only outcome $\hbar$) but not of $\hat L^2$.</p>
+</div>
+
+<div class="block">
+<h3>24. $\delta$ 函数积分（5 分）</h3>
+<p><span class="label">解题思路</span>先把 $\delta$ 的自变量凑成 $(x-x_0)$ 形式，用缩放性质提出系数，再用筛选性质取出 $f(x_0)$。</p>
+<p><span class="label green">涉及公式</span>
+$$\delta(ax)=\frac{\delta(x)}{|a|}\ (a\neq0),\qquad \int_{-\infty}^{\infty}f(x)\delta(x-x_0)\,\mathrm dx=f(x_0).$$
+</p>
+<p><span class="label gold">解题模式</span>「因式分解自变量 → 缩放 $\delta(ax)=\delta(x)/|a|$ → 筛选得 $f(x_0)$」。</p>
+
+<p><strong>中文过程。</strong>
+$$\delta(-2x+4)=\delta\big(-2(x-2)\big)=\frac{\delta(x-2)}{|-2|}=\frac{\delta(x-2)}{2}.$$
+因此
+$$\int_{-\infty}^{\infty}f(x)\,\delta(-2x+4)\,\mathrm dx=\int f(x)\cdot\frac{\delta(x-2)}{2}\,\mathrm dx=\frac{f(2)}{2}.$$
+</p>
+<p class="en"><strong>Approach:</strong> rewrite the argument as $-2(x-2)$, use $\delta(ax)=\delta(x)/|a|$, then the sifting property yields $f(2)/2$.</p>
+</div>
+
+<p class="meta" style="margin-top:1.8rem;">对答案时：填空看“空里填什么”；计算看模式能否默写；简答先写中文要点，英语是帮你对照概念，考试一般用中文答即可。</p>
+
+</article>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function render() {
+    if (!window.renderMathInElement) { setTimeout(render, 40); return; }
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+      ],
+      throwOnError: false
+    });
+  }
+  render();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>量子力学前三章 · 复习课</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #efeae2;
+    color: #1c1915;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    line-height: 1.75;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 18px;
+    padding: 22px 16px 72px;
+  }
+  nav {
+    position: sticky;
+    top: 12px;
+    align-self: start;
+    max-height: calc(100vh - 24px);
+    overflow: auto;
+    background: #fffdf9;
+    border: 1px solid #e4d9c8;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+  nav strong { display: block; margin: 8px 0 4px; }
+  nav a { color: #5c4a32; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  nav ol { margin: 0; padding-left: 1.3em; }
+  nav li { margin: 0.28em 0; }
+  article {
+    background: #fffdf9;
+    border: 1px solid #e4d9c8;
+    border-radius: 12px;
+    padding: 32px 40px 56px;
+    min-width: 0;
+  }
+  h1 { font-size: 1.7rem; margin: 0 0 .4rem; line-height: 1.3; }
+  h2 { font-size: 1.28rem; margin: 2.4rem 0 .6rem; padding-top: .4rem; border-top: 1px solid #eadfce; }
+  h3 { font-size: 1.05rem; margin: 1.2rem 0 .3rem; }
+  p { margin: .65em 0; }
+  img.fig {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eadfce;
+    border-radius: 8px;
+    background: #fffdf9;
+  }
+  .cap { color: #6d6256; font-size: .92rem; margin-top: .35rem; }
+  .box {
+    border-radius: 8px;
+    padding: .7em 1em;
+    margin: .9em 0;
+  }
+  .goal { background: #f8efe4; border-left: 4px solid #c45c26; }
+  .say { background: #f4f7f2; border-left: 4px solid #2f6b4f; }
+  .do { background: #f3f6f8; border-left: 4px solid #2c5f8a; }
+  .warn { background: #fbf6ea; border-left: 4px solid #a07828; }
+  .formula { overflow-x: auto; margin: .8em 0; }
+  details { margin: .8em 0 1.2em; }
+  summary { cursor: pointer; color: #8a4b12; }
+  ol.steps { padding-left: 1.3em; }
+  ol.steps li { margin: .25em 0; }
+  .map { display: flex; flex-wrap: wrap; gap: 8px; margin: .8em 0 1em; }
+  .map span {
+    background: #fff;
+    border: 1px solid #e4d9c8;
+    border-radius: 999px;
+    padding: .2em .75em;
+    font-size: .92rem;
+  }
+  a { color: #8a4b12; }
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; }
+    nav { position: static; max-height: none; }
+    article { padding: 20px 16px 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+<nav>
+  <strong>一次只看一节</strong>
+  <ol>
+    <li><a href="#l0">先看地图</a></li>
+    <li><a href="#l1">黑体</a></li>
+    <li><a href="#l2">光电效应</a></li>
+    <li><a href="#l3">光子和康普顿</a></li>
+    <li><a href="#l4">玻尔和氢光谱</a></li>
+    <li><a href="#l5">电子也是波</a></li>
+    <li><a href="#l6">波函数</a></li>
+    <li><a href="#l7">薛定谔方程</a></li>
+    <li><a href="#l8">盒子里的粒子</a></li>
+    <li><a href="#l9">弹簧和零点能</a></li>
+    <li><a href="#l10">穿墙</a></li>
+    <li><a href="#l11">测量得到什么</a></li>
+    <li><a href="#l12">不能同时测准</a></li>
+  </ol>
+  <strong>字典</strong>
+  <a href="../前三章知识梳理.html">旧的公式对照</a>
+</nav>
+<article>
+
+<h1>量子力学前三章 · 复习课</h1>
+<p>这门课的量子部分，闭卷考的是三份课件：概述、波函数和薛定谔方程、力学算符。教材用来把课件写到一半的模型补完。课件里没出现的推导，知道图像就行，不用背。</p>
+<p>上一份《知识梳理》是公式字典，留着查，不要从那里开始读。这一份按考试顺序，一节只解决一件事。</p>
+<div class="box say">
+  <strong>怎么用。</strong> 一次只打开一节。先看图，再用自己的话说这一节在解决什么，最后把蓝框里的计算盖住重做一遍。做完一节再往下。聊天里我们按这个顺序讲，不要跳着背公式。
+</div>
+<div class="box warn">
+  公式排版需要联网。若公式显示成一串带反斜杠的英文，先连上网再刷新。课件里的质量有时写成 $\mu$，它就是粒子质量，不是约化质量。教材势能写 $U$，课件常写 $V$，是同一个东西。
+</div>
+
+<h2 id="l0">0. 十条线，其实是一条</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 不看笔记，按顺序说出这十步各自在回答什么问题。数字和推导后面再补。</div>
+<div class="map">
+  <span>1 经典解释不了</span>
+  <span>2 光既是波也是粒子</span>
+  <span>3 玻尔解释氢光谱</span>
+  <span>4 电子也有波长</span>
+  <span>5 波函数是概率</span>
+  <span>6 薛定谔方程规定变化</span>
+  <span>7 被关住就能量分立</span>
+  <span>8 测量只得到允许的值</span>
+  <span>9 不对易就不能同时确定</span>
+  <span>10 和能量对易的量守恒</span>
+</div>
+<p>课程目标页写的三件事，对应的就是：说出和经典的差别；会用波函数和薛定谔方程；会算盒子这种简单模型。平时占 30%（考勤 10% + 随堂测验 20%），期末闭卷占 70%。</p>
+<p>相对论在课件里只用来写光子的能量和动量。洛伦兹变换本身不考计算。</p>
+
+<h2 id="l1">1. 黑体：能量不能一点一点地连续往外吐</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 指出三条曲线谁在高频失败、谁在低频失败；说出普朗克多假设了什么；知道维恩位移是“越热，峰值波长越短”。</div>
+<img class="fig" src="fig/01_blackbody.png" alt="三条黑体曲线">
+<p class="cap">纵轴只比较形状。绿线在高频被截断了，否则会一直冲出图外。</p>
+<div class="box say">
+  黑体可以想成炉壁上的一个小孔：光射进去就出不来。炉子和里面的光达到平衡以后，光的能量按频率怎么分布，只跟温度有关，跟炉子是什么材料无关。
+</div>
+<p>19 世纪末有两条理论曲线，各对一半：</p>
+<ul>
+  <li><strong>维恩</strong>：高频（短波）符合，低频偏低。它是靠实验凑的指数衰减，不是从电磁理论推出来的。</li>
+  <li><strong>瑞利–金斯</strong>：低频符合。高频时每个“振动模式”仍分到一份热能，模式又越来越多，总能量变成无限大。这叫紫外灾难。</li>
+</ul>
+<p>普朗克假设：频率为 $\nu$ 的光，发射和吸收的能量只能是 $h\nu$ 的整数倍，不能连续变化。$h\nu$ 叫能量子。由此得到和实验一致的公式（这是<strong>假设推出来的结果</strong>）：</p>
+<div class="formula">$$\rho_\nu\,\mathrm d\nu=\frac{8\pi h\nu^3}{c^3}\frac{1}{\mathrm e^{h\nu/k_BT}-1}\,\mathrm d\nu.$$</div>
+<p>高频时它退回维恩那种指数衰减；低频时 $\mathrm e^{x}-1\approx x$，退回瑞利–金斯。所以它是把两边接上，不是另画一条无关的曲线。</p>
+<p>课件里的瑞利–金斯写成</p>
+<div class="formula">$$\rho_\nu\,\mathrm d\nu=\frac{8\pi\nu^2}{c^3}kT\,\mathrm d\nu.$$</div>
+<p>维恩位移：峰值波长和温度成反比，$\lambda_{\max}T=b$，$b\approx 0.002898\,\mathrm{m\cdot K}$。炉子越热，最亮的颜色越往短波走。</p>
+<p>记一句就够：凡是 $h$ 不能当成 0 的现象，就是量子现象。</p>
+<details>
+  <summary>自测：为什么高频时经典公式会爆？</summary>
+  <p>高频的振动方式非常多，经典统计仍给每一种分到 $kT$。份数乘上一个越来越大的数目，能量就无限了。普朗克让高频的一份能量 $h\nu$ 很大，很难被激发，所以高频被压下去。</p>
+</details>
+
+<h2 id="l2">2. 光电效应：频率决定跑得有多快</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 由遏止电压写出最大动能；由直线 $U_a=K\nu-U_0$ 找出红限；说明光强改变的是电子个数，不是每个电子的动能。</div>
+<img class="fig" src="fig/02_photoelectric.png" alt="光电效应的两条实验曲线">
+<p class="cap">左图两条曲线停在同一个反向电压。右图直线和横轴的交点就是红限。</p>
+<div class="box say">
+  光打在金属上打出电子。经典说法是：光越强，电子攒的能量越多，跑得越快。实验不是这样。
+</div>
+<p>实验把四件事钉死了：</p>
+<ol class="steps">
+  <li>光越强，饱和电流越大。单位时间打出的电子越多。</li>
+  <li>加反向电压，电流会变成零。这个遏止电压和光强无关，所以最快电子的动能和光强无关。</li>
+  <li>遏止电压和频率是直线。频率低于红限，光再强也打不出电子。</li>
+  <li>从照光到出电子，不超过大约 $10^{-9}\,\mathrm s$，没有“慢慢攒能量”的等待。</li>
+</ol>
+<p>最快电子的动能等于它刚好爬不过去的那个反向电压：</p>
+<div class="formula">$$\frac12 m_e v_m^2=eU_a.$$</div>
+<p>直线是 $U_a=K\nu-U_0$。红限频率 $\nu_0=U_0/K$。</p>
+<p>爱因斯坦把普朗克的 $h\nu$ 看成一颗颗光子。一个电子吸收一个光子，先支付逸出功 $W_0$，剩下的才是动能（这是<strong>假设</strong>）：</p>
+<div class="formula">$$\frac12 m_e v_m^2=h\nu-W_0.$$</div>
+<p>和直线对照：$K=h/e$，$W_0=eU_0$，$\nu_0=W_0/h$。光强只增加光子个数，所以只增加电子个数。</p>
+<div class="box do">
+  <strong>照着做。</strong> 已知某金属逸出功对应的电压是 $U_0$，直线斜率是 $K$。
+  <ol class="steps">
+    <li>红限：$\nu_0=U_0/K$。频率比这低，动能为负，没有电子出来。</li>
+    <li>频率为 $\nu$ 时，遏止电压 $U_a=K\nu-U_0$。</li>
+    <li>最大动能 $=eU_a=h\nu-W_0$。不要把光强代进这个式子。</li>
+  </ol>
+</div>
+<details>
+  <summary>自测：把光增强一倍，红限变不变？饱和电流变不变？</summary>
+  <p>红限不变，它只由金属的逸出功决定。饱和电流变大，因为光子多了，打出的电子多了。</p>
+</details>
+
+<h2 id="l3">3. 光子带有动量，撞上电子波长会变</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 写出光子的能量和动量；知道康普顿波长变化只跟散射角有关，正面撞回去增加最多。</div>
+<img class="fig" src="fig/03_compton.png" alt="康普顿波长变化随角度">
+<div class="box say">
+  光已经会干涉，所以是波。光电效应又要求它一份一份地被吸收，所以也是粒子。两边用同一组关系接上。
+</div>
+<p>光子没有静止质量，能量和动量的关系是 $E=cp$。再写上 $E=h\nu$（<strong>定义，用了相对论</strong>）：</p>
+<div class="formula">$$E=h\nu=\hbar\omega,\qquad p=\frac{h}{\lambda}=\hbar k,\qquad \hbar=\frac{h}{2\pi},\quad \omega=2\pi\nu,\quad k=\frac{2\pi}{\lambda}.$$</div>
+<p>X 射线打在轻原子的电子上，散开以后波长变长。经典电磁波散射不该变波长。把它看成光子和静止电子的碰撞，能量守恒、动量守恒，消掉电子的速度和飞出方向，得到（<strong>推出来的</strong>）：</p>
+<div class="formula">$$\Delta\lambda=\lambda'-\lambda=\frac{h}{m_0 c}(1-\cos\theta).$$</div>
+<p>$\theta=0$ 时波长不变；$\theta=180^\circ$ 时增加最多，增加 $2h/(m_0 c)$。变化量和入射波长无关。$h/(m_0 c)$ 大约是 $2.43\,\mathrm{pm}$。</p>
+<p>另一个等价写法是 $\Delta\lambda=\dfrac{4\pi\hbar}{m_0 c}\sin^2\dfrac\theta2$。因为 $1-\cos\theta=2\sin^2(\theta/2)$，而 $4\pi\hbar=2h$。</p>
+<details>
+  <summary>自测：散射角 90° 时，波长增加多少？</summary>
+  <p>$1-\cos 90^\circ=1$，所以 $\Delta\lambda=h/(m_0 c)$，大约 2.43 pm。</p>
+</details>
+
+<h2 id="l4">4. 氢原子的光是一条一条的</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 用巴耳末公式算频率；说出玻尔的三条假设；说出它解释不了什么。角动量记 $L=n\hbar$。允许跃迁、禁止跃迁只记定性说法。</div>
+<img class="fig" src="fig/04_bohr.png" alt="氢原子能级和两条谱线">
+<div class="box say">
+  核式模型里，电子绕着很小的核转。经典电磁学说，转弯的电荷必须不断发光，能量变少，最后掉进核，而且发出的光应该是连续的。实验却是一条一条的谱线，原子也是稳的。
+</div>
+<p>巴耳末把氢光谱收成一个经验公式：</p>
+<div class="formula">$$\nu=R_\infty c\left(\frac{1}{n'^2}-\frac{1}{n^2}\right),\qquad n>n'.$$</div>
+<p>$n'=2$ 落到第 2 层，是可见光那一组；$n'=1$ 落到第 1 层，在紫外。课件强调：所有谱线的波数都能写成两项相减。有 $\nu_1$ 和 $\nu_2$，常常还有它们的和或差。这叫并合原则，不是“基频的整数倍”。</p>
+<p>玻尔用三条假设解释这件事：</p>
+<ol class="steps">
+  <li><strong>定态。</strong> 电子只待在某些轨道上，待着的时候不发光。</li>
+  <li><strong>跃迁。</strong> 从能量 $E_n$ 跳到 $E_{n'}$，放出或吸收一个光子，$h\nu=|E_n-E_{n'}|$。</li>
+  <li><strong>角动量量子化。</strong> $L=n\hbar$，$n=1,2,3,\ldots$。课件用圆周上的驻波 $2\pi r=n\lambda$ 推出这一条，最后是 $n\hbar$，不是 $nh$。</li>
+</ol>
+<p>氢原子能级 $E_n=-13.6\,\mathrm{eV}/n^2$。$n=1$ 最低，是负的，因为零点选在电子离核无限远的地方。</p>
+<div class="box warn">
+  玻尔仍把电子当成经典质点，只是轨道被限死。它能给出氢的谱线位置，给不出谱线强弱，到氦原子就失败。后来的量子力学不再说“电子走哪条轨道”。
+</div>
+<p>课件里的选择定则只记到这一句：有些能级之间不满足角动量那条规则，不能通过吸收或放出一个光子跳过去，叫禁止跃迁。具体计算不在这三章。</p>
+<details>
+  <summary>自测：从 n=3 落到 n=2，光子频率用哪两个数？</summary>
+  <p>$\nu=R_\infty c(1/2^2-1/3^2)=R_\infty c(1/4-1/9)=R_\infty c\cdot 5/36$。能量差是 $|E_3-E_2|$，再除以 $h$ 得到同一个频率。</p>
+</details>
+
+<h2 id="l5">5. 电子也有波长</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 由动量算波长；用戴维逊–革末的数字算出衍射角，并和实验的 50° 对上。</div>
+<img class="fig" src="fig/05_davisson.png" alt="电子在镍晶体上衍射">
+<div class="box say">
+  德布罗意说：光子那组 $E=h\nu$、$p=h/\lambda$ 也给实物粒子用。有动量就有波长 $\lambda=h/p$。自由粒子对应一列平面波，而且必须写成复数，后面写薛定谔方程时会用到。
+</div>
+<p>戴维逊–革末把这件事做成了实验。54 V 加速的电子，波长 $\lambda=0.167\,\mathrm{nm}$。镍的原子层间距 $d=0.215\,\mathrm{nm}$。晶体衍射用</p>
+<div class="formula">$$n\lambda=2d\sin\theta.$$</div>
+<div class="box do">
+  <strong>把数字代进去。</strong> 取 $n=2$：
+  $$\sin\theta=\frac{n\lambda}{2d}=\frac{2\times 0.167}{2\times 0.215}=\frac{0.334}{0.430}=0.777.$$
+  $\theta\approx 51^\circ$。实验上衍射最强出现在大约 $50^\circ$。对得上，所以电子确实有波动性。
+</div>
+<p>加速电压和波长的关系：动能 $\frac12 mv^2=eV$，所以 $p=\sqrt{2meV}$，$\lambda=h/p$。电压越高，电子越快，波长越短。</p>
+<details>
+  <summary>自测：同一个电子，速度变大，波长变长还是变短？</summary>
+  <p>变短。动量大，波长小。</p>
+</details>
+
+<h2 id="l6">6. 波函数：在哪里更容易找到它</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 归一化；由 $|\psi|^2$ 算一段区间里的概率和平均值；知道差一个相因子还是同一个态；双缝必须先把振幅相加。</div>
+<img class="fig" src="fig/06_doubleslit.png" alt="概率相加和振幅相加">
+<div class="box say">
+  把电子流减弱到一个一个地来，屏上先是随机的点。时间够长，点仍排成衍射条纹。所以“波”不是电子被撕成云，而是：这一次会落在哪里，由概率决定。很多次以后，概率变成条纹。
+</div>
+<p>玻恩的解释（<strong>假设</strong>）：$|\Psi|^2\mathrm dV$ 是在那一小块体积里找到粒子的概率。$|\Psi|^2$ 叫概率密度。粒子总得在某处，所以</p>
+<div class="formula">$$\int|\Psi|^2\mathrm dV=1.$$</div>
+<p>这叫归一化。还没归一的函数先算积分，再除以它的平方根。再乘 $\mathrm e^{i\delta}$（$\delta$ 是实数）不改变概率，因为这个因子的模是 1。它叫相因子，乘上去仍是同一个态。</p>
+<p>标准条件先记三条：波函数在所讨论的区域里有限、连续、单值。束缚态还要在无穷远处变成 0。</p>
+<div class="box do">
+  <strong>课件例题。</strong> $\psi=A\sin(\pi x/a)$，$0\le x\le a$，外面是 0。
+  <ol class="steps">
+    <li>归一化：$\int_0^a A^2\sin^2(\pi x/a)\,\mathrm dx=1$。$\sin^2$ 在整数个半波上的平均是 $1/2$，积分等于 $A^2\cdot a/2$。所以 $A=\sqrt{2/a}$（取正）。</li>
+    <li>概率密度 $(2/a)\sin^2(\pi x/a)$，在 $x=a/2$ 最大。</li>
+    <li>$0$ 到 $a/2$ 正好是半个拱，概率是 $1/2$。</li>
+    <li>位置平均值 $\bar x=\int_0^a x|\psi|^2\mathrm dx=a/2$。左右对称，不用硬算也能看出来。</li>
+    <li>$\overline{x^2}=a^2/3-a^2/(2\pi^2)$。这一条是积分结果，考试若给出 $\psi$，按 $\int x^2|\psi|^2\mathrm dx$ 去算。</li>
+  </ol>
+</div>
+<p>高斯型 $\psi=A\exp(-\frac12 a^2 x^2-\mathrm i\omega t/2)$：归一化 $A=(a^2/\pi)^{1/4}$，概率在 $x=0$ 最大。时间只出现在相因子里，所以概率分布不随时间变。</p>
+<p>自由粒子平面波 $|\psi|^2$ 是常数，全空间积分是无限大，不能按上面的办法归一。改用 $\delta$ 函数归一以后，一维的系数是 $A=(2\pi\hbar)^{-1/2}$。考试若只问“为什么不能普通归一”，答到积分发散即可。</p>
+<div class="box warn">
+  双缝两缝都开时，概率不是“只开上缝的概率 + 只开下缝的概率”。要先把两个波函数相加，再平方。多出来的交叉项就是明暗条纹。单次测量也不会得到“两个结果的加权平均”，那是很多次的平均值。
+</div>
+<details>
+  <summary>自测：把波函数乘 3，概率变不变？</summary>
+  <p>没有归一化之前，各点的相对概率不变，仍是同一个态。归一化时会把这个 3 除回去。真正改变概率形状的是函数形式，不是整体乘一个常数。</p>
+</details>
+
+<h2 id="l7">7. 状态怎样随时间变</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 写出薛定谔方程；说明它是假设，不是从牛顿定律推出来的；势能不随时间变时，写出定态，并说明 $|\Psi|^2$ 不随时间变，但波函数本身仍带时间因子。</div>
+<div class="box say">
+  经典里，知道这一刻的位置和速度，牛顿定律告诉你下一刻在哪。量子里，状态是波函数。需要一个方程，吃进去 $\Psi$，吐出来它怎么变。
+</div>
+<p>这个方程要满足两件事，否则和前面冲突：它是线性的，这样叠加起来的态也是解；系数里不能再出现某一个态才有的 $E$ 或 $p$，否则别的态用不了。</p>
+<p>建立的路子是凑，然后当成<strong>假设</strong>：</p>
+<ol class="steps">
+  <li>自由粒子写成复数平面波 $\Psi=A\exp[\mathrm i(\mathbf p\cdot\mathbf r-Et)/\hbar]$。</li>
+  <li>对时间求导，得到 $\mathrm i\hbar\,\partial\Psi/\partial t=E\Psi$。</li>
+  <li>对空间求两次导，得到 $-\hbar^2\nabla^2\Psi=p^2\Psi$。</li>
+  <li>自由粒子 $E=p^2/(2m)$。用它把 $E$ 和 $p$ 换成对波函数的运算，方程里就不再出现 $E$ 和 $p$。</li>
+</ol>
+<p>对应规则（还不是测量理论）：</p>
+<div class="formula">$$E\;\longleftrightarrow\;\mathrm i\hbar\frac{\partial}{\partial t},\qquad \mathbf p\;\longleftrightarrow\;-\mathrm i\hbar\nabla.$$</div>
+<p>有势能时，经典关系是 $E=p^2/(2m)+U$。同样替换，得到薛定谔方程：</p>
+<div class="formula">$$\mathrm i\hbar\frac{\partial\Psi}{\partial t}=\left[-\frac{\hbar^2}{2m}\nabla^2+U\right]\Psi.$$</div>
+<p>时间导数必须是一阶的。因为实验只准备好某一时刻的 $\Psi$，方程只要能从这一份出发往后走。</p>
+<div class="box warn">
+  换成 $\cos$ 写的实数波，代不进这个方程：对时间求导变成正弦，对空间求导两次仍是余弦，两边对不上。所以平面波必须用复数。
+</div>
+<p>概率不会无中生有。定义概率流</p>
+<div class="formula">$$\mathbf J=\frac{\mathrm i\hbar}{2m}\left(\Psi\nabla\Psi^{*}-\Psi^{*}\nabla\Psi\right),$$</div>
+<p>就有 $\partial w/\partial t+\nabla\cdot\mathbf J=0$。某一块区域里的概率变少，是因为概率从边界流出去了。这是方程的推论，不是另一条假设。全空间积分之后，归一化一旦成立就一直成立。</p>
+<h3>定态</h3>
+<p>势能 $U$ 不含时间时，可以找一种特解：空间部分和时间部分分开。时间部分是</p>
+<div class="formula">$$\Psi(\mathbf r,t)=\psi(\mathbf r)\,\mathrm e^{-\mathrm i Et/\hbar}.$$</div>
+<p>空间部分满足定态方程</p>
+<div class="formula">$$\left[-\frac{\hbar^2}{2m}\nabla^2+U\right]\psi=E\psi.$$</div>
+<p>方括号里的运算叫哈密顿算符 $\hat H$，也叫能量算符。上式就是 $\hat H\psi=E\psi$。</p>
+<p>$|\Psi|^2=|\psi|^2$，时间因子消掉了，所以概率密度和概率流都不随时间变。能量是确定的。但不要说“定态波函数不含时间”。它含，只是概率看不出来。</p>
+<p>一般状态是许多定态叠在一起。叠了不同能量以后，概率密度可以随时间变，那就是干涉项。</p>
+<details>
+  <summary>自测：定态的波函数乘上时间因子以后，概率为什么不变？</summary>
+  <p>时间因子的模是 1，它和自己的共轭相乘得 1，所以 $|\Psi|^2=|\psi|^2$。</p>
+</details>
+
+<h2 id="l8">8. 关在盒子里，能量变成一档一档</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 对从 0 到 $L$ 的无限深势阱，写出能级和归一化波函数，并说明两端为什么是 0。课件写到这里中断，下面就是那四步的结果。</div>
+<img class="fig" src="fig/07_well.png" alt="无限深势阱的波函数和概率">
+<p class="cap">左图把波形竖着叠在各自的能量上，方便看节点。右图是概率。$n$ 越大，概率的拱越多，能量按 $n^2$ 升高。</p>
+<div class="box say">
+  盒子里势能是 0，壁上势能是无限大。粒子出不去。经典上它在里面可以有任意速度。量子上，波必须在两壁处是 0，于是只容得下整数个半波，能量就被卡成一串数。
+</div>
+<p>课件把盒子写成 $0\le x\le L$，外面波函数是 0。四步：</p>
+<ol class="steps">
+  <li>里面：$-\dfrac{\hbar^2}{2m}\psi''=E\psi$。令 $k=\sqrt{2mE}/\hbar$，解是 $\sin$ 和 $\cos$ 的组合。</li>
+  <li>$\psi(0)=0$ 把 $\cos$ 去掉，只剩 $\sin(kx)$。</li>
+  <li>$\psi(L)=0$ 要求 $kL=n\pi$，$n=1,2,3,\ldots$。$n=0$ 会使波函数处处是 0，扔掉。</li>
+  <li>归一化得到系数 $\sqrt{2/L}$。</li>
+</ol>
+<div class="formula">$$\psi_n(x)=\sqrt{\frac{2}{L}}\sin\frac{n\pi x}{L},\qquad E_n=\frac{n^2\pi^2\hbar^2}{2mL^2}.$$</div>
+<p>教材例题把宽度写成 $a$，把 $L$ 换成 $a$ 即可。基态 $n=1$ 的能量不是 0。</p>
+<div class="box warn">
+  教材正文还有一种对称盒子，从 $-a$ 到 $a$，宽度是 $2a$，能量是 $\pi^2\hbar^2 n^2/(8ma^2)$。宽度差一倍，能量差 4 倍。课件和要算的题用的是 0 到 $L$ 这一种，不要背串。
+</div>
+<p>$n$ 号波函数在盒子里有 $n-1$ 个节点（不把两端算进去）。概率在波节处是 0，粒子在那些点附近很少出现，但能量仍然是确定的。</p>
+<p>含时间的定态是 $\Psi_n=\psi_n\mathrm e^{-\mathrm i E_n t/\hbar}$。它可以看成两列反向跑的波叠成的驻波，概率流是 0：概率在拱里晃，并不整体流向一边。</p>
+<div class="box do">
+  <strong>基态的动量不是“向左一半、向右一半”。</strong> 把 $\sin$ 写成指数，看起来像动量 $\pm \pi\hbar/L$ 的两列波。真正按动量展开以后，动量概率是一条连续曲线，并不只在这两个值上。高能级才会在 $\pm n\pi\hbar/L$ 附近各有一个峰。
+</div>
+<details>
+  <summary>自测：盒子宽度变成原来的 2 倍，基态能量变成原来的几倍？</summary>
+  <p>$E$ 和 $L^2$ 成反比，所以变成 $1/4$。粒子更“松”，最低能量更低。</p>
+</details>
+
+<h2 id="l9">9. 弹簧：最低能量也不是零</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 写出谐振子能级 $E_n=\hbar\omega(n+\frac12)$；用不确定关系说明最低大约是 $\frac12\hbar\omega$。厄米多项式不用默写。课件考的是后面这条估计，完整能级是教材把模型补完。</div>
+<img class="fig" src="fig/08_oscillator.png" alt="谐振子势能和前三个态">
+<p class="cap">图上的“1 份”就是 $\hbar\omega$。最低是半份，往上每一档多一份。波形叠在能量线上，只为了看节点。</p>
+<div class="box say">
+  稳定平衡附近，小振动的势能都像一只开口向上的抛物线：$U=\frac12 m\omega^2 x^2$。分子振动、晶体里的原子，都可以先收成这个模型。
+</div>
+<p>要求无穷远处波函数变成 0，能级被卡成（<strong>推出来的</strong>）</p>
+<div class="formula">$$E_n=\hbar\omega\left(n+\frac12\right),\qquad n=0,1,2,\ldots$$</div>
+<p>间隔都是 $\hbar\omega$。最低的一份 $\frac12\hbar\omega$ 叫零点能。经典弹簧可以完全停住，能量是 0。这里不行。</p>
+<p>$n$ 为偶数时波函数是偶函数，奇数时是奇函数。节点个数就是 $n$。</p>
+<img class="fig" src="fig/11_uncertainty.png" alt="位置晃动和最低能量">
+<p class="cap">横轴是位置晃动的大小。太挤，动量就猛，动能高；太松，弹簧拉得远，势能高。最低点是零点能。</p>
+<div class="box do">
+  <strong>课件的估计，按这个顺序写。</strong> 质量课件写成 $\mu$，这里写成 $m$，是同一个质量。
+  <ol class="steps">
+    <li>平均能量 $=\overline{p^2}/(2m)+\frac12 m\omega^2\overline{x^2}$。</li>
+    <li>基态左右对称，$\bar x=0$，$\bar p=0$。于是 $\overline{x^2}$ 就是位置的不确定程度，$\overline{p^2}$ 就是动量的。</li>
+    <li>不确定关系：两者相乘至少是 $\hbar^2/4$。取等号，能量变成“一个量 + 它的倒数”。</li>
+    <li>对这个量求最小，得到 $\frac12\hbar\omega$。</li>
+  </ol>
+  精确解的基态正好等于这个下限。所以零点能不是计算误差，是位置和动量不能同时安静的结果。
+</div>
+<details>
+  <summary>自测：盒子的基态能量，是不是也等于 ½ℏω？</summary>
+  <p>不是。盒子的基态是 $\pi^2\hbar^2/(2mL^2)$。$\frac12\hbar\omega$ 只属于这种抛物线势能。</p>
+</details>
+
+<h2 id="l10">10. 能量不够，仍可能出现在墙的另一边</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 说出 $E$ 低于势垒时透射概率仍可以不是 0；说明这不是“动能变成负的”。长公式当字典查，知道指数里垒越高、越宽、粒子越重，透过越少。</div>
+<img class="fig" src="fig/09_barrier.png" alt="势垒和透射波">
+<p class="cap">左边的波有进有回，所以幅度忽大忽小。进垒以后包络很快下降。右边还剩一小段，所以对面找得到粒子。纵轴把波形画在能量线附近，不是把波函数的数值当成能量。</p>
+<div class="box say">
+  经典粒子能量低于墙，就一定被弹回。量子里墙的另一边仍有波。概率流过去一点，反射回去一点，加起来是 1。
+</div>
+<p>方势垒：中间一段高度 $U_0$、宽度 $a$，两边势能是 0。$E>U_0$ 时也有反射，透射概率还随宽度振荡。考试更常问的是 $E&lt;U_0$。</p>
+<p>垒又高又宽时，透射系数近似成</p>
+<div class="formula">$$D\approx D_0\exp\left[-\frac{2a}{\hbar}\sqrt{2m(U_0-E)}\right].$$</div>
+<p>$D_0$ 是数量级为 1 的数。指数里那一截越大，$D$ 越小。电子、垒高几个电子伏、宽度 1 nm 时，透过还明显；宽到 10 nm 就极小。所以宏观物体看不到这件事。</p>
+<p>形状不规则的垒，把指数里的 $a\sqrt{U_0-E}$ 换成积分 $\int\sqrt{2m(U-E)}\,\mathrm dx$。会用这个指数即可。</p>
+<div class="box warn">
+  隧道效应不是粒子带着负动能穿过去。$E=p^2/(2m)+U$ 是经典关系。在 $E&lt;U$ 的区域，动量不是一个确定的实数，波函数改成指数衰减，不是“速度是虚数的小球”。
+</div>
+<p>另一种课件和教材都会碰到的是尖针一样的势，$U=A\delta(x-a)$。透射系数</p>
+<div class="formula">$$T=\frac{1}{1+mA^2/(2\hbar^2 E)}.$$</div>
+<p>$A$ 有限、$E$ 不是零，$T$ 就不是零。波函数连续，导数跳一下。</p>
+<details>
+  <summary>自测：把粒子质量加大，同样的垒，更不容易透过还是更容易？</summary>
+  <p>更不容易。指数里有 $\sqrt{m}$，质量大，指数更负。</p>
+</details>
+
+<h2 id="l11">11. 测量：一次只得到允许的那些数</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 知道力学量对应线性厄米算符；测量结果是本征值；概率是 $|c_n|^2$；平均值是另外一件事；一组互相对易的量才能把态定死。</div>
+<img class="fig" src="fig/10_measure.png" alt="单次测量的两种结果">
+<p class="cap">这是课件那道叠加题的结果：一次测量不会得到平均值。平均值是很多次的平均。</p>
+<div class="box say">
+  经典里，位置和动量同时有一个数。微观里做不到。规则是：经典式子里的动量换成 $-i\hbar\nabla$，得到的运算必须是线性厄米的。厄米保证测到的数和平均值是实数。$d/dx$ 就不是厄米的，不能拿来当动量。
+</div>
+<p>动量算符 $\hat{\mathbf p}=-i\hbar\nabla$。动能是 $\hat p^2/(2m)$。能量算符就是前面的 $\hat H$。</p>
+<p>课件前半有梯度、散度、旋度，是为了会写 $\nabla$。那个 $\nabla$ 和能量算符 $\hat H$ 只是中文都叫过“哈密顿”，不是同一个东西。若题目给一个具体矢量场让你求旋度，就按定义对每个分量求导，不要背某一页上有争议的那个终点数字。</p>
+<p>五个基本假设，其实就是把前面收成五句：</p>
+<ol class="steps">
+  <li>状态用波函数描写。</li>
+  <li>力学量用线性厄米算符描写。</li>
+  <li>测量只得到本征值。$\psi=\sum c_n\phi_n$ 时，得到 $\lambda_n$ 的概率是 $|c_n|^2$（已归一）。</li>
+  <li>平均值 $\overline F=\int\psi^{*}\hat F\psi\,\mathrm dV$。它可以不是任何一个本征值。</li>
+  <li>状态怎样变，由薛定谔方程规定。</li>
+</ol>
+<div class="box do">
+  <strong>课件的叠加题。</strong> $\Psi=\frac13 Y_{11}+\frac23 Y_{21}$，还没归一。$Y_{lm}$ 是“角动量大小和 $z$ 分量都确定”的函数，形状不用画。
+  <ol class="steps">
+    <li>两个分量的 $L^2$ 本征值不同，一个是 $2\hbar^2$，一个是 $6\hbar^2$。所以这不是 $L^2$ 的本征态。</li>
+    <li>两个的 $L_z$ 都是 $\hbar$。测 $L_z$ 只得到 $\hbar$。</li>
+    <li>系数平方是 $1/9$ 和 $4/9$，加起来是 $5/9$。除掉以后，概率是 $1/5$ 和 $4/5$。</li>
+    <li>$\langle L^2\rangle=\frac15\cdot 2\hbar^2+\frac45\cdot 6\hbar^2=\frac{26}{5}\hbar^2$。这是平均值，单次测不到它。</li>
+  </ol>
+</div>
+<p>要唯一标定一个态，需要一组两两对易的力学量，个数一般等于自由度。例子：自由粒子用 $p_x,p_y,p_z$；一维谐振子只用 $H$；氢原子用 $H$、$L^2$、$L_z$。氢原子那一组里 $H$ 有简并也没关系，三个数合在一起仍能定死一个态。</p>
+<p>$\delta$ 函数只记用法：$\int f(x)\delta(x-x_0)\mathrm dx=f(x_0)$，以及 $\delta(ax)=\delta(x)/|a|$。课件练习 $\int f(x)\delta(-2x+4)\mathrm dx$。先写成 $\delta(-2(x-2))=\delta(x-2)/2$，结果是 $f(2)/2$。页上没印答案，这是用这条性质算的。</p>
+<details>
+  <summary>自测：一次测量得到了平均值，这种说法错在哪？</summary>
+  <p>一次测量得到的是某一个本征值。平均值是大量相同实验的算术平均，可以落在两个本征值之间。</p>
+</details>
+
+<h2 id="l12">12. 两个量什么时候能同时有确定值</h2>
+<div class="box goal"><strong>考试要能做的：</strong> 算出 $[x,p_x]=i\hbar$；由对易子写出不确定关系；判断一个量的平均值是否随时间变。对易没有传递性。</div>
+<div class="box say">
+  两个运算的前后次序如果有差别，这两个量就不能在同一个态里都有确定值。差别写成对易子 $[\hat F,\hat G]=\hat F\hat G-\hat G\hat F$。
+</div>
+<p>最重要的一个（<strong>直接算出来的</strong>）：</p>
+<div class="formula">$$[x,\hat p_x]=i\hbar.$$</div>
+<p>算法：$\hat p_x=-i\hbar d/dx$，作用在任意函数 $f$ 上，</p>
+<div class="formula">$$x\hat p_x f-\hat p_x(xf)=-i\hbar x f'+i\hbar(f+xf')=i\hbar f.$$</div>
+<p>$x$ 和 $p_y$ 对易，各方向的动量彼此对易。$[A,B]=0$ 且 $[B,C]=0$，不能推出 $[A,C]=0$。</p>
+<p>若 $[\hat F,\hat G]=i\hat k$，不确定关系是</p>
+<div class="formula">$$\overline{(\Delta F)^2}\ \overline{(\Delta G)^2}\ge\frac{\bar k^2}{4}.$$</div>
+<p>用于位置和动量，就是 $\Delta x\,\Delta p_x\ge\hbar/2$。它不是“测量把粒子碰乱了”才出现的，态一旦给定，这两个晃动的乘积就不能再小。</p>
+<p>角动量：$[L_x,L_y]=i\hbar L_z$。在 $Y_{lm}$ 上，$\langle L_x\rangle=\langle L_y\rangle=0$，</p>
+<div class="formula">$$\Delta L_x=\Delta L_y=\hbar\sqrt{\frac12\big[l(l+1)-m^2\big]}.$$</div>
+<p>若把下限写成 $\frac12 m\hbar^2$，这里的 $m$ 若是负数，要理解成 $|m|$。</p>
+<h3>什么量守恒</h3>
+<p>平均值随时间的变化（<strong>推出来的</strong>）：</p>
+<div class="formula">$$\frac{\mathrm d\overline F}{\mathrm dt}=\overline{\frac{\partial\hat F}{\partial t}}+\frac{1}{i\hbar}\overline{[\hat F,\hat H]}.$$</div>
+<p>不显含时间，又和 $\hat H$ 对易，平均值就不随时间变。这样的量叫运动恒量。四个例子：</p>
+<ul>
+  <li>自由粒子的动量。没有外力，$\hat H=\hat p^2/(2m)$，和 $\hat p$ 对易。</li>
+  <li>中心力场里的角动量。势能只跟 $r$ 有关。</li>
+  <li>能量本身。$\hat H$ 不显含时间。</li>
+  <li>宇称。势能左右对称时，波函数可以选成偶的或奇的，而且这种偶奇性不随时间变。</li>
+</ul>
+<details>
+  <summary>自测：一个量不显含时间，它的平均值就一定不变吗？</summary>
+  <p>不一定。还要和 $\hat H$ 对易。位置不显含时间，但 $[x,H]$ 一般不是 0，所以 $\bar x$ 可以随时间变。</p>
+</details>
+
+<h2>课件没让你默写、知道图像即可</h2>
+<ul>
+  <li>氢原子完整的径向波函数。考试若问到，用的是玻尔能级和“$H$、$L^2$、$L_z$ 合在一起标定一个态”，不是背 $R_{32}$。</li>
+  <li>谐振子的厄米多项式。会用能级和零点能的估计。</li>
+  <li>势垒透射系数那个带 $\sin$ 的长分式。会用高而宽时的指数，并会解释图。</li>
+  <li>均匀磁场里电子能级、导体平面上方的电子、三个函数的正交化。这些是教材例题。等你把上面十二节做顺，再按题号回来看字典，不提前做成模拟卷。</li>
+</ul>
+<p>旧稿里标过“假设 / 定义 / 推出来的”，查公式时以那份为准。若某一式和课件原页不一致，以课件原页为准，告诉我页码即可。</p>
+
+</article>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function render() {
+      if (!window.renderMathInElement) { setTimeout(render, 40); return; }
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ],
+        throwOnError: false
+      });
+    }
+    render();
+  });
+</script>
+</body>
+</html>
