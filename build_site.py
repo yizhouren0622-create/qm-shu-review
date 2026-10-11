@@ -16,6 +16,7 @@ NAV = """
       <a href="index.html" data-page="index.html">首页</a>
       <a href="review.html" data-page="review.html">复习课</a>
       <a href="examples.html" data-page="examples.html">课件例题</a>
+      <a href="formulas.html" data-page="formulas.html">公式与应用 / Formulas</a>
       <a href="exam.html" data-page="exam.html">综合卷</a>
       <a href="answers.html" data-page="answers.html">综合卷答案</a>
       <a href="exam-ch3.html" data-page="exam-ch3.html">第3章卷</a>
@@ -87,8 +88,16 @@ def strip_old_katex_and_scripts(html: str) -> str:
     return html
 
 
-def inject_chrome(html: str, title: str | None = None) -> str:
+def inject_chrome(html: str, title: str | None = None, *, native_math: bool = False) -> str:
     html = strip_old_katex_and_scripts(html)
+    head_extra = HEAD_EXTRA
+    foot_scripts = FOOT_SCRIPTS
+    footer = FOOTER
+    if native_math:
+        # The formula companion contains pre-rendered MathML and needs no CDN.
+        head_extra = re.sub(r'<link[^>]+katex[^>]*>\n?', '', head_extra)
+        foot_scripts = ""
+        footer = '<footer class="site-footer">上海大学微电子 · 量子力学课件范围复习材料。本页公式采用 MathML；文字、公式与例题均可离线阅读。</footer>\n'
     if title:
         html = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", html, count=1, flags=re.S)
 
@@ -97,13 +106,13 @@ def inject_chrome(html: str, title: str | None = None) -> str:
         if re.search(r'<meta[^>]+viewport', html, re.I):
             html = re.sub(
                 r'(<meta[^>]+viewport[^>]*>)',
-                r"\1\n" + HEAD_EXTRA,
+                r"\1\n" + head_extra,
                 html,
                 count=1,
                 flags=re.I,
             )
         else:
-            html = html.replace("<head>", "<head>\n" + HEAD_EXTRA, 1)
+            html = html.replace("<head>", "<head>\n" + head_extra, 1)
 
     # Remove duplicate viewport from HEAD_EXTRA if double — keep both ok or clean
     # Ensure body starts with nav
@@ -111,9 +120,9 @@ def inject_chrome(html: str, title: str | None = None) -> str:
         html = re.sub(r"<body([^>]*)>", r"<body\1>\n" + NAV, html, count=1, flags=re.I)
 
     if "site-footer" not in html:
-        html = re.sub(r"</body>", FOOTER + "\n" + FOOT_SCRIPTS + "\n</body>", html, count=1, flags=re.I)
+        html = re.sub(r"</body>", footer + "\n" + foot_scripts + "\n</body>", html, count=1, flags=re.I)
     elif "assets/site.js" not in html:
-        html = re.sub(r"</body>", FOOT_SCRIPTS + "\n</body>", html, count=1, flags=re.I)
+        html = re.sub(r"</body>", foot_scripts + "\n</body>", html, count=1, flags=re.I)
 
     # Fix review page link to old knowledge梳理
     html = html.replace("../前三章知识梳理.html", "index.html")
@@ -144,6 +153,10 @@ def build_hub() -> str:
       <a class="hub-link span2" href="examples.html">
         <strong>课件例题全解</strong>
         <span>按章节、知识点列出 PPT 里的例题和练习，每题都有概念、公式、思路和过程。</span>
+      </a>
+      <a class="hub-link span2" href="formulas.html">
+        <strong>公式与应用 / Formulas in practice</strong>
+        <span>前三章 35 组公式：中英对照、符号与适用条件、简单例题和计算步骤。可按章节和关键词查找。</span>
       </a>
       <a class="hub-link" href="exam.html">
         <strong>综合模拟卷</strong>
@@ -176,12 +189,13 @@ def main() -> None:
         ("exam.source.html", "exam.html", "量子力学模拟卷 · 上大微电子"),
         ("answers.source.html", "answers.html", "模拟卷参考答案 · 上大微电子"),
         ("examples.source.html", "examples.html", "课件例题全解 · 上大微电子"),
+        ("formulas.source.html", "formulas.html", "公式与应用 · Formulas in practice · 上大微电子"),
         ("exam-ch3.source.html", "exam-ch3.html", "第3章力学算符模拟卷 · 上大微电子"),
     ]
     for src_name, out_name, title in mapping:
         src = ROOT / src_name
         text = src.read_text(encoding="utf-8")
-        out = inject_chrome(text, title=title)
+        out = inject_chrome(text, title=title, native_math=out_name == "formulas.html")
         (ROOT / out_name).write_text(out, encoding="utf-8")
         print("wrote", out_name, "bytes", len(out.encode("utf-8")))
 
