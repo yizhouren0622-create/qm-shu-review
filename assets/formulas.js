@@ -2,27 +2,9 @@
   "use strict";
   const root = document.querySelector('.formula-guide');
   if (!root) return;
-  const activeLink = document.querySelector('.site-links a[data-page="formulas.html"]');
-  if (activeLink) {
-    activeLink.classList.add('is-active');
-    activeLink.setAttribute('aria-current', 'page');
-  }
-  const siteTop = document.querySelector('.site-top');
-  const menuButton = document.querySelector('.site-menu-btn');
-  if (siteTop && menuButton) {
-    menuButton.addEventListener('click', () => {
-      menuButton.setAttribute('aria-expanded', String(siteTop.classList.toggle('open')));
-    });
-    for (const link of siteTop.querySelectorAll('.site-links a')) {
-      link.addEventListener('click', () => {
-        siteTop.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
-      });
-    }
-  }
       const guide = root.querySelector('.guide');
       const input = root.querySelector('input');
-      const select = root.querySelector('select');
+      const select = document.querySelector('#site-language');
       const buttons = [...root.querySelectorAll('[data-filter]')];
       const articles = [...root.querySelectorAll('article')];
       const expand = root.querySelector('.expand');
@@ -46,7 +28,7 @@
         expand.setAttribute('aria-expanded',String(allOpen));
       };
       input.addEventListener('input',refresh);
-      select.addEventListener('change',() => { guide.dataset.view = select.value; refresh(); });
+      document.addEventListener('languagechange',refresh);
       for (const button of buttons) button.addEventListener('click',() => {
         filter = button.dataset.filter;
         for (const other of buttons) other.setAttribute('aria-pressed',String(other === button));
