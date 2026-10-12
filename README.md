@@ -1,5 +1,16 @@
 # 量子力学复习站 · Quantum mechanics review
 
+在线阅读：<https://yizhouren0622-create.github.io/qm-shu-review/>
+
+- [首页](https://yizhouren0622-create.github.io/qm-shu-review/index.html)
+- [复习课](https://yizhouren0622-create.github.io/qm-shu-review/review.html)
+- [课件例题](https://yizhouren0622-create.github.io/qm-shu-review/examples.html)
+- [公式与应用](https://yizhouren0622-create.github.io/qm-shu-review/formulas.html)
+- [综合模拟卷](https://yizhouren0622-create.github.io/qm-shu-review/exam.html)
+- [参考答案](https://yizhouren0622-create.github.io/qm-shu-review/answers.html)
+- [第3章卷](https://yizhouren0622-create.github.io/qm-shu-review/exam-ch3.html)
+- [学习路线与符号表](https://yizhouren0622-create.github.io/qm-shu-review/study.html)
+
 基于上海大学微电子 Chapter 01–03 课件的静态双语复习站：复习课、课件例题、公式与应用、两套模拟卷、参考答案、学习路线与符号表。
 
 保持纸张风格，支持中文 / English / 中英对照。语言偏好只保存在本机浏览器。两套试卷的每题提示和答案均默认收起，互相独立；可打印纯题目或含答案版。公式预渲染为原生 MathML，浏览时不依赖外部公式服务。现代浏览器支持 MathML；离线阅读需同时保存页面和 assets、fig 资源。
