@@ -94,53 +94,94 @@ eU=\frac{p^2}{2m},\qquad \lambda=\frac{h}{p}=\frac{h}{\sqrt{2meU}},\qquad n\lamb
 <h3 data-lang="zh" lang="zh-CN"><span class="tag m">计算</span>一维 \(\psi=A\sin(\pi x/a)\)，\(0\le x\le a\)</h3><div data-lang="en" lang="en" class="english-essentials"><h3>Sine wave function</h3><p>For $\psi=A\sin(\pi x/a)$ on $[0,a]$, normalization gives $A=\sqrt{2/a}$. Then $w=(2/a)\sin^2(\pi x/a)$, maximal at $a/2$, with half the probability on either side. Symmetry gives $\langle x\rangle=a/2$; integration gives $\langle x^2\rangle=a^2/3-a^2/(2\pi^2)$.</p></div><div data-lang="zh" lang="zh-CN" class="original-working">
 <p><b>原题。</b>粒子波函数在 \(0\le x\le a\) 上为 \(\psi=A\sin(\pi x/a)\)，外面为零。求归一化常数、概率密度最大的位置、区间 \([0,a/2]\) 的概率、\(\bar x\) 和 \(\overline{x^2}\)。</p>
 <p><b>基础概念。</b>\(|\psi|^2\) 是概率密度，全体积分为 1。实波函数的概率密度就是 \(\psi^2\)。最大位置是概率密度的峰，不是波函数穿过零的地方。平均值 \(\overline{f}=\int\psi^{*} f\psi\,\mathrm dx\)。</p>
-<p><b>公式。</b></p>
+<p><b>公式。</b>要用到的高数只有两条。倍角：</p>
 \[
-\int_0^a\sin^2\frac{n\pi x}{a}\,\mathrm dx=\frac a2,\qquad
 \sin^2\theta=\frac{1-\cos 2\theta}{2}.
 \]
-<p><b>思路。</b>先归一化，后面所有积分都带着 \(|A|^2=2/a\)。对称性可以先猜 \(\bar x=a/2\)，但积分要算出来核对。\(\overline{x^2}\) 要用分部积分，不能只背结果。</p>
+<p>分部积分（不定积分写法）：设 \(u\) 是要拿去求导的那一块，\(\mathrm dv\) 是剩下准备积分的那一块，则</p>
+\[
+\int u\,\mathrm dv=uv-\int v\,\mathrm du.
+\]
+<p>定积分就是先写出这个原函数，再代入上限减下限。</p>
+<p><b>思路。</b>先归一化，后面所有积分都带着 \(|A|^2=2/a\)。对称性可以先猜 \(\bar x=a/2\)，但积分要算出来核对。含 \(x\)、\(x^2\) 时先用倍角把 \(\sin^2\) 拆成“1 减余弦”，再对带 \(x\) 的那一项分部积分。</p>
 <p><b>过程。</b></p>
-<p>1. 归一化。\(A\) 取正实数：</p>
+<p>1. 归一化。\(A\) 取正实数。先把平方拆开，令 \(\theta=\pi x/a\)，则 \(2\theta=2\pi x/a\)：</p>
 \[
-\int_0^a A^2\sin^2\frac{\pi x}{a}\,\mathrm dx=A^2\cdot\frac a2=1\implies A=\sqrt{\frac{2}{a}}.
+\sin^2\frac{\pi x}{a}=\frac{1-\cos(2\pi x/a)}{2}.
 \]
-<p>2. 概率密度 \(w=(2/a)\sin^2(\pi x/a)\)。\(\sin\) 在 \(x=a/2\) 为 1，所以最大在中点。两端 \(w=0\)，粒子不到墙上。</p>
-<p>3. 左半边概率。令 \(b=2\pi/a\)：</p>
 \[
-P=\frac{2}{a}\int_0^{a/2}\frac{1-\cos(bx)}{2}\,\mathrm dx
-=\frac{1}{a}\left[\frac a2-\frac{\sin(b a/2)}{b}\right]
-=\frac{1}{a}\cdot\frac a2=\frac12,
+\int_0^a\sin^2\frac{\pi x}{a}\,\mathrm dx
+=\int_0^a\frac{1-\cos(2\pi x/a)}{2}\,\mathrm dx
+=\frac12\left[x-\frac{a}{2\pi}\sin\frac{2\pi x}{a}\right]_0^a.
 \]
-<p>因为 \(\sin(\pi)=0\)。左右对称，各占一半。</p>
-<p>4. \(\bar x\)。同样把 \(\sin^2\) 拆开：</p>
+<p>上限 \(x=a\)：\(a-(a/(2\pi))\sin(2\pi)=a-0=a\)。下限 \(x=0\)：\(0-(a/(2\pi))\sin 0=0\)。上下限相减仍是 \(a\)，再乘前面的 \(1/2\)，积分等于 \(a/2\)。于是</p>
 \[
-\bar x=\frac{2}{a}\int_0^a x\cdot\frac{1-\cos(bx)}{2}\,\mathrm dx
+\int_0^a A^2\sin^2\frac{\pi x}{a}\,\mathrm dx=A^2\cdot\frac a2=1,\qquad A=\sqrt{\frac{2}{a}}.
+\]
+<p>2. 概率密度 \(w=(2/a)\sin^2(\pi x/a)\)。\(\sin(\pi x/a)\) 在 \(x=a/2\) 等于 1，是这一段上的最大值，所以 \(w\) 也在中点最大。两端 \(\sin 0=\sin\pi=0\)，概率密度为 0。</p>
+<p>3. 左半边概率。下面令 \(b=2\pi/a\)，这样 \(\cos(2\pi x/a)=\cos(bx)\)。</p>
+\[
+P=\frac{2}{a}\int_0^{a/2}\sin^2\frac{\pi x}{a}\,\mathrm dx
+=\frac{2}{a}\int_0^{a/2}\frac{1-\cos(bx)}{2}\,\mathrm dx
+=\frac{1}{a}\int_0^{a/2}\bigl(1-\cos(bx)\bigr)\,\mathrm dx.
+\]
+<p>\(1\) 的原函数是 \(x\)，\(\cos(bx)\) 的原函数是 \(\sin(bx)/b\)（因为再求导会乘回 \(b\)）。所以</p>
+\[
+P=\frac{1}{a}\left[x-\frac{\sin(bx)}{b}\right]_0^{a/2}.
+\]
+<p>上限：\(b\cdot(a/2)=(2\pi/a)\cdot(a/2)=\pi\)，\(\sin\pi=0\)，所以括号里是 \(a/2-0\)。下限是 0。因此 \(P=(1/a)\cdot(a/2)=1/2\)。左右对称，右半边也是 \(1/2\)。</p>
+<p>4. \(\bar x\)。\(\psi\) 是实数，\(\psi^{*}=\psi\)，所以</p>
+\[
+\bar x=\int_0^a x\,|\psi|^2\,\mathrm dx
+=\frac{2}{a}\int_0^a x\cdot\frac{1-\cos(bx)}{2}\,\mathrm dx
 =\frac{1}{a}\int_0^a x\,\mathrm dx-\frac{1}{a}\int_0^a x\cos(bx)\,\mathrm dx.
 \]
-<p>第一项是 \(a/2\)。第二项分部积分：\(\int x\cos(bx)\,\mathrm dx=x\sin(bx)/b+\cos(bx)/b^2\)。上下限 \(x=0\) 和 \(x=a\) 处 \(\sin(ba)=\sin(2\pi)=0\)，\(\cos\) 都是 1，两项相减为 0。所以</p>
+<p>第一项直接积：\(\int_0^a x\,\mathrm dx=[x^2/2]_0^a=a^2/2\)，再除以 \(a\) 得到 \(a/2\)。</p>
+<p>第二项用分部积分。设 \(u=x\)，\(\mathrm dv=\cos(bx)\,\mathrm dx\)。则 \(\mathrm du=\mathrm dx\)，\(v=\sin(bx)/b\)。</p>
 \[
-\bar x=\frac a2.
+\int x\cos(bx)\,\mathrm dx=uv-\int v\,\mathrm du
+=\frac{x\sin(bx)}{b}-\int\frac{\sin(bx)}{b}\,\mathrm dx
+=\frac{x\sin(bx)}{b}+\frac{\cos(bx)}{b^2}.
 \]
-<p>5. \(\overline{x^2}\)。</p>
+<p>（最后一步：\(\int\sin(bx)\,\mathrm dx=-\cos(bx)/b\)，前面再有一个负号，变成正的 \(\cos(bx)/b^2\)。）代入上下限。\(ba=2\pi\)，\(\sin(2\pi)=\sin 0=0\)，\(\cos(2\pi)=\cos 0=1\)：</p>
 \[
-\overline{x^2}=\frac{1}{a}\int_0^a x^2\,\mathrm dx-\frac{1}{a}\int_0^a x^2\cos(bx)\,\mathrm dx
-=\frac{a^2}{3}-\frac{I}{a}.
+\left[\frac{x\sin(bx)}{b}\right]_0^a=0,
+\qquad
+\left[\frac{\cos(bx)}{b^2}\right]_0^a=\frac{1}{b^2}-\frac{1}{b^2}=0.
 \]
-<p>对 \(I=\int_0^a x^2\cos(bx)\,\mathrm dx\) 分部两次。令 \(u=x^2\)，\(\mathrm dv=\cos(bx)\,\mathrm dx\)：</p>
+<p>第二项整个是 0。所以 \(\bar x=a/2-0=a/2\)。</p>
+<p>5. \(\overline{x^2}\)。同样拆开：</p>
 \[
-\int x^2\cos(bx)\,\mathrm dx=\frac{x^2\sin(bx)}{b}-\frac{2}{b}\int x\sin(bx)\,\mathrm dx,
+\overline{x^2}=\frac{1}{a}\int_0^a x^2\,\mathrm dx-\frac{1}{a}\int_0^a x^2\cos(bx)\,\mathrm dx.
 \]
+<p>第一项：\(\int_0^a x^2\,\mathrm dx=[x^3/3]_0^a=a^3/3\)，除以 \(a\) 得 \(a^2/3\)。记第二项的积分为 \(I=\int_0^a x^2\cos(bx)\,\mathrm dx\)，则 \(\overline{x^2}=a^2/3-I/a\)。</p>
+<p>对 \(I\) 分部两次。第一次设 \(u=x^2\)，\(\mathrm dv=\cos(bx)\,\mathrm dx\)，则 \(\mathrm du=2x\,\mathrm dx\)，\(v=\sin(bx)/b\)：</p>
 \[
-\int x\sin(bx)\,\mathrm dx=-\frac{x\cos(bx)}{b}+\frac{\sin(bx)}{b^2}.
+\int x^2\cos(bx)\,\mathrm dx
+=\frac{x^2\sin(bx)}{b}-\frac{2}{b}\int x\sin(bx)\,\mathrm dx.
 \]
-<p>合起来</p>
+<p>再积 \(\int x\sin(bx)\,\mathrm dx\)。设 \(u=x\)，\(\mathrm dv=\sin(bx)\,\mathrm dx\)，则 \(\mathrm du=\mathrm dx\)，\(v=-\cos(bx)/b\)：</p>
 \[
-\int x^2\cos(bx)\,\mathrm dx=\frac{x^2\sin(bx)}{b}+\frac{2x\cos(bx)}{b^2}-\frac{2\sin(bx)}{b^3}.
+\int x\sin(bx)\,\mathrm dx
+=-\frac{x\cos(bx)}{b}-\int\left(-\frac{\cos(bx)}{b}\right)\mathrm dx
+=-\frac{x\cos(bx)}{b}+\frac{1}{b}\cdot\frac{\sin(bx)}{b}
+=-\frac{x\cos(bx)}{b}+\frac{\sin(bx)}{b^2}.
 \]
-<p>在 \(0\) 和 \(a\) 上 \(\sin(ba)=\sin 0=0\)，\(\cos(ba)=\cos 0=1\)，所以 \(I=2a/b^2-0\)。\(b=2\pi/a\)，\(b^2=4\pi^2/a^2\)，</p>
+<p>代回去。减号乘上下面的负号，\(\cos\) 项变成正的：</p>
 \[
-I=\frac{2a\cdot a^2}{4\pi^2}=\frac{a^3}{2\pi^2},\qquad
+\int x^2\cos(bx)\,\mathrm dx
+=\frac{x^2\sin(bx)}{b}-\frac{2}{b}\left(-\frac{x\cos(bx)}{b}+\frac{\sin(bx)}{b^2}\right)
+=\frac{x^2\sin(bx)}{b}+\frac{2x\cos(bx)}{b^2}-\frac{2\sin(bx)}{b^3}.
+\]
+<p>从 0 积到 \(a\)。凡是乘 \(\sin(bx)\) 的项，在两端都是 \(\sin(2\pi)=\sin 0=0\)，消失。只剩</p>
+\[
+I=\left[\frac{2x\cos(bx)}{b^2}\right]_0^a
+=\frac{2a\cos(2\pi)}{b^2}-\frac{2\cdot 0\cdot\cos 0}{b^2}
+=\frac{2a}{b^2}.
+\]
+<p>\(b=2\pi/a\)，所以 \(b^2=4\pi^2/a^2\)，</p>
+\[
+I=\frac{2a}{4\pi^2/a^2}=2a\cdot\frac{a^2}{4\pi^2}=\frac{a^3}{2\pi^2},\qquad
 \frac{I}{a}=\frac{a^2}{2\pi^2}.
 \]
 \[
@@ -153,24 +194,46 @@ I=\frac{2a\cdot a^2}{4\pi^2}=\frac{a^3}{2\pi^2},\qquad
 <article class="ex" id="c2-g">
 <h3 data-lang="zh" lang="zh-CN"><span class="tag m">计算</span>高斯型 \(\psi=A\exp(-\frac12 a^2 x^2-\mathrm i\omega t/2)\)</h3><div data-lang="en" lang="en" class="english-essentials"><h3>Gaussian wave packet</h3><p>For $\psi=Ae^{-a^2x^2/2-i\omega t/2}$ with $a&gt;0$, use $\int e^{-a^2x^2}dx=\sqrt\pi/a$ to get $A=\sqrt{a/\sqrt\pi}$. The density is an even normalized Gaussian, $\langle x\rangle=0$, and $\langle x^2\rangle=1/(2a^2)$. The overall time phase does not alter the density.</p></div><div data-lang="zh" lang="zh-CN" class="original-working">
 <p><b>原题。</b>求归一化常数、概率密度，以及概率最大的位置。</p>
-<p><b>基础概念。</b>时间因子 \(e^{-\mathrm i\omega t/2}\) 的模是 1，不进概率密度。高斯函数 \(e^{-a^2 x^2}\) 的积分是已知结论。</p>
-<p><b>公式。</b>\(\displaystyle\int_{-\infty}^{\infty}e^{-a^2 x^2}\,\mathrm dx=\frac{\sqrt\pi}{a}\)（\(a&gt;0\)）。</p>
-<p><b>思路。</b>先丢掉纯相位，再让 \(\int|\psi|^2=1\)。峰的位置看指数：指数越接近 0，函数越大。</p>
+<p><b>基础概念。</b>复数 \(e^{\mathrm i\varphi}\) 的模是 1，它和自己的共轭相乘得 1，所以纯时间相位不进概率密度。高斯积分 \(\int_{-\infty}^{\infty}e^{-u^2}\,\mathrm du=\sqrt\pi\) 当作已知公式用，下面只把本题用换元化成它。</p>
+<p><b>公式。</b>\(a&gt;0\) 时，令 \(u=ax\)，则 \(\mathrm dx=\mathrm du/a\)，</p>
+\[
+\int_{-\infty}^{\infty}e^{-a^2 x^2}\,\mathrm dx
+=\int_{-\infty}^{\infty}e^{-u^2}\,\frac{\mathrm du}{a}
+=\frac{\sqrt\pi}{a}.
+\]
+<p>等价写法：\(\displaystyle\int_{-\infty}^{\infty}e^{-p x^2}\,\mathrm dx=\sqrt{\pi/p}\)（\(p&gt;0\)）。这里 \(p=a^2\)。</p>
+<p><b>思路。</b>先把 \(|\psi|^2\) 乘出来，确认时间因子消失，再让全直线积分等于 1。峰的位置看指数：指数越接近 0，函数越大。</p>
 <p><b>过程。</b></p>
+<p>把波函数拆成空间部分和相位：</p>
 \[
-|\psi|^2=|A|^2\exp(-a^2 x^2),
+\psi=A\exp\left(-\frac12 a^2 x^2\right)\exp\left(-\mathrm i\omega t/2\right).
+\]
+<p>共轭把 \(\mathrm i\) 换成 \(-\mathrm i\)，实指数不变（\(A\) 取正实数）：</p>
+\[
+\psi^{*}=A\exp\left(-\frac12 a^2 x^2\right)\exp\left(+\mathrm i\omega t/2\right).
+\]
+<p>乘起来时两个相位指数相加：\(-\mathrm i\omega t/2+\mathrm i\omega t/2=0\)，\(e^0=1\)。两个实指数相加：\(-\frac12 a^2 x^2-\frac12 a^2 x^2=-a^2 x^2\)。所以</p>
+\[
+|\psi|^2=\psi^{*}\psi=A^2\exp(-a^2 x^2).
+\]
+<p>归一化：</p>
+\[
+\int_{-\infty}^{\infty}|\psi|^2\,\mathrm dx
+=A^2\int_{-\infty}^{\infty}e^{-a^2 x^2}\,\mathrm dx
+=A^2\cdot\frac{\sqrt\pi}{a}=1.
 \]
 \[
-|A|^2\int_{-\infty}^{\infty}e^{-a^2 x^2}\,\mathrm dx=|A|^2\frac{\sqrt\pi}{a}=1,
+A^2=\frac{a}{\sqrt\pi}.
 \]
+<p>开方时注意：\(\sqrt{a/\sqrt\pi}=a^{1/2}/\pi^{1/4}\)。而 \((a^2/\pi)^{1/4}=(a^2)^{1/4}/\pi^{1/4}=a^{1/2}/\pi^{1/4}\)，两式相同。取正实数</p>
 \[
-|A|^2=\frac{a}{\sqrt\pi},\qquad A=\left(\frac{a^2}{\pi}\right)^{1/4}
+A=\left(\frac{a^2}{\pi}\right)^{1/4}.
 \]
-<p>（取正实数）。概率密度</p>
+<p>概率密度</p>
 \[
 w=\frac{a}{\sqrt\pi}\,e^{-a^2 x^2}.
 \]
-<p>\(e^{-a^2 x^2}\) 在 \(x=0\) 最大，所以概率最大在 \(x=0\)。\(a\) 越大，包越窄。</p>
+<p>\(e^{-a^2 x^2}\) 的指数 \(-a^2 x^2\le 0\)，只在 \(x=0\) 时等于 0，所以函数在 \(x=0\) 最大。\(a\) 越大，指数下降越快，包越窄。</p>
 <p><b>结果。</b>\(A=(a^2/\pi)^{1/4}\)；\(w=(a/\sqrt\pi)e^{-a^2 x^2}\)；最大在 \(x=0\)。</p>
 <p><b>路数。</b>含 \(e^{-\mathrm i\ldots t}\) 的归一化只看空间部分。高斯积分记住 \(\int e^{-p x^2}\mathrm dx=\sqrt{\pi/p}\)，这里 \(p=a^2\)。</p>
 </div><p class="topic-links"><a href="formulas.html#qmf-gaussian"><span data-lang="zh" lang="zh-CN">相关公式</span><span data-lang="en" lang="en">Related formula</span></a> · <a href="study.html"><span data-lang="zh" lang="zh-CN">练习与课件页码</span><span data-lang="en" lang="en">Practice &amp; slide pages</span></a></p></article>
@@ -209,15 +272,21 @@ w=\frac{a}{\sqrt\pi}\,e^{-a^2 x^2}.
 <p><b>过程。</b></p>
 <ol>
 <li>分区。\(x\le 0\) 或 \(x\ge a\) 时 \(\psi=0\)。粒子只在开区间里。</li>
-<li>阱内令 \(k=\sqrt{2mE}/\hbar\)，方程变成 \(\psi''+k^2\psi=0\)。通解 \(\psi=C\sin kx+D\cos kx\)。</li>
+<li>阱内把方程两边乘 \(-2m/\hbar^2\)：\(\psi''=-(2mE/\hbar^2)\psi\)。令 \(k^2=2mE/\hbar^2\)，即 \(k=\sqrt{2mE}/\hbar\)（\(E&gt;0\) 时 \(k\) 取正），方程变成 \(\psi''+k^2\psi=0\)。它的通解是振荡：\(\psi=C\sin kx+D\cos kx\)。直接代回去可以核对：\(\sin kx\) 求导两次得到 \(-k^2\sin kx\)。</li>
 <li>边界。\(\psi(0)=0\) 迫使 \(D=0\)。\(\psi(a)=0\) 迫使 \(\sin(ka)=0\)，故 \(ka=n\pi\)，\(n=1,2,3,\ldots\)（\(n=0\) 得到 \(\psi\equiv 0\)，不是态）。于是</li>
 </ol>
 \[
 k_n=\frac{n\pi}{a},\qquad E_n=\frac{\hbar^2 k_n^2}{2m}=\frac{n^2\pi^2\hbar^2}{2ma^2}.
 \]
 <ol start="4">
-<li>归一化 \(\int_0^a |C|^2\sin^2(n\pi x/a)\,\mathrm dx=|C|^2\cdot a/2=1\)，取正实数 \(C=\sqrt{2/a}\)。</li>
+<li>归一化。和上一题同一条倍角公式，\(n\) 换成任意正整数也一样：</li>
 </ol>
+\[
+\int_0^a\sin^2\frac{n\pi x}{a}\,\mathrm dx
+=\int_0^a\frac{1-\cos(2n\pi x/a)}{2}\,\mathrm dx
+=\frac12\left[x-\frac{a}{2n\pi}\sin\frac{2n\pi x}{a}\right]_0^a.
+\]
+<p>上限的正弦是 \(\sin(2n\pi)=0\)，下限的正弦是 \(\sin 0=0\)，所以积分严格等于 \(a/2\)，和 \(n\) 无关。于是 \(|C|^2\cdot a/2=1\)，取正实数 \(C=\sqrt{2/a}\)。</p>
 \[
 \psi_n(x)=\sqrt{\frac{2}{a}}\sin\frac{n\pi x}{a},\qquad 0\le x\le a.
 \]
@@ -232,17 +301,34 @@ k_n=\frac{n\pi}{a},\qquad E_n=\frac{\hbar^2 k_n^2}{2m}=\frac{n^2\pi^2\hbar^2}{2m
 <h3 data-lang="zh" lang="zh-CN"><span class="tag m">计算</span>\(\delta\) 函数练习 \(\displaystyle\int f(x)\,\delta(-2x+4)\,\mathrm dx\)</h3><div data-lang="en" lang="en" class="english-essentials"><h3>Delta-distribution integral</h3><p>Factor $-2x+4=-2(x-2)$. Scaling gives $\delta(-2(x-2))=\delta(x-2)/2$; sifting gives $f(2)/2$ when the root is inside the integration interval. Use the absolute value of the scale factor.</p></div><div data-lang="zh" lang="zh-CN" class="original-working">
 <p><b>原题。</b>计算这个积分。课件下一页没有单独答案框。</p>
 <p><b>基础概念。</b>\(\delta(x-x_0)\) 只在 \(x_0\) 处不为零，并且 \(\int f(x)\delta(x-x_0)\mathrm dx=f(x_0)\)。自变量被拉伸时，尖峰变窄，高度要补偿，所以有缩放性质。</p>
-<p><b>公式。</b>\(\delta(ax)=\delta(x)/|a|\)（\(a\neq 0\)）。更一般地 \(\delta(g(x))\) 在每个单重零点 \(x_i\) 贡献 \(f(x_i)/|g'(x_i)|\)。</p>
+<p><b>公式。</b>\(\delta(ax)=\delta(x)/|a|\)（\(a\neq 0\)）。更一般地，\(\delta(g(x))\) 在每个单重零点 \(x_i\) 贡献 \(f(x_i)/|g'(x_i)|\)。</p>
 <p><b>思路。</b>先把 \(-2x+4\) 收成“常数乘 \((x-\text{根})\)”，再用缩放性质。绝对值不要丢：这里系数是 \(-2\)，绝对值是 2。</p>
-<p><b>过程。</b></p>
+<p><b>过程。</b>先看缩放是怎么来的。算 \(\int_{-\infty}^{\infty} g(y)\,\delta(cy)\,\mathrm dy\)，\(c\neq 0\)。令 \(u=cy\)，则 \(y=u/c\)，\(\mathrm dy=\mathrm du/c\)。</p>
+<p>若 \(c&gt;0\)，上下限仍是 \(-\infty\) 到 \(+\infty\)：</p>
+\[
+\int g(y)\,\delta(cy)\,\mathrm dy
+=\int g(u/c)\,\delta(u)\,\frac{\mathrm du}{c}
+=\frac{g(0)}{c}=\frac{g(0)}{|c|}.
+\]
+<p>若 \(c&lt;0\)，\(y\) 从 \(-\infty\) 跑到 \(+\infty\) 时，\(u=cy\) 从 \(+\infty\) 跑到 \(-\infty\)。把积分限掉个头，多一个负号，而 \(1/c\) 本身是负的，负负得正：</p>
+\[
+\int_{+\infty}^{-\infty} g(u/c)\,\delta(u)\,\frac{\mathrm du}{c}
+=\int_{-\infty}^{+\infty} g(u/c)\,\delta(u)\,\frac{\mathrm du}{|c|}
+=\frac{g(0)}{|c|}.
+\]
+<p>和 \(\int g(y)\,\delta(y)\,\mathrm dy=g(0)\) 对比，就得到 \(\delta(cy)=\delta(y)/|c|\)。</p>
+<p>本题令 \(y=x-2\)。因为</p>
 \[
 -2x+4=-2(x-2),
 \]
+<p>这里的 \(c=-2\)，\(|c|=2\)，尖峰仍在 \(y=0\) 即 \(x=2\)：</p>
 \[
-\delta(-2x+4)=\delta\bigl(-2(x-2)\bigr)=\frac{\delta(x-2)}{|-2|}=\frac12\delta(x-2).
+\delta(-2x+4)=\delta\bigl(-2(x-2)\bigr)=\frac{\delta(x-2)}{2}.
 \]
 \[
-\int f(x)\,\delta(-2x+4)\,\mathrm dx=\frac12 f(2).
+\int f(x)\,\delta(-2x+4)\,\mathrm dx
+=\int f(x)\cdot\frac12\delta(x-2)\,\mathrm dx
+=\frac12 f(2).
 \]
 <p>若积分限不包括 \(x=2\)，结果是 0。课件默认积分穿过这个根。</p>
 <p><b>结果。</b>\(f(2)/2\)。不是 \(f(2)\)，也不是 \(f(-2)\)。</p>
@@ -285,19 +371,23 @@ u\nabla\cdot\mathbf r=9x\sin(yz).
 \]
 
 <p><b>例 3 原题。</b>设 \(\mathbf A=xz^3\mathbf i-2x^2 y\mathbf j+2yz^4\mathbf k\)，求点 \(M(1,2,1)\) 的 \(\nabla\times\mathbf A\)。课件印出的最后一行和这个 \(\mathbf A\) 对不太齐，数值不要背课件上那一个矢量，按这个 \(\mathbf A\) 重算。</p>
-<p><b>过程。</b>分量公式</p>
+<p><b>过程。</b>三个分量是“对另一个变量求导再相减”。记 \(A_x=xz^3\)，\(A_y=-2x^2 y\)，\(A_z=2yz^4\)。</p>
 \[
-(\nabla\times\mathbf A)_x=\partial_y A_z-\partial_z A_y,\quad
-(\nabla\times\mathbf A)_y=\partial_z A_x-\partial_x A_z,\quad
-(\nabla\times\mathbf A)_z=\partial_x A_y-\partial_y A_x.
+(\nabla\times\mathbf A)_x=\frac{\partial A_z}{\partial y}-\frac{\partial A_y}{\partial z}.
 \]
-<p>\(A_x=xz^3\)，\(A_y=-2x^2 y\)，\(A_z=2yz^4\)。</p>
+<p>\(A_z=2yz^4\) 对 \(y\) 求导：\(z^4\) 当常数，得到 \(2z^4\)。\(A_y=-2x^2 y\) 不含 \(z\)，对 \(z\) 求导是 0。所以 \(x\) 分量是 \(2z^4-0=2z^4\)。</p>
 \[
-(\nabla\times\mathbf A)_x=2z^4,\qquad
-(\nabla\times\mathbf A)_y=3xz^2,\qquad
-(\nabla\times\mathbf A)_z=-4xy.
+(\nabla\times\mathbf A)_y=\frac{\partial A_x}{\partial z}-\frac{\partial A_z}{\partial x}.
 \]
-<p>代入 \(M(1,2,1)\)：\(2\mathbf i+3\mathbf j-8\mathbf k\)。</p>
+<p>\(A_x=xz^3\) 对 \(z\) 求导：\(x\) 当常数，\(z^3\) 的导数是 \(3z^2\)，得到 \(3xz^2\)。\(A_z=2yz^4\) 不含 \(x\)，对 \(x\) 求导是 0。所以 \(y\) 分量是 \(3xz^2\)。</p>
+\[
+(\nabla\times\mathbf A)_z=\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}.
+\]
+<p>\(A_y=-2x^2 y\) 对 \(x\) 求导：\(y\) 当常数，\(x^2\) 的导数是 \(2x\)，得到 \(-4xy\)。\(A_x=xz^3\) 不含 \(y\)，对 \(y\) 求导是 0。所以 \(z\) 分量是 \(-4xy\)。</p>
+\[
+\nabla\times\mathbf A=2z^4\,\mathbf i+3xz^2\,\mathbf j-4xy\,\mathbf k.
+\]
+<p>代入 \(M(1,2,1)\)：\(2(1)^4=2\)，\(3\cdot 1\cdot 1^2=3\)，\(-4\cdot 1\cdot 2=-8\)。结果是 \(2\mathbf i+3\mathbf j-8\mathbf k\)。</p>
 
 <p><b>例 4 原题。</b>\(\mathbf a\) 为常矢量，证明 \(\displaystyle\oint(\mathrm d\mathbf l\times\mathbf a)\cdot\mathbf r=2\int_S\mathbf a\cdot\mathrm d\mathbf S\)。</p>
 <p><b>过程。</b>三重积 \((\mathrm d\mathbf l\times\mathbf a)\cdot\mathbf r=(\mathbf a\times\mathbf r)\cdot\mathrm d\mathbf l\)。于是环量是矢量场 \(\mathbf F=\mathbf a\times\mathbf r\) 的环量。斯托克斯定理把它换成 \(\int(\nabla\times\mathbf F)\cdot\mathrm d\mathbf S\)。常矢量 \(\mathbf a\) 满足</p>
@@ -314,7 +404,15 @@ u\nabla\cdot\mathbf r=9x\sin(yz).
 <p>两边积分即得。</p>
 
 <p><b>例 6 原题。</b>格林第二公式 \(\displaystyle\int(u\nabla^2 v-v\nabla^2 u)\,\mathrm dV=\oint(u\nabla v-v\nabla u)\cdot\mathrm d\mathbf S\)。</p>
-<p><b>过程。</b>例 5 对 \((u,v)\) 写一次，再对 \((v,u)\) 写一次，两式相减，\(\nabla u\cdot\nabla v\) 抵消。</p>
+<p><b>过程。</b>例 5 对 \((u,v)\) 写一次：</p>
+\[
+\int(u\nabla^2 v+\nabla u\cdot\nabla v)\,\mathrm dV=\oint u\nabla v\cdot\mathrm d\mathbf S.
+\]
+<p>再把字母 \(u\) 和 \(v\) 对调，写一次：</p>
+\[
+\int(v\nabla^2 u+\nabla v\cdot\nabla u)\,\mathrm dV=\oint v\nabla u\cdot\mathrm d\mathbf S.
+\]
+<p>两式相减。\(\nabla u\cdot\nabla v\) 和 \(\nabla v\cdot\nabla u\) 是同一个标量，互相抵消，左边剩下 \(\int(u\nabla^2 v-v\nabla^2 u)\,\mathrm dV\)，右边剩下 \(\oint(u\nabla v-v\nabla u)\cdot\mathrm d\mathbf S\)。</p>
 
 <p><b>例 7 原题。</b>\(\nabla\times(u\mathbf A)=u\nabla\times\mathbf A+\nabla u\times\mathbf A\)。</p>
 <p><b>过程。</b>旋度对乘积用求导法则：对 \(u\) 求导时 \(\mathbf A\) 当常数，得到 \(\nabla u\times\mathbf A\)；对 \(\mathbf A\) 求导时 \(u\) 当常数，得到 \(u\nabla\times\mathbf A\)。</p>
@@ -366,22 +464,38 @@ u\nabla\cdot\mathbf r=9x\sin(yz).
 \[
 [\hat O,[\hat U,\hat E]]+[\hat U,[\hat E,\hat O]]+[\hat E,[\hat O,\hat U]]=0.
 \]
-<p><b>过程：\([\hat x,\hat p_x]\)。</b>\(\hat p_x=-\mathrm i\hbar\partial_x\)。对任意 \(\psi\)，</p>
+<p><b>过程：\([\hat x,\hat p_x]\)。</b>\(\hat p_x=-\mathrm i\hbar\partial_x\)。对任意 \(\psi\)，先做动量再乘 \(x\)：</p>
 \[
-\hat x\hat p_x\psi=-\mathrm i\hbar\, x\psi',\qquad
-\hat p_x\hat x\psi=-\mathrm i\hbar\partial_x(x\psi)=-\mathrm i\hbar\psi-\mathrm i\hbar\, x\psi'.
+\hat x\hat p_x\psi=x\cdot(-\mathrm i\hbar\psi')=-\mathrm i\hbar\, x\psi'.
 \]
+<p>先乘 \(x\) 再做动量。乘积的导数是 \((x\psi)'=\psi+x\psi'\)：</p>
 \[
-[\hat x,\hat p_x]\psi=\mathrm i\hbar\psi.
+\hat p_x(x\psi)=-\mathrm i\hbar(\psi+x\psi')=-\mathrm i\hbar\psi-\mathrm i\hbar\, x\psi'.
 \]
+<p>对易子是前一个减后一个。减一个负数等于加：</p>
+\[
+[\hat x,\hat p_x]\psi
+=(-\mathrm i\hbar\, x\psi')-(-\mathrm i\hbar\psi-\mathrm i\hbar\, x\psi')
+=-\mathrm i\hbar\, x\psi'+\mathrm i\hbar\psi+\mathrm i\hbar\, x\psi'
+=\mathrm i\hbar\psi.
+\]
+<p>\(x\psi'\) 两项抵消。</p>
 <p>\(\psi\) 任意，所以 \([\hat x,\hat p_x]=\mathrm i\hbar\)。同理 \([\hat y,\hat p_y]=\mathrm i\hbar\)，\([\hat z,\hat p_z]=\mathrm i\hbar\)。不同方向 \([\hat x,\hat p_y]=0\)。</p>
-<p><b>过程：\([\hat p_x,f(x)]\)。</b></p>
+<p><b>过程：\([\hat p_x,f(x)]\)。</b>先让动量作用在乘积 \(f\psi\) 上。乘法求导：\((f\psi)'=f'\psi+f\psi'\)，</p>
 \[
-\hat p_x(f\psi)=-\mathrm i\hbar(f'\psi+f\psi'),\qquad f\hat p_x\psi=-\mathrm i\hbar f\psi'.
+\hat p_x(f\psi)=-\mathrm i\hbar(f'\psi+f\psi').
 \]
+<p>反过来先做动量再乘 \(f\)：\(f\) 是普通函数，可以穿过它，</p>
 \[
-[\hat p_x,f]\psi=-\mathrm i\hbar f'\psi,\qquad [\hat p_x,f(x)]=-\mathrm i\hbar\frac{\mathrm df}{\mathrm dx}.
+f\,\hat p_x\psi=f\cdot(-\mathrm i\hbar\psi')=-\mathrm i\hbar f\psi'.
 \]
+<p>相减时 \(f\psi'\) 抵消：</p>
+\[
+[\hat p_x,f]\psi
+=-\mathrm i\hbar f'\psi-\mathrm i\hbar f\psi'-(-\mathrm i\hbar f\psi')
+=-\mathrm i\hbar f'\psi.
+\]
+<p>所以 \([\hat p_x,f(x)]=-\mathrm i\hbar\,\mathrm df/\mathrm dx\)。它是“乘上 \(-\mathrm i\hbar f'\)”这个运算，不是一个普通数。</p>
 <p><b>过程：\([\mathrm d/\mathrm dx,\,x]\)。</b></p>
 \[
 \frac{\mathrm d}{\mathrm dx}(x\psi)-\,x\frac{\mathrm d\psi}{\mathrm dx}=\psi.
@@ -396,15 +510,40 @@ u\nabla\cdot\mathbf r=9x\sin(yz).
 <h3 data-lang="zh" lang="zh-CN"><span class="tag c">概念</span><span class="tag i">推导</span>厄米性练习</h3><div data-lang="en" lang="en" class="english-essentials"><h3>Hermiticity</h3><p>Check $\int\psi^*F\phi=\int(F\psi)^*\phi$ on a stated domain. Integration by parts gives $(\partial_x)^\dagger=-\partial_x$ if boundary terms vanish; $p_x=-i\hbar\partial_x$ is Hermitian under suitable conditions. For Hermitian $A,B$, $(AB)^\dagger=BA$; the product is Hermitian when the operators commute, subject to compatible domains.</p></div><div data-lang="zh" lang="zh-CN" class="original-working">
 <p><b>原题。</b>判断 \(\hat x\)、\(\hat p\)、\(\hat{\mathbf L}\)、\(\hat H\) 以及 \(\mathrm d/\mathrm dx\) 是不是厄米算符。并证明 \((\mathrm d/\mathrm dx)^{+}=-\mathrm d/\mathrm dx\)，而 \(\hat p_x\) 是厄米的。</p>
 <p><b>基础概念。</b>厄米共轭由 \(\int u^{*}(\hat F v)=\int(\hat F^{+}u)^{*}v\) 定义。\(\hat F^{+}=\hat F\) 叫厄米。测量值和平均值必须是实数，所以力学量用厄米算符。两个厄米算符相乘，一般要它们对易，乘积才仍厄米。线性是另一件事：\(\hat F(c_1u_1+c_2u_2)=c_1\hat Fu_1+c_2\hat Fu_2\)。开方和取复共轭不是线性的。态叠加要求力学量算符线性。</p>
-<p><b>公式。</b>分部积分，波函数在无穷远或墙上为 0 时边界项消失：</p>
-\[
-\int u^{*}\frac{\mathrm dv}{\mathrm dx}\,\mathrm dx=-\int\frac{\mathrm du^{*}}{\mathrm dx}v\,\mathrm dx.
-\]
+<p><b>公式。</b>分部积分就是 \(\int U\,\mathrm dV=UV-\int V\,\mathrm dU\)。下面用它把求导从右边的函数挪到左边。</p>
 <p><b>过程。</b></p>
 <ol>
-<li>\(\hat x\) 是乘法，而且 \(x\) 是实数。\(\int u^{*}(xv)=\int (xu)^{*}v\)，所以 \(\hat x^{+}=\hat x\)。</li>
-<li>\(\mathrm d/\mathrm dx\)：上面的分部积分右边多一个负号，又没有虚数把它再变回来，所以 \((\mathrm d/\mathrm dx)^{+}=-\mathrm d/\mathrm dx\neq\mathrm d/\mathrm dx\)，不是厄米。</li>
-<li>\(\hat p_x=-\mathrm i\hbar\mathrm d/\mathrm dx\)。厄米共轭先对系数取复共轭、再对求导取转置：\((-\mathrm i)^{*}=+\mathrm i\)，转置再给一个负号，\(+\mathrm i\times(-1)=-\mathrm i\)。系数回到 \(-\mathrm i\hbar\)，所以 \(\hat p_x^{+}=\hat p_x\)。同理 \(\mathrm i\mathrm d/\mathrm dx\) 也是厄米的（虚数单位和那个负号一起配合）。单独的 \(\partial/\partial x\) 不是。</li>
+<li>\(\hat x\) 是乘法，而且 \(x\) 是实数。\(x\) 可以随便穿过积分，也等于自己的共轭：\(\int u^{*}(xv)\,\mathrm dx=\int (xu)^{*}v\,\mathrm dx\)。所以 \(\hat x^{+}=\hat x\)。</li>
+<li>\(\mathrm d/\mathrm dx\)。要算 \(\int u^{*}(\mathrm dv/\mathrm dx)\,\mathrm dx\)。设 \(U=u^{*}\)，\(\mathrm dV=v'\,\mathrm dx\)，则 \(V=v\)，\(\mathrm dU=(u^{*})'\,\mathrm dx\)。</li>
+</ol>
+\[
+\int u^{*}v'\,\mathrm dx
+=\bigl[u^{*}v\bigr]_{\text{边界}}-\int v\,(u^{*})'\,\mathrm dx.
+\]
+<p>波函数在无穷远或墙上为 0，边界上的 \(u^{*}v\) 是 0。共轭和求导可以交换，\((u^{*})'=(u')^{*}\)，所以</p>
+\[
+\int u^{*}\frac{\mathrm dv}{\mathrm dx}\,\mathrm dx
+=-\int\left(\frac{\mathrm du}{\mathrm dx}\right)^{*}v\,\mathrm dx.
+\]
+<p>厄米条件希望右边是 \(\int (u')^{*}v\,\mathrm dx\)，这里多出一个负号。因此 \((\mathrm d/\mathrm dx)^{+}=-\mathrm d/\mathrm dx\)，它不等于自己，不是厄米的。</p>
+<ol start="3">
+<li>\(\hat p_x=-\mathrm i\hbar\,\mathrm d/\mathrm dx\)。把上面的积分乘上系数 \(-\mathrm i\hbar\)：</li>
+</ol>
+\[
+\int u^{*}(\hat p_x v)\,\mathrm dx
+=\int u^{*}(-\mathrm i\hbar\, v')\,\mathrm dx
+=-\mathrm i\hbar\left(-\int (u')^{*}v\,\mathrm dx\right)
+=\mathrm i\hbar\int (u')^{*}v\,\mathrm dx.
+\]
+<p>另一边按定义应是 \(\int(\hat p_x u)^{*}v\,\mathrm dx\)。先算共轭：\((-\mathrm i)^{*}=+\mathrm i\)，所以</p>
+\[
+(\hat p_x u)^{*}=(-\mathrm i\hbar\, u')^{*}=+\mathrm i\hbar\,(u')^{*},
+\]
+\[
+\int(\hat p_x u)^{*}v\,\mathrm dx=\mathrm i\hbar\int (u')^{*}v\,\mathrm dx.
+\]
+<p>左右相等，\(\hat p_x^{+}=\hat p_x\)。负号和 \(\mathrm i\) 一起把分部积分留下的那个负号抵消了。单独的 \(\partial/\partial x\) 没有这套系数，所以不是厄米的。</p>
+<ol start="4">
 <li>\(\hat{\mathbf L}=\mathbf r\times\hat{\mathbf p}\) 由厄米的 \(\mathbf r\)、\(\hat{\mathbf p}\) 按叉乘组成，三个分量都厄米。\(\hat H=\hat p^2/(2m)+V(x)\) 在 \(V\) 为实函数时厄米：\(\hat p^2=(\hat p)^{+}\hat p\) 厄米，实势能是乘法厄米算符。</li>
 </ol>
 <p><b>结果。</b>力学量算符 \(\hat x,\hat p,\hat L,\hat H\) 厄米；\(\mathrm d/\mathrm dx\) 不是；\([\mathrm d/\mathrm dx,\,x]=1\)。</p>
@@ -476,18 +615,45 @@ E=\frac{p^2}{2\mu}+\frac12\mu\omega^2 x^2,\qquad
 \[
 \overline E=\frac{(\Delta p)^2}{2\mu}+\frac12\mu\omega^2(\Delta x)^2.
 \]
-<p>取等号 \((\Delta p)^2=\hbar^2/(4(\Delta x)^2)\)，令 \(y=(\Delta x)^2&gt;0\)：</p>
+<p>取等号 \((\Delta p)^2=\hbar^2\big/\bigl(4(\Delta x)^2\bigr)\)。令 \(y=(\Delta x)^2&gt;0\)，则 \((\Delta p)^2=\hbar^2/(4y)\)，动能那一项是</p>
+\[
+\frac{(\Delta p)^2}{2\mu}=\frac{\hbar^2}{4y}\cdot\frac{1}{2\mu}=\frac{\hbar^2}{8\mu y}.
+\]
 \[
 E(y)=\frac{\hbar^2}{8\mu y}+\frac12\mu\omega^2 y.
 \]
+<p>对 \(y\) 求导。\(1/y\) 的导数是 \(-1/y^2\)，第二项里 \(y\) 的系数是常数：</p>
 \[
-\frac{\mathrm dE}{\mathrm dy}=-\frac{\hbar^2}{8\mu y^2}+\frac12\mu\omega^2=0
-\implies y=\frac{\hbar}{2\mu\omega}.
+\frac{\mathrm dE}{\mathrm dy}=-\frac{\hbar^2}{8\mu y^2}+\frac12\mu\omega^2.
 \]
-<p>代回：</p>
+<p>令导数为 0，把第一项移到左边：</p>
 \[
-E_{\min}=\frac{\hbar^2}{8\mu\cdot\hbar/(2\mu\omega)}+\frac12\mu\omega^2\cdot\frac{\hbar}{2\mu\omega}
-=\frac{\hbar\omega}{4}+\frac{\hbar\omega}{4}=\frac12\hbar\omega.
+\frac12\mu\omega^2=\frac{\hbar^2}{8\mu y^2}.
+\]
+<p>两边乘 \(8\mu y^2\)：</p>
+\[
+\frac12\mu\omega^2\cdot 8\mu y^2=\hbar^2,
+\qquad 4\mu^2\omega^2 y^2=\hbar^2,
+\qquad y^2=\frac{\hbar^2}{4\mu^2\omega^2}.
+\]
+<p>\(y&gt;0\)，开方只取正根：\(y=\hbar/(2\mu\omega)\)。</p>
+<p>代回能量。第一项把分母里的 \(y\) 倒过来：</p>
+\[
+\frac{\hbar^2}{8\mu y}
+=\frac{\hbar^2}{8\mu}\cdot\frac{2\mu\omega}{\hbar}
+=\frac{\hbar^2\cdot 2\mu\omega}{8\mu\hbar}
+=\frac{2}{8}\hbar\omega
+=\frac14\hbar\omega.
+\]
+<p>第二项：</p>
+\[
+\frac12\mu\omega^2\cdot\frac{\hbar}{2\mu\omega}
+=\frac12\cdot\frac{1}{2}\hbar\omega
+=\frac14\hbar\omega.
+\]
+<p>两项相加：</p>
+\[
+E_{\min}=\frac14\hbar\omega+\frac14\hbar\omega=\frac12\hbar\omega.
 \]
 <p><b>结果。</b>\(\overline E_{\min}=\frac12\hbar\omega\)。质量用 \(\mu\) 或 \(m\)，结果一样。</p>
 <p><b>路数。</b>零点能估计四步：平均值里令 \(\bar x=\bar p=0\) → 不确定关系取等号 → 对 \((\Delta x)^2\) 求导 → 代回得到 \(\frac12\hbar\omega\)。不要把能级间隔 \(\hbar\omega\) 当成零点能。</p>
