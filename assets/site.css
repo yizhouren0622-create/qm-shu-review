@@ -105,6 +105,12 @@ a { color: var(--accent); }
   cursor: pointer;
 }
 
+/* Examples page only: a small step up from the 16px root, including formulas. */
+html:has(main.page) {
+  font-size: 18px;
+  --nav-h: 58px;
+}
+
 .page { max-width: 860px; margin: 0 auto; padding: 18px 16px 48px; }
 .page h1 { font-size: clamp(1.3rem, 4vw, 1.7rem); line-height: 1.35; margin: 0.2em 0 0.4em; }
 .page h2 { font-size: 1.2rem; margin: 1.4em 0 0.5em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
