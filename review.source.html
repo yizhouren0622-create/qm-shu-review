@@ -271,7 +271,7 @@
     <li>$\overline{x^2}=a^2/3-a^2/(2\pi^2)$。这一条是积分结果，考试若给出 $\psi$，按 $\int x^2|\psi|^2\mathrm dx$ 去算。</li>
   </ol>
 </div>
-<p>高斯型 $\psi=A\exp(-\frac12 a^2 x^2-\mathrm i\omega t/2)$：归一化 $A=(a^2/\pi)^{1/4}$，概率在 $x=0$ 最大。时间只出现在相因子里，所以概率分布不随时间变。</p>
+<p>高斯型 $\psi=Ae^{-\frac12 a^2 x^2-\mathrm i\omega t/2}$：归一化 $A=(a^2/\pi)^{1/4}$，概率在 $x=0$ 最大。时间只出现在相因子里，所以概率分布不随时间变。</p>
 <p>自由粒子平面波 $|\psi|^2$ 是常数，全空间积分是无限大，不能按上面的办法归一。改用 $\delta$ 函数归一以后，一维的系数是 $A=(2\pi\hbar)^{-1/2}$。考试若只问“为什么不能普通归一”，答到积分发散即可。</p>
 <div class="box warn">
   双缝两缝都开时，概率不是“只开上缝的概率 + 只开下缝的概率”。要先把两个波函数相加，再平方。多出来的交叉项就是明暗条纹。单次测量也不会得到“两个结果的加权平均”，那是很多次的平均值。
@@ -288,7 +288,7 @@
 <p>这个方程要满足两件事，否则和前面冲突：它是线性的，这样叠加起来的态也是解；系数里不能再出现某一个态才有的 $E$ 或 $p$，否则别的态用不了。</p>
 <p>建立的路子是凑，然后当成<strong>假设</strong>：</p>
 <ol class="steps">
-  <li>自由粒子写成复数平面波 $\Psi=A\exp[\mathrm i(\mathbf p\cdot\mathbf r-Et)/\hbar]$。</li>
+  <li>自由粒子写成复数平面波 $\Psi=Ae^{\mathrm i(\mathbf p\cdot\mathbf r-Et)/\hbar}$。</li>
   <li>对时间求导，得到 $\mathrm i\hbar\,\partial\Psi/\partial t=E\Psi$。</li>
   <li>对空间求两次导，得到 $-\hbar^2\nabla^2\Psi=p^2\Psi$。</li>
   <li>自由粒子 $E=p^2/(2m)$。用它把 $E$ 和 $p$ 换成对波函数的运算，方程里就不再出现 $E$ 和 $p$。</li>
@@ -372,7 +372,7 @@
   <p>不是。盒子的基态是 $\pi^2\hbar^2/(2mL^2)$。$\frac12\hbar\omega$ 只属于这种抛物线势能。</p>
 </details>
 
-</div><p class="topic-links"><a href="formulas.html#qmf-zero-point"><span data-lang="zh" lang="zh-CN">相关公式与例题</span><span data-lang="en" lang="en">Related formula &amp; example</span></a> · <a href="study.html"><span data-lang="zh" lang="zh-CN">课件页码与练习</span><span data-lang="en" lang="en">Slide pages &amp; practice</span></a></p><h2 id="l10"><span data-lang="zh" lang="zh-CN">10. 能量不够，仍可能出现在墙的另一边</span><span data-lang="en" lang="en">Tunneling · supplementary reading</span></h2><div class="scope-note"><div data-lang="zh" lang="zh-CN">拓展阅读：未在提供的三份课件中定位到本节势垒公式。</div><div data-lang="en" lang="en">Supplementary: these barrier formulas were not located in the supplied slides.</div></div><div data-lang="en" lang="en" class="english-essentials"><p>This section extends beyond the supplied slides. For an opaque rectangular barrier with $E&lt;U_0$, transmission has an exponential factor $\exp[-2a\sqrt{2m(U_0-E)}/\hbar]$. Larger mass, height or width suppresses transmission. A decaying amplitude is not a classical particle with negative kinetic energy.</p></div><figure class="lesson-figure"><img class="fig" src="fig/09_barrier.png" alt="势垒和透射波">
+</div><p class="topic-links"><a href="formulas.html#qmf-zero-point"><span data-lang="zh" lang="zh-CN">相关公式与例题</span><span data-lang="en" lang="en">Related formula &amp; example</span></a> · <a href="study.html"><span data-lang="zh" lang="zh-CN">课件页码与练习</span><span data-lang="en" lang="en">Slide pages &amp; practice</span></a></p><h2 id="l10"><span data-lang="zh" lang="zh-CN">10. 能量不够，仍可能出现在墙的另一边</span><span data-lang="en" lang="en">Tunneling · supplementary reading</span></h2><div class="scope-note"><div data-lang="zh" lang="zh-CN">拓展阅读：未在提供的三份课件中定位到本节势垒公式。</div><div data-lang="en" lang="en">Supplementary: these barrier formulas were not located in the supplied slides.</div></div><div data-lang="en" lang="en" class="english-essentials"><p>This section extends beyond the supplied slides. For an opaque rectangular barrier with $E&lt;U_0$, transmission has an exponential factor $e^{-2a\sqrt{2m(U_0-E)}/\hbar}$. Larger mass, height or width suppresses transmission. A decaying amplitude is not a classical particle with negative kinetic energy.</p></div><figure class="lesson-figure"><img class="fig" src="fig/09_barrier.png" alt="势垒和透射波">
 <figcaption class="cap"><p class="cap" data-lang="zh" lang="zh-CN">左边的波有进有回，所以幅度忽大忽小。进垒以后包络很快下降。右边还剩一小段，所以对面找得到粒子。纵轴把波形画在能量线附近，不是把波函数的数值当成能量。</p>
 <p data-lang="en" lang="en">Illustration: Tunneling · supplementary reading. See the concept summary above for assumptions.</p></figcaption></figure><div data-lang="zh" lang="zh-CN" class="original-lesson"><div class="box goal"><strong>建议掌握：</strong> 说出 $E$ 低于势垒时透射概率仍可以不是 0；说明这不是“动能变成负的”。长公式当字典查，知道指数里垒越高、越宽、粒子越重，透过越少。</div>
 <div class="box say">
@@ -380,7 +380,7 @@
 </div>
 <p>方势垒：中间一段高度 $U_0$、宽度 $a$，两边势能是 0。$E&gt;U_0$ 时也有反射，透射概率还随宽度振荡。本节重点解释 $E&lt;U_0$ 的物理图像，属于拓展阅读。</p>
 <p>垒又高又宽时，透射系数近似成</p>
-<div class="formula">$$D\approx D_0\exp\left[-\frac{2a}{\hbar}\sqrt{2m(U_0-E)}\right].$$</div>
+<div class="formula">$$D\approx D_0e^{-\frac{2a}{\hbar}\sqrt{2m(U_0-E)}}.$$</div>
 <p>$D_0$ 是数量级为 1 的数。指数里那一截越大，$D$ 越小。电子、垒高几个电子伏、宽度 1 nm 时，透过还明显；宽到 10 nm 就极小。所以宏观物体看不到这件事。</p>
 <p>形状不规则的垒，把指数里的 $a\sqrt{U_0-E}$ 换成积分 $\int\sqrt{2m(U-E)}\,\mathrm dx$。会用这个指数即可。</p>
 <div class="box warn">

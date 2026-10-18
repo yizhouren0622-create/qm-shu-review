@@ -151,14 +151,14 @@ I=\frac{2a\cdot a^2}{4\pi^2}=\frac{a^3}{2\pi^2},\qquad
 </div><p class="topic-links"><a href="formulas.html#qmf-normalization"><span data-lang="zh" lang="zh-CN">相关公式</span><span data-lang="en" lang="en">Related formula</span></a> · <a href="study.html"><span data-lang="zh" lang="zh-CN">练习与课件页码</span><span data-lang="en" lang="en">Practice &amp; slide pages</span></a></p></article>
 
 <article class="ex" id="c2-g">
-<h3 data-lang="zh" lang="zh-CN"><span class="tag m">计算</span>高斯型 \(\psi=A\exp(-\frac12 a^2 x^2-\mathrm i\omega t/2)\)</h3><div data-lang="en" lang="en" class="english-essentials"><h3>Gaussian wave packet</h3><p>For $\psi=Ae^{-a^2x^2/2-i\omega t/2}$ with $a&gt;0$, use $\int e^{-a^2x^2}dx=\sqrt\pi/a$ to get $A=\sqrt{a/\sqrt\pi}$. The density is an even normalized Gaussian, $\langle x\rangle=0$, and $\langle x^2\rangle=1/(2a^2)$. The overall time phase does not alter the density.</p></div><div data-lang="zh" lang="zh-CN" class="original-working">
+<h3 data-lang="zh" lang="zh-CN"><span class="tag m">计算</span>高斯型 \(\psi=Ae^{-\frac12 a^2 x^2-\mathrm i\omega t/2}\)</h3><div data-lang="en" lang="en" class="english-essentials"><h3>Gaussian wave packet</h3><p>For $\psi=Ae^{-a^2x^2/2-i\omega t/2}$ with $a&gt;0$, use $\int e^{-a^2x^2}dx=\sqrt\pi/a$ to get $A=\sqrt{a/\sqrt\pi}$. The density is an even normalized Gaussian, $\langle x\rangle=0$, and $\langle x^2\rangle=1/(2a^2)$. The overall time phase does not alter the density.</p></div><div data-lang="zh" lang="zh-CN" class="original-working">
 <p><b>原题。</b>求归一化常数、概率密度，以及概率最大的位置。</p>
 <p><b>基础概念。</b>时间因子 \(e^{-\mathrm i\omega t/2}\) 的模是 1，不进概率密度。高斯函数 \(e^{-a^2 x^2}\) 的积分是已知结论。</p>
 <p><b>公式。</b>\(\displaystyle\int_{-\infty}^{\infty}e^{-a^2 x^2}\,\mathrm dx=\frac{\sqrt\pi}{a}\)（\(a&gt;0\)）。</p>
 <p><b>思路。</b>先丢掉纯相位，再让 \(\int|\psi|^2=1\)。峰的位置看指数：指数越接近 0，函数越大。</p>
 <p><b>过程。</b></p>
 \[
-|\psi|^2=|A|^2\exp(-a^2 x^2),
+|\psi|^2=|A|^2e^{-a^2 x^2},
 \]
 \[
 |A|^2\int_{-\infty}^{\infty}e^{-a^2 x^2}\,\mathrm dx=|A|^2\frac{\sqrt\pi}{a}=1,
