@@ -28,7 +28,7 @@
   }
   for (const b of document.querySelectorAll('[data-print]')) b.addEventListener('click',() => {
     restorePrint();
-    printState = [...document.querySelectorAll('.reveal')].map(d => [d,d.open]);
+    printState = [...document.querySelectorAll('.reveal,.source-details')].map(d => [d,d.open]);
     const solutions = b.dataset.print === 'solutions';
     document.body.classList.toggle('print-solutions',solutions);
     for (const [d] of printState) d.open = solutions;

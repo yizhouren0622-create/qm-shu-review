@@ -1,0 +1,1423 @@
+{
+  "past": [
+    {
+      "section": 1,
+      "local": 1,
+      "title": {
+        "zh": "实验与波粒二象性",
+        "en": "Experiments and wave–particle duality"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>Compton 效应证实了光具有（　　　）、Davisson 和 Germer 的实验证实了电子具有（　　　）。</p>",
+        "en": "<p>The Compton effect confirms the (　　　) of light; the Davisson–Germer experiment confirms the (　　　) of electrons.</p>"
+      },
+      "hint": {
+        "zh": "<p>区分“光子碰撞中交换能量和动量”与“晶体衍射”。</p>",
+        "en": "<p>Distinguish photon collision kinematics from diffraction by a crystal.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>粒子性；波动性。</p><h4>解析</h4><ol><li>康普顿效应可按光子与电子碰撞处理，光子携带 $E=h\\nu$、$p=h/\\lambda$；这体现光的粒子性。</li><li>Davisson–Germer 实验中电子束经晶体散射形成衍射极大，验证电子的波动性及 $\\lambda=h/p$。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不要把两个实验的证据方向颠倒。实验分别突出某一方面，不表示光或电子只具有这一种性质。</p>",
+        "en": "<h4>Exam answer</h4><p>Particle character; wave character.</p><h4>Working</h4><ol><li>Compton scattering is described using photon energy $E=h\\nu$ and momentum $p=h/\\lambda$ exchanged with an electron, demonstrating the particle aspect of light.</li><li>Electron diffraction from a crystal in Davisson–Germer verifies the wave aspect and $\\lambda=h/p$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The two experiments emphasize different aspects; neither says the object has only that aspect.</p>"
+      },
+      "sources": [
+        "matter",
+        "photon",
+        "book-light"
+      ],
+      "formula": "de-broglie",
+      "origin": "一、1 · PDF 1",
+      "n": 1
+    },
+    {
+      "section": 1,
+      "local": 2,
+      "title": {
+        "zh": "波函数标准条件",
+        "en": "Wave-function regularity"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>波函数应满足的标准条件是（　　　）、（　　　）、（　　　）。</p>",
+        "en": "<p>The standard regularity conditions for a wave function are (　　　), (　　　), and (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>按课件的三个性质回答，不是写概率积分。</p>",
+        "en": "<p>Give the three regularity properties in the slides, rather than a probability integral.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>连续性、有限性、单值性（顺序可调）。</p><h4>解析</h4><ol><li>课件把这三个性质称为波函数的“标准化条件”：同一位置的波函数取值应唯一，在通常讨论的区域内有限且连续。</li><li>“归一化”另指平方可积态满足 $\\int |\\Psi|^2\\,dV=1$，不能替代上面的三个空。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不要把“标准条件”和“归一化条件”混成同一问。涉及奇异势能时，还需按具体模型讨论匹配条件。</p>",
+        "en": "<h4>Exam answer</h4><p>Continuous, finite, and single-valued (any order).</p><h4>Working</h4><ol><li>These are the three regularity conditions named in the slides. A point has a unique wave-function value, finite and continuous in the usual domain considered.</li><li>Normalization of a square-integrable state is a separate condition, $\\int |\\Psi|^2dV=1$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Do not replace one regularity condition with normalization. Singular potentials require model-specific matching conditions.</p>"
+      },
+      "sources": [
+        "born"
+      ],
+      "formula": "born",
+      "origin": "一、2 · PDF 1",
+      "n": 2
+    },
+    {
+      "section": 1,
+      "local": 3,
+      "title": {
+        "zh": "对易括号定义",
+        "en": "Commutator definition"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>对易式 $[\\hat F,\\hat G]$ 等于（　　　）。</p>",
+        "en": "<p>The commutator $[\\hat F,\\hat G]$ equals (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>写出两种作用次序的差，注意先后顺序。</p>",
+        "en": "<p>Subtract the products in opposite orders, retaining their order.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$[\\hat F,\\hat G]=\\hat F\\hat G-\\hat G\\hat F$。</p><h4>解析</h4><ol><li>$\\hat F\\hat G\\psi$ 的意思是先让 $\\hat G$ 作用，再让 $\\hat F$ 作用。</li><li>若对定义域内的函数两种次序作用相同，即 $[\\hat F,\\hat G]=0$，称为对易；否则称为不对易。</li></ol><p class=\"common-error\"><strong>易错点：</strong>$[\\hat G,\\hat F]=-[\\hat F,\\hat G]$，所以反写次序会改变符号。</p>",
+        "en": "<h4>Exam answer</h4><p>$[\\hat F,\\hat G]=\\hat F\\hat G-\\hat G\\hat F$.</p><h4>Working</h4><ol><li>In $\\hat F\\hat G\\psi$, $\\hat G$ acts first. The commutator compares this with the reverse order.</li><li>If the difference vanishes on the appropriate domain, the operators commute.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Reversing the labels reverses the sign: $[\\hat G,\\hat F]=-[\\hat F,\\hat G]$.</p>"
+      },
+      "sources": [
+        "commutator"
+      ],
+      "formula": "commutator",
+      "origin": "一、3 · PDF 1",
+      "n": 3
+    },
+    {
+      "section": 1,
+      "local": 4,
+      "title": {
+        "zh": "物质波的频率",
+        "en": "Matter-wave frequency"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>已知一粒子的能量是 $E$，根据德布罗意关系，它波动形式对应的频率应该是（　　　）。</p>",
+        "en": "<p>A particle has energy $E$. By the de Broglie relation, its corresponding wave frequency is (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>区分普通频率与角频率。</p>",
+        "en": "<p>Distinguish ordinary frequency from angular frequency.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$\\nu=E/h$。</p><h4>解析</h4><ol><li>由 $E=h\\nu=\\hbar\\omega$ 得普通频率 $\\nu=E/h$，角频率 $\\omega=E/\\hbar$。</li><li>两者满足 $\\omega=2\\pi\\nu$，对应平面波 $e^{-iEt/\\hbar}$ 的相位变化。</li></ol><p class=\"common-error\"><strong>易错点：</strong>题目问“频率”，通常填 $E/h$；$E/\\hbar$ 是角频率。应沿用题目和模型给定的能量零点约定。</p>",
+        "en": "<h4>Exam answer</h4><p>$\\nu=E/h$.</p><h4>Working</h4><ol><li>$E=h\\nu=\\hbar\\omega$ gives ordinary frequency $\\nu=E/h$ and angular frequency $\\omega=E/\\hbar$.</li><li>They obey $\\omega=2\\pi\\nu$ and generate the time phase $e^{-iEt/\\hbar}$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>$E/\\hbar$ is angular frequency, not ordinary frequency. Use the energy convention specified by the model.</p>"
+      },
+      "sources": [
+        "matter",
+        "book-wave"
+      ],
+      "formula": "de-broglie",
+      "origin": "一、4 · PDF 1",
+      "n": 4
+    },
+    {
+      "section": 1,
+      "local": 5,
+      "title": {
+        "zh": "几率守恒的课件原句",
+        "en": "The slide statement of probability conservation"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>几率守恒具有局域性质，当空间某处几率减少了，必然另外一些地方几率增加，使总几率（　　　），并伴随着某种流来实现这种变化。几率守恒定律是（　　　）和（　　　）的推论，并不是量子力学中的一条独立假设。由几率密度和几率流密度的表达式中可知，波函数在空间坐标的变化全部区域内应是（　　　）。</p>",
+        "en": "<p>Probability conservation is local: a decrease in one region is balanced elsewhere, keeping total probability (　　　), with a current realizing the change. It follows from (　　　) and (　　　), rather than being an independent postulate. From the density and current expressions, the wave function throughout the spatial domain should be (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>最后一空应把课件第51页的整项要求写全，而不只写三个标准条件中的一个词。</p>",
+        "en": "<p>For the last blank, include the full requirement on slide PDF p. 51, rather than just one of the three regularity words.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>不变；波函数的统计解释；薛定谔方程；连续的，且有连续的微商。</p><h4>解析</h4><ol><li>按统计解释，归一化态的密度 $\\rho=\\Psi^*\\Psi$。对实势能的薛定谔方程及其复共轭式作差，可得 $\\partial_t\\rho+\\nabla\\cdot\\mathbf j=0$，其中 $\\mathbf j=\\frac{\\hbar}{2mi}(\\Psi^*\\nabla\\Psi-\\Psi\\nabla\\Psi^*)$。</li><li>对区域 $\\Omega$ 积分：$\\frac{d}{dt}\\int_\\Omega\\rho\\,dV=-\\oint_{\\partial\\Omega}\\mathbf j\\cdot d\\mathbf S$。区域内概率的减少对应向外的概率流。</li><li>在全空间无净流出、或适当封闭边界条件下，总概率不随时间变化；已归一化时恒为1。</li><li>课件第51页把最后一项写作“连续的，且有连续的微商”，本题按这项完整作答。</li></ol><p class=\"common-error\"><strong>易错点：</strong>局域守恒不等于每一点的密度都不变；也不要把末空只填“连续”。</p><p>适用条件：上述常规推导取实、局域势能及适当光滑性。δ势等奇异模型允许导数按匹配条件跳变，不能把课件的常规表述推广到所有奇异点。</p>",
+        "en": "<h4>Exam answer</h4><p>Unchanged; the statistical interpretation of the wave function; the Schrödinger equation; continuous with a continuous first derivative.</p><h4>Working</h4><ol><li>For a normalized state $\\rho=\\Psi^*\\Psi$. The Schrödinger equation for a real local potential and its complex conjugate yield $\\partial_t\\rho+\\nabla\\cdot\\mathbf j=0$, where $\\mathbf j=\\hbar(\\Psi^*\\nabla\\Psi-\\Psi\\nabla\\Psi^*)/(2mi)$.</li><li>Integration gives $d\\int_\\Omega\\rho dV/dt=-\\oint_{\\partial\\Omega}\\mathbf j\\cdot d\\mathbf S$. Loss in a region is outward probability flux.</li><li>With no net boundary flux, total probability stays constant, equal to one for a normalized state.</li><li>The last blank follows the complete statement on slide PDF p. 51: continuity of the wave function and its first derivative.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Local conservation does not require time-independent density at each point. Do not omit the derivative condition in this particular slide-based question.</p><p>This regular-potential statement needs the stated smoothness and boundary assumptions. Singular potentials such as a delta potential have their own derivative jump conditions.</p>"
+      },
+      "sources": [
+        "current",
+        "born",
+        "schrodinger",
+        "book-current"
+      ],
+      "formula": "current",
+      "origin": "一、5 · PDF 1",
+      "n": 5
+    },
+    {
+      "section": 1,
+      "local": 6,
+      "title": {
+        "zh": "谐振子零点能",
+        "en": "Oscillator zero-point energy"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>势能为 $\\frac12m\\omega^2x^2$ 的一维线性谐振子的基态能量是（　　　）。</p>",
+        "en": "<p>The ground-state energy of a one-dimensional oscillator with potential $m\\omega^2x^2/2$ is (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>注意最低能量与相邻能级间隔不是同一个量。</p>",
+        "en": "<p>Distinguish the lowest energy from the level spacing.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$E_0=\\frac12\\hbar\\omega$。</p><h4>解析</h4><ol><li>不确定关系 $\\Delta x\\Delta p\\ge\\hbar/2$ 使动能与势能不能同时降为零。令 $y=(\\Delta x)^2$，对中心均值为零的最低能态有 $E\\ge\\hbar^2/(8my)+m\\omega^2y/2$。</li><li>右侧在 $y=\\hbar/(2m\\omega)$ 时取极小值 $\\hbar\\omega/2$；高斯基态能达到此下限。</li></ol><p class=\"common-error\"><strong>易错点：</strong>$\\hbar\\omega$ 是相邻能级间隔；基态能量是它的一半。</p>",
+        "en": "<h4>Exam answer</h4><p>$E_0=\\hbar\\omega/2$.</p><h4>Working</h4><ol><li>$\\Delta x\\Delta p\\ge\\hbar/2$ prevents both energy contributions from vanishing. For centered means, put $y=(\\Delta x)^2$ to obtain $E\\ge\\hbar^2/(8my)+m\\omega^2y/2$.</li><li>The minimum occurs at $y=\\hbar/(2m\\omega)$ and equals $\\hbar\\omega/2$. A Gaussian ground state attains the bound.</li></ol><p class=\"common-error\"><strong>Common error：</strong>$\\hbar\\omega$ is the level spacing, not the ground-state energy.</p>"
+      },
+      "sources": [
+        "zero-point"
+      ],
+      "formula": "zero-point",
+      "origin": "一、6 · PDF 1",
+      "n": 6
+    },
+    {
+      "section": 1,
+      "local": 7,
+      "title": {
+        "zh": "状态的完整描述",
+        "en": "What a state determines"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>微观粒子量子状态用波函数完全描述，波函数确定之后，粒子的任何一个力学量的（　　　）及其测量的可能值和相应的（　　　）也都被完全确定。</p>",
+        "en": "<p>Once a wave function specifies the state, each observable’s (　　　), its possible measurement outcomes and their (　　　) are determined.</p>"
+      },
+      "hint": {
+        "zh": "<p>“分布被确定”与“一次结果被预先确定”不同。</p>",
+        "en": "<p>A specified probability distribution does not predetermine every single outcome.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>平均值；几率分布（概率分布）。</p><h4>解析</h4><ol><li>对归一化态 $\\psi=\\sum_n c_n\\phi_n$，测得本征值 $f_n$ 的概率为 $|c_n|^2$；有简并时对同一本征值的分量求和。</li><li>平均值 $\\langle F\\rangle=\\int\\psi^*\\hat F\\psi\\,dV=\\sum_n f_n|c_n|^2$。因此态确定的是统计预言。</li><li>若不是 $\\hat F$ 的本征态，单次测量仍可能得到不同允许值，并非所有力学量在该态都有确定值。</li></ol><p class=\"common-error\"><strong>易错点：</strong>第二空优先写“几率分布”，贴合课件原句；不要误写“测量值全部确定”。</p>",
+        "en": "<h4>Exam answer</h4><p>Expectation value; probability distribution.</p><h4>Working</h4><ol><li>For a normalized expansion $\\psi=\\sum_n c_n\\phi_n$, the probability of $f_n$ is $|c_n|^2$; add weights within a degenerate eigenspace.</li><li>$\\langle F\\rangle=\\int\\psi^*\\hat F\\psi dV=\\sum_n f_n|c_n|^2$. The state determines statistical predictions.</li><li>Unless it is an eigenstate of the observable, individual trials can still give different eigenvalues.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The determined object is the distribution, not a predetermined outcome for every observable.</p>"
+      },
+      "sources": [
+        "complete",
+        "measurement"
+      ],
+      "formula": "measurement",
+      "origin": "一、7 · PDF 1",
+      "n": 7
+    },
+    {
+      "section": 1,
+      "local": 8,
+      "title": {
+        "zh": "正则对易与共同确定值",
+        "en": "Canonical commutation and compatibility"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>一维体系中，坐标算符 $\\hat x$ 与动量算符 $\\hat p_x$ 的对易子 $[\\hat x,\\hat p_x]=$（　　　）。若两个力学量对应的厄米算符相互对易，则这两个力学量（　　　）同时具有确定的测量值（填“可以”或“不可以”）。</p>",
+        "en": "<p>In one dimension, $[\\hat x,\\hat p_x]=$ (　　　). If two Hermitian observable operators commute, their observables (can / cannot) have definite values simultaneously.</p>"
+      },
+      "hint": {
+        "zh": "<p>第一空注意顺序；第二空说“可以”，并非“任意态都一定如此”。</p>",
+        "en": "<p>Keep the commutator order; compatibility means that suitable common eigenstates can be chosen.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$i\\hbar$；可以。</p><h4>解析</h4><ol><li>$\\hat p_x=-i\\hbar\\partial_x$。作用于任意适当函数 $f$：$x\\hat p_xf-\\hat p_x(xf)=-i\\hbar xf\\prime+i\\hbar(f+xf\\prime)=i\\hbar f$。</li><li>在本课程通常采用的定义域等条件下，对易的厄米算符可选取共同本征基；在共同本征态中两个量都有确定值。</li></ol><p class=\"common-error\"><strong>易错点：</strong>“可以”不等于任意叠加态中的两个量都确定；也不能把 $[x,p_x]$ 的符号与 $[p_x,x]$ 混淆。</p>",
+        "en": "<h4>Exam answer</h4><p>$i\\hbar$; can.</p><h4>Working</h4><ol><li>Using $p_x=-i\\hbar\\partial_x$, $x p_xf-p_x(xf)=-i\\hbar xf\\prime+i\\hbar(f+xf\\prime)=i\\hbar f$ for any suitable $f$.</li><li>Under the usual domain assumptions in this course, commuting Hermitian operators admit a common eigenbasis. Their common eigenstates give definite values to both observables.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Compatibility does not say that both values are definite in every arbitrary state. Reversing the commutator changes its sign.</p>"
+      },
+      "sources": [
+        "commutator",
+        "measurement",
+        "book-measurement"
+      ],
+      "formula": "commutator",
+      "origin": "一、8 · PDF 1",
+      "n": 8
+    },
+    {
+      "section": 2,
+      "local": 1,
+      "title": {
+        "zh": "验证物质波的实验",
+        "en": "Experiment verifying matter waves"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>证明德布罗意波的实验是以下哪一种（　　）<div class=\"opts\">A. 戴维逊–革末实验<br>B. 迈克尔逊–莫雷实验<br>C. 康普顿效应<br>D. 卢瑟福散射实验</div></p>",
+        "en": "<p>Which experiment verifies de Broglie matter waves?<div class=\"opts\">A. Davisson–Germer<br>B. Michelson–Morley<br>C. Compton scattering<br>D. Rutherford scattering</div></p>"
+      },
+      "hint": {
+        "zh": "<p>找直接观察电子衍射的实验。</p>",
+        "en": "<p>Look for direct observation of electron diffraction.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>A。</p><h4>解析</h4><ol><li>A：晶体产生电子衍射，是物质波的直接证据。</li><li>B：主要涉及以太与相对论背景；C：突出光子的粒子性；D：支持原子的核式结构。它们不是本题要求的电子物质波验证。</li></ol><p class=\"common-error\"><strong>易错点：</strong>看到“散射”不能一概当成物质波证据；关键是实验显示了什么。</p>",
+        "en": "<h4>Exam answer</h4><p>A.</p><h4>Working</h4><ol><li>Davisson–Germer observes electron diffraction by a crystal and directly verifies matter waves.</li><li>Michelson–Morley concerns the ether/relativity context; Compton emphasizes photon particle properties; Rutherford supports the nuclear atom.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The word scattering alone does not establish a matter-wave diffraction result.</p>"
+      },
+      "sources": [
+        "matter"
+      ],
+      "formula": "de-broglie",
+      "origin": "二、1 · PDF 1",
+      "n": 9
+    },
+    {
+      "section": 2,
+      "local": 2,
+      "title": {
+        "zh": "黑体辐射辨错",
+        "en": "Find the black-body error"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>下面描述黑体辐射错误的说法是哪一个？（　　）<div class=\"opts\">A. 空腔辐射能量密度随波长的分布曲线，其形状和位置只与黑体的绝对温度 $T$ 有关，而与黑体的形状和材料无关。<br>B. 根据维恩位移定律，能量密度极大值对应的波长 $\\lambda_m$ 与温度 $T$ 成正比，即 $T$ 越大，$\\lambda_m$ 越大。<br>C. 普朗克认为黑体辐射以一个最小能量单位的整数倍跳跃式变化，这个最小单位称为“能量子”。<br>D. Rayleigh–Jeans 公式在长波部分与实验相符，短波部分明显不一致，出现紫外灾变。</div></p>",
+        "en": "<p>Which description of black-body radiation is incorrect?<div class=\"opts\">A. The equilibrium wavelength distribution depends on absolute temperature, not cavity material or shape.<br>B. Wien displacement says $\\lambda_m$ is proportional to $T$, so it increases as $T$ increases.<br>C. Planck introduces a smallest energy quantum, exchanged in integer multiples for a given frequency.<br>D. Rayleigh–Jeans agrees at long wavelengths but fails at short wavelengths, producing the ultraviolet catastrophe.</div></p>"
+      },
+      "hint": {
+        "zh": "<p>写出维恩位移定律，再判断正比还是反比。</p>",
+        "en": "<p>Write Wien’s displacement law and check the direction of proportionality.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>B。正确关系是 $\\lambda_m T=b$，即 $\\lambda_m=b/T$。</p><h4>解析</h4><ol><li>T 增大时，峰值向短波移动，而不是向长波移动。</li><li>A 描述热平衡黑体辐射的普适性；C 中最小能量须理解为给定频率的 $h\\nu$，不同频率的能量子不同；D 是经典公式的长波适用与短波失败。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不要把“维恩位移定律”与“维恩辐射近似公式”混为一条公式。</p>",
+        "en": "<h4>Exam answer</h4><p>B. Wien displacement is $\\lambda_mT=b$, hence $\\lambda_m=b/T$.</p><h4>Working</h4><ol><li>Increasing temperature shifts the peak toward shorter wavelengths.</li><li>A expresses universality in thermal equilibrium. In C the quantum is $h\\nu$ for a specified frequency, not one universal energy for all frequencies. D describes the classical long-wave limit and short-wave failure.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Distinguish Wien’s displacement law from Wien’s approximate radiation formula.</p>"
+      },
+      "sources": [
+        "radiation"
+      ],
+      "formula": "wien",
+      "origin": "二、2 · PDF 1",
+      "n": 10
+    },
+    {
+      "section": 2,
+      "local": 3,
+      "title": {
+        "zh": "德布罗意关系辨析",
+        "en": "De Broglie relation: conceptual check"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>关于微观粒子的波粒二象性与德布罗意关系，下列说法正确的是（　　）<div class=\"opts\">A. 仅光子具有波粒二象性，电子、原子等实物粒子无波动性。<br>B. 实物粒子的德布罗意波长满足 $\\lambda=p/h$。<br>C. 宏观物体的德布罗意波长极小，其波动性很难被实验观测。<br>D. 微观粒子对应的物质波是经典机械波。</div></p>",
+        "en": "<p>Which statement about wave–particle duality and de Broglie waves is correct?<div class=\"opts\">A. Only photons have duality; electrons and atoms have no wave aspect.<br>B. Matter-wave wavelength is $\\lambda=p/h$.<br>C. Macroscopic objects generally have extremely short de Broglie wavelengths, making their wave behavior difficult to observe.<br>D. A matter wave is a classical mechanical wave.</div></p>"
+      },
+      "hint": {
+        "zh": "<p>先核对 $\\lambda$ 的量纲，并回忆波函数的统计解释。</p>",
+        "en": "<p>Check the wavelength relation and recall the statistical interpretation.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>C。</p><h4>解析</h4><ol><li>A 错：电子等实物粒子也呈现干涉、衍射。</li><li>B 错：应为 $\\lambda=h/p$，动量越大波长越短；$p/h$ 的量纲是长度的倒数。</li><li>C 在通常宏观质量与动量条件下正确。D 错：物质波由概率幅描述，不是介质密度或位移的经典机械波。</li></ol><p class=\"common-error\"><strong>易错点：</strong>“宏观物体波动性难以观察”不等于德布罗意关系对宏观物体失效。</p>",
+        "en": "<h4>Exam answer</h4><p>C.</p><h4>Working</h4><ol><li>A is false: electrons and other material particles can interfere and diffract.</li><li>B reverses the formula: $\\lambda=h/p$; $p/h$ has inverse-length units.</li><li>For ordinary macroscopic momenta the wavelength is very small. D is false because the wave function is a probability amplitude, not a mechanical displacement field.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Difficulty of observing macroscopic wave behavior does not invalidate the relation.</p>"
+      },
+      "sources": [
+        "matter",
+        "born",
+        "book-wave"
+      ],
+      "formula": "de-broglie",
+      "origin": "二、3 · PDF 1",
+      "n": 11
+    },
+    {
+      "section": 2,
+      "local": 4,
+      "title": {
+        "zh": "厄米算符选择",
+        "en": "Identify a Hermitian operator"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>找出以下算符中的厄米算符（　　）<div class=\"opts\">A. $-i\\hbar\\frac{\\partial}{\\partial x}$<br>B. $\\frac1{\\sqrt2}\\left(x+\\frac{\\partial}{\\partial x}\\right)$<br>C. $\\frac1{\\sqrt2}\\left(x-\\frac{\\partial}{\\partial x}\\right)$<br>D. $-\\hbar\\frac{\\partial}{\\partial x}$</div></p>",
+        "en": "<p>Which operator is Hermitian?<div class=\"opts\">A. $-i\\hbar\\partial_x$<br>B. $(x+\\partial_x)/\\sqrt2$<br>C. $(x-\\partial_x)/\\sqrt2$<br>D. $-\\hbar\\partial_x$</div></p>"
+      },
+      "hint": {
+        "zh": "<p>在使分部积分边界项为零的条件下，求导算符的伴随带负号。</p>",
+        "en": "<p>When integration-by-parts boundary terms vanish, the derivative’s adjoint has a minus sign.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>A（采用合适的定义域与边界条件）。</p><h4>解析</h4><ol><li>记 $D=\\partial_x$。边界项为零时 $D^\\dagger=-D$，而实坐标乘法算符 $x^\\dagger=x$。</li><li>A 的伴随：$(-i\\hbar D)^\\dagger=i\\hbar(-D)=-i\\hbar D$，所以是厄米的。</li><li>B、C 互为伴随，一般不等于自身。D 的伴随为 $+\\hbar D$，也不等于自身。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不能只看前面是否有负号；取伴随同时包括复共轭和算符伴随。</p><p>原卷的 B、C 形式通常按无量纲坐标理解。若使用有长度量纲的坐标，需补充相应长度尺度；这不改变本题对伴随关系的判断。</p>",
+        "en": "<h4>Exam answer</h4><p>A, on a suitable domain with appropriate boundary conditions.</p><h4>Working</h4><ol><li>Write $D=\\partial_x$. If the boundary term vanishes, $D^\\dagger=-D$, while $x^\\dagger=x$.</li><li>$(-i\\hbar D)^\\dagger=i\\hbar(-D)=-i\\hbar D$, so A is Hermitian.</li><li>B and C are adjoints of each other, not individually Hermitian. D has adjoint $+\\hbar D$, different from itself.</li></ol><p class=\"common-error\"><strong>Common error：</strong>An adjoint involves complex conjugation as well as reversal of derivative signs.</p><p>B and C are conventionally read using a dimensionless coordinate. A dimensionful coordinate would require matching length scales; the adjoint test is unchanged.</p>"
+      },
+      "sources": [
+        "hermitian"
+      ],
+      "formula": "hermitian",
+      "origin": "二、4 · PDF 1",
+      "n": 12
+    },
+    {
+      "section": 3,
+      "local": 1,
+      "title": {
+        "zh": "德布罗意波的两种形式",
+        "en": "Two representations of a de Broglie wave"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>什么是 de Broglie 波？写出描述它的两种形式。</p>",
+        "en": "<p>What is a de Broglie wave? Write two forms that describe it.</p>"
+      },
+      "hint": {
+        "zh": "<p>先写 $\\nu,\\lambda$ 参数的复指数，再代入 $E=h\\nu$、$p=h/\\lambda$。</p>",
+        "en": "<p>Write the complex exponential in $\\nu,\\lambda$, then substitute $E=h\\nu$ and $p=h/\\lambda$.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>德布罗意波是与自由粒子相联系的单色平面物质波，满足 $E=h\\nu$、$p=h/\\lambda$。课件的两种等价形式为：$$\\Psi(x,t)=A\\exp[-i2\\pi(\\nu t-x/\\lambda)],$$$$\\Psi(x,t)=A\\exp[i(px-Et)/\\hbar].$$</p><h4>解析</h4><ol><li>由 $\\hbar=h/(2\\pi)$，把 $\\nu=E/h$、$1/\\lambda=p/h$ 代入第一式，就得到第二式。</li><li>也可引入 $\\omega=2\\pi\\nu$、$k=2\\pi/\\lambda$，写成 $Ae^{i(kx-\\omega t)}$。三维推广为 $Ae^{i(\\mathbf p\\cdot\\mathbf r-Et)/\\hbar}=Ae^{i(\\mathbf k\\cdot\\mathbf r-\\omega t)}$。</li><li>物质波在统计解释中是概率波，平面波描写能量、动量确定的自由粒子。</li></ol><p class=\"common-error\"><strong>易错点：</strong>教材§1.4还比较实余弦和复指数，但本题主答优先按课件第3页列出的两种参数表示。实余弦虽是相应复波的实部，却一般不是同一动量本征态；量子态不能任意改成其实部。</p>",
+        "en": "<h4>Exam answer</h4><p>A de Broglie wave is a monochromatic plane matter wave associated with a free particle, with $E=h\\nu$ and $p=h/\\lambda$. The two equivalent forms shown in the slides are $$\\Psi(x,t)=A\\exp[-i2\\pi(\\nu t-x/\\lambda)],$$$$\\Psi(x,t)=A\\exp[i(px-Et)/\\hbar].$$</p><h4>Working</h4><ol><li>Substitute $\\nu=E/h$, $1/\\lambda=p/h$ and $\\hbar=h/(2\\pi)$ into the first expression to obtain the second.</li><li>Equivalently, set $\\omega=2\\pi\\nu$, $k=2\\pi/\\lambda$ to get $Ae^{i(kx-\\omega t)}$. In three dimensions use $Ae^{i(\\mathbf p\\cdot\\mathbf r-Et)/\\hbar}=Ae^{i(\\mathbf k\\cdot\\mathbf r-\\omega t)}$.</li><li>Under the statistical interpretation this is a probability wave. A plane wave describes a free particle with definite energy and momentum.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The textbook also compares a real cosine with a complex exponential. Prefer the two parameterizations actually printed on slide p. 3 for this answer. Taking a real part generally changes the momentum state; it is not an arbitrary replacement for a quantum wave function.</p>"
+      },
+      "sources": [
+        "matter",
+        "born",
+        "book-wave"
+      ],
+      "formula": "plane-wave",
+      "origin": "三、1 · PDF 2",
+      "n": 13
+    },
+    {
+      "section": 3,
+      "local": 2,
+      "title": {
+        "zh": "坐标—动量对易关系的证明",
+        "en": "Prove the coordinate–momentum commutator"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>写出位置和动量算符的对易关系，并证明。</p>",
+        "en": "<p>State and prove the commutation relation for position and momentum.</p>"
+      },
+      "hint": {
+        "zh": "<p>对任意可微函数作用，展开 $\\partial_x(xf)$。</p>",
+        "en": "<p>Act on an arbitrary differentiable function and expand $\\partial_x(xf)$.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>一维 $[\\hat x,\\hat p_x]=i\\hbar$；三维 $[\\hat x_i,\\hat p_j]=i\\hbar\\delta_{ij}$。</p><h4>解析</h4><ol><li>在坐标表象，$\\hat x f=xf$，$\\hat p_x f=-i\\hbar f\\prime$。</li><li>$\\hat x\\hat p_x f=-i\\hbar xf\\prime$；$\\hat p_x\\hat x f=-i\\hbar(xf)\\prime=-i\\hbar(f+xf\\prime)$。</li><li>相减得 $[\\hat x,\\hat p_x]f=i\\hbar f$。因 $f$ 任意，故 $[\\hat x,\\hat p_x]=i\\hbar I$，常把单位算符 $I$ 省略。</li><li>不同坐标方向的乘法与求导互不干扰，所以 $i\\ne j$ 时为零。</li></ol><p class=\"common-error\"><strong>易错点：</strong>只把 $x$、$p$ 当作普通数相乘会错误地得到零；证明必须让算符作用在函数上。</p>",
+        "en": "<h4>Exam answer</h4><p>In one dimension, $[\\hat x,\\hat p_x]=i\\hbar$; in three dimensions, $[\\hat x_i,\\hat p_j]=i\\hbar\\delta_{ij}$.</p><h4>Working</h4><ol><li>In position representation, $\\hat x f=xf$ and $\\hat p_xf=-i\\hbar f\\prime$.</li><li>$\\hat x\\hat p_x f=-i\\hbar xf\\prime$, while $\\hat p_x\\hat x f=-i\\hbar(f+xf\\prime)$ by the product rule.</li><li>Subtraction gives $[\\hat x,\\hat p_x]f=i\\hbar f$ for arbitrary suitable $f$, proving the operator identity $i\\hbar I$.</li><li>Different Cartesian directions commute, giving the Kronecker delta.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Treating the operators as ordinary scalar numbers incorrectly gives zero; retain their action on a test function.</p>"
+      },
+      "sources": [
+        "commutator"
+      ],
+      "formula": "commutator",
+      "origin": "三、2 · PDF 2",
+      "n": 14
+    },
+    {
+      "section": 3,
+      "local": 3,
+      "title": {
+        "zh": "不确定关系是否禁止准确测量",
+        "en": "Does uncertainty forbid accurate measurements?"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>“根据测不准关系，力学量是无法准确测量的”，这个说法对吗？为什么？</p>",
+        "en": "<p>“According to the uncertainty relation, physical observables cannot be measured accurately.” Is this correct? Explain.</p>"
+      },
+      "hint": {
+        "zh": "<p>区分一个量的确定值、两个量的共同确定值，以及仪器读数误差。</p>",
+        "en": "<p>Distinguish a sharp value of one observable, joint sharpness of two, and instrument error.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>不对。不确定关系限制的是同一量子态中某些不对易量的统计分散度乘积，并不禁止单个力学量具有确定值或被准确测量。</p><h4>解析</h4><ol><li>$\\Delta A=\\sqrt{\\langle A^2\\rangle-\\langle A\\rangle^2}$ 是同样制备的一组体系的测量结果标准差，不是把仪器刻度做粗造成的误差。</li><li>一般 $\\Delta A\\Delta B\\ge\\frac12|\\langle[\\hat A,\\hat B]\\rangle|$；对 $x,p_x$，右边恒为 $\\hbar/2$，故二者不能在同一归一化物理态中都无涨落。</li><li>处于离散谱算符 $\\hat A$ 的本征态时可有 $\\Delta A=0$，其测量结果确定。例如定态能量可确定；不确定关系并未禁止这种情况。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不能笼统写成“所有力学量都不准”，也不能把一般非对易关系一概断言为每个态都有严格正下界。</p>",
+        "en": "<h4>Exam answer</h4><p>No. The uncertainty relation bounds statistical spreads of certain observables in the same state; it does not forbid a sharp value or accurate measurement of one observable.</p><h4>Working</h4><ol><li>$\\Delta A=\\sqrt{\\langle A^2\\rangle-\\langle A\\rangle^2}$ is the standard deviation over identically prepared systems, not simply an instrument’s calibration error.</li><li>$\\Delta A\\Delta B\\ge|\\langle[\\hat A,\\hat B]\\rangle|/2$. For $x,p_x$ the bound is always $\\hbar/2$, precluding both spreads from vanishing in the same normalized physical state.</li><li>An eigenstate of a discrete-spectrum observable can have $\\Delta A=0$, such as definite energy in an energy eigenstate.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Do not conclude that every observable is intrinsically inaccurate. For a general nonzero commutator, its expectation and thus this lower bound can vanish in particular states.</p>"
+      },
+      "sources": [
+        "uncertainty",
+        "measurement",
+        "book-measurement"
+      ],
+      "formula": "uncertainty",
+      "origin": "三、3 · PDF 2",
+      "n": 15
+    },
+    {
+      "section": 3,
+      "local": 4,
+      "title": {
+        "zh": "分立谱与连续谱",
+        "en": "Discrete and continuous spectra"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>在量子力学中，何种力学量算符的本征值都是分立的？何种力学量算符的本征值都是连续的？</p>",
+        "en": "<p>In quantum mechanics, which observable operators have discrete eigenvalues, and which have continuous eigenvalues?</p>"
+      },
+      "hint": {
+        "zh": "<p>先给本课常见例子，再说明谱还依赖体系和边界条件。</p>",
+        "en": "<p>Give the standard examples first, then state the role of the system and boundary conditions.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>典型分立谱：轨道角动量 $L^2$ 和分量 $L_z$，以及无限深阱、谐振子的能量；典型连续谱：全直线/全空间中的坐标与自由粒子动量。谱的类型必须结合体系、定义域与边界条件判断，不能只凭“厄米算符”或力学量名称一概分类。</p><h4>解析</h4><ol><li>$L^2$ 的本征值 $l(l+1)\\hbar^2$，$L_z=m\\hbar$，其中 $l=0,1,\\ldots$，$m=-l,\\ldots,l$，取值分立。无限深阱 $E_n=n^2\\pi^2\\hbar^2/(2ma^2)$ 也分立。</li><li>在全空间中，位置本征值和自由动量本征值可连续取值；相应广义本征函数通常用δ归一化。</li><li>反例检验：自由粒子能量有连续谱；氢原子哈密顿量兼有束缚态离散谱和电离连续谱。周期箱中动量 $p_n=2\\pi\\hbar n/L$ 则分立。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不要写成“能量一律分立，动量在任何边界条件下一律连续”，也不要把“本征值为实数”等同于“本征值分立”。</p><p>原题问法比较概括，以上先给通常课堂预期的分类，再补全限制条件；不是把带边界条件的不同问题混为一个算符。</p>",
+        "en": "<h4>Exam answer</h4><p>Standard discrete examples are orbital $L^2,L_z$ and the energies of an infinite well or oscillator. Standard continuous examples are position and free-particle momentum on the whole line/space. Spectral type depends on the system, operator domain and boundary conditions, not merely on Hermiticity or the observable’s name.</p><h4>Working</h4><ol><li>$L^2=l(l+1)\\hbar^2$ and $L_z=m\\hbar$ are discrete, with integer $l\\ge0$ and $-l\\le m\\le l$. Infinite-well energies are also discrete.</li><li>Whole-space position and free momentum have continuous generalized eigenvalues, conventionally delta-normalized.</li><li>A free particle has continuous energy; hydrogen has both bound discrete and ionization continuous energy spectra. In a periodic box, $p_n=2\\pi\\hbar n/L$ is discrete.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Neither “all energies are discrete” nor “momentum is continuous under every boundary condition” is correct. Real eigenvalues do not imply a discrete spectrum.</p><p>The broad source wording is answered with the usual classroom examples first, followed by the assumptions that make them valid.</p>"
+      },
+      "sources": [
+        "spectrum",
+        "angular",
+        "well",
+        "measurement"
+      ],
+      "formula": "periodic-box",
+      "origin": "三、4 · PDF 2",
+      "n": 16
+    },
+    {
+      "section": 4,
+      "local": 1,
+      "title": {
+        "zh": "无限深势阱与基态位置期望",
+        "en": "Infinite well and ground-state position mean"
+      },
+      "points": 20,
+      "question": {
+        "zh": "<p>已知一维无限深势阱，$x&lt;0$ 或 $x&gt;a$ 时 $V=\\infty$，计算：<p>（1）电子的能量本征值、波函数。（12分）</p><p>（2）电子处于基态（$n=1$）时，位置的期望值。（8分）</p></p>",
+        "en": "<p>For a one-dimensional infinite well with $V=\\infty$ when $x&lt;0$ or $x&gt;a$, find:<p>(1) Electron energy eigenvalues and wave functions. (12 points)</p><p>(2) The position expectation value in the ground state $n=1$. (8 points)</p></p>"
+      },
+      "hint": {
+        "zh": "<p>采用通常约定阱内 $V=0$。依次写方程、两端边界、允许波数、归一化；再对基态密度求位置平均值。</p>",
+        "en": "<p>Use the usual zero potential inside. Write the equation, endpoint conditions, allowed wave numbers and normalization; then integrate position against the ground-state density.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$E_n=\\dfrac{n^2\\pi^2\\hbar^2}{2m_ea^2}$，$n=1,2,\\ldots$；阱内 $\\psi_n(x)=\\sqrt{2/a}\\sin(n\\pi x/a)$，阱外为0。若问含时波函数，$\\Psi_n=\\psi_n e^{-iE_nt/\\hbar}$。基态位置期望 $\\langle x\\rangle_1=a/2$。</p><h4>解析</h4><ol><li>模型约定：原题只明写阱外势能，解析采用通常的阱内 $V=0$、$a&gt;0$，电子质量 $m_e$。阱内定态方程为 $-\\hbar^2\\psi\\prime\\prime/(2m_e)=E\\psi$。</li><li>令 $k=\\sqrt{2m_eE}/\\hbar$，通解 $\\psi=A\\sin kx+B\\cos kx$。无限高壁给出 $\\psi(0)=\\psi(a)=0$；第一式使 $B=0$，第二式要求 $ka=n\\pi$。</li><li>$n=0$ 对应零函数，不能归一化，故舍弃；$n$ 与 $-n$ 仅差整体符号，取 $n=1,2,\\ldots$。于是得到上述 $E_n$。</li><li>归一化：$1=|A|^2\\int_0^a\\sin^2(n\\pi x/a)dx=|A|^2a/2$，取实正系数 $A=\\sqrt{2/a}$。</li><li>基态密度为 $\\rho_1=(2/a)\\sin^2(\\pi x/a)$。$\\langle x\\rangle_1=(2/a)\\int_0^a x\\sin^2(\\pi x/a)dx$。</li><li>用 $\\sin^2u=(1-\\cos2u)/2$：$\\langle x\\rangle_1=\\frac1a\\int_0^a xdx-\\frac1a\\int_0^a x\\cos(2\\pi x/a)dx$。前一项为 $a/2$；后一积分的原函数为 $x\\sin bx/b+\\cos bx/b^2$（$b=2\\pi/a$），两端差为0。</li><li>故 $\\langle x\\rangle_1=a/2$。也可用密度关于 $a/2$ 对称验证：平均位置在阱中心，但不表示粒子始终停在中心。</li></ol><p class=\"common-error\"><strong>易错点：</strong>阱在 $[0,a]$，位置平均值不是0；不能套用中心对称阱 $[-a,a]$ 的坐标结果或半宽能量式。</p><p>练习用参考分配：第（1）问方程与边界4分、能级4分、归一化波函数4分；第（2）问积分设置3分、计算或对称性论证4分、结果1分。这不是学校公布的评分细则。</p>",
+        "en": "<h4>Exam answer</h4><p>$E_n=n^2\\pi^2\\hbar^2/(2m_ea^2)$, $n=1,2,\\ldots$. Inside, $\\psi_n=\\sqrt{2/a}\\sin(n\\pi x/a)$; outside it is zero. A time-dependent energy eigenstate is $\\Psi_n=\\psi_n e^{-iE_nt/\\hbar}$. The ground-state mean is $\\langle x\\rangle_1=a/2$.</p><h4>Working</h4><ol><li>The source explicitly gives only the exterior potential. Use the standard convention $V=0$ inside, $a&gt;0$, and electron mass $m_e$. Then $-\\hbar^2\\psi\\prime\\prime/(2m_e)=E\\psi$.</li><li>Put $k=\\sqrt{2m_eE}/\\hbar$ and write $\\psi=A\\sin kx+B\\cos kx$. Infinite walls impose $\\psi(0)=\\psi(a)=0$, giving $B=0$ and $ka=n\\pi$.</li><li>$n=0$ is the zero function and cannot be normalized; negative $n$ only changes an overall sign. Choose positive integers and obtain the stated energies.</li><li>$1=|A|^2\\int_0^a\\sin^2(n\\pi x/a)dx=|A|^2a/2$, hence a positive real amplitude is $\\sqrt{2/a}$.</li><li>$\\rho_1=(2/a)\\sin^2(\\pi x/a)$ and $\\langle x\\rangle_1=(2/a)\\int_0^a x\\sin^2(\\pi x/a)dx$.</li><li>Using the double-angle identity gives $a^{-1}\\int_0^a xdx-a^{-1}\\int_0^a x\\cos(2\\pi x/a)dx$. The first term is $a/2$; the second integral is zero by its endpoint values.</li><li>Thus $\\langle x\\rangle_1=a/2$, also verified by reflection symmetry about the midpoint. A mean at the center does not mean the electron remains there.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The well is $[0,a]$, not $[-a,a]$. Do not import a zero position mean or a half-width energy formula.</p><p>Suggested practice marking: part (1), equation/boundaries 4, energies 4, normalized functions 4; part (2), integral setup 3, calculation or symmetry proof 4, result 1. These are not official marking instructions.</p>"
+      },
+      "sources": [
+        "well",
+        "sine",
+        "book-well"
+      ],
+      "formula": "infinite-well",
+      "origin": "四、1 · PDF 2",
+      "n": 17
+    }
+  ],
+  "mock_a": [
+    {
+      "section": 1,
+      "local": 1,
+      "title": {
+        "zh": "光子的能量与动量",
+        "en": "Photon energy and momentum"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>真空中波长为 $\\lambda$ 的光子，其能量 $E=$（　　　），动量大小 $p=$（　　　）。</p>",
+        "en": "<p>A photon in vacuum has wavelength $\\lambda$. Its energy is $E=$ (　　　), and momentum magnitude is $p=$ (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>联用 $E=h\\nu$、$c=\\lambda\\nu$ 和 $E=cp$。</p>",
+        "en": "<p>Combine $E=h\\nu$, $c=\\lambda\\nu$ and $E=cp$.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$hc/\\lambda$；$h/\\lambda$。</p><h4>解析</h4><ol><li>真空中 $\\nu=c/\\lambda$，因此 $E=h\\nu=hc/\\lambda$。</li><li>光子静质量为零，$E=cp$，故 $p=E/c=h/\\lambda=\\hbar k$。</li></ol><p class=\"common-error\"><strong>易错点：</strong>光子不能用非相对论的 $p=mv$ 并令静质量为零来计算动量。</p>",
+        "en": "<h4>Exam answer</h4><p>$hc/\\lambda$; $h/\\lambda$.</p><h4>Working</h4><ol><li>In vacuum $\\nu=c/\\lambda$, so $E=hc/\\lambda$.</li><li>For a photon $E=cp$, hence $p=h/\\lambda=\\hbar k$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Do not set photon momentum to zero by inserting its zero rest mass into the nonrelativistic formula $mv$.</p>"
+      },
+      "sources": [
+        "photon"
+      ],
+      "formula": "photon",
+      "origin": null,
+      "n": 1
+    },
+    {
+      "section": 1,
+      "local": 2,
+      "title": {
+        "zh": "加速电子的物质波",
+        "en": "Matter wave of an accelerated electron"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>电子从静止经电压 $U&gt;0$ 加速，忽略相对论效应，其德布罗意波长 $\\lambda=$（　　　）。若电压变为 $4U$，波长变为原来的（　　　）倍。</p>",
+        "en": "<p>An electron starts from rest and is accelerated through $U&gt;0$. Neglect relativity. Its wavelength is $\\lambda=$ (　　　). At $4U$, the wavelength is (　　　) times its original value.</p>"
+      },
+      "hint": {
+        "zh": "<p>先由电势能差求动能，再求动量。</p>",
+        "en": "<p>Find kinetic energy from voltage, then momentum.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$h/\\sqrt{2m_e eU}$；$1/2$。</p><h4>解析</h4><ol><li>用电荷量大小 $e&gt;0$，$eU=p^2/(2m_e)$，所以 $p=\\sqrt{2m_e eU}$。</li><li>$\\lambda=h/p\\propto U^{-1/2}$；电压乘4使动量乘2、波长除2。</li></ol><p class=\"common-error\"><strong>易错点：</strong>该式取非相对论近似和从静止出发；不要把电压与能量的单位直接混用。</p>",
+        "en": "<h4>Exam answer</h4><p>$h/\\sqrt{2m_e eU}$; $1/2$.</p><h4>Working</h4><ol><li>With charge magnitude $e&gt;0$, $eU=p^2/(2m_e)$, giving $p=\\sqrt{2m_e eU}$.</li><li>$\\lambda=h/p\\propto U^{-1/2}$, so quadrupling voltage halves wavelength.</li></ol><p class=\"common-error\"><strong>Common error：</strong>This assumes nonrelativistic motion starting from rest. Keep voltage and energy units distinct.</p>"
+      },
+      "sources": [
+        "matter"
+      ],
+      "formula": "de-broglie",
+      "origin": null,
+      "n": 2
+    },
+    {
+      "section": 1,
+      "local": 3,
+      "title": {
+        "zh": "统计解释与归一化",
+        "en": "Statistical interpretation and normalization"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>归一化波函数 $\\Psi(\\mathbf r,t)$ 对应的几率密度 $\\rho=$（　　　）；全空间归一化条件为（　　　）。</p>",
+        "en": "<p>For a normalized wave function $\\Psi(\\mathbf r,t)$, the probability density is $\\rho=$ (　　　), and the whole-space normalization condition is (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>密度与概率的区别在于是否已对体积积分。</p>",
+        "en": "<p>A density becomes probability after integration over volume.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$\\rho=|\\Psi|^2$；$\\int_{\\mathbb R^3}|\\Psi|^2dV=1$。</p><h4>解析</h4><ol><li>体积元 $dV$ 中的概率为 $dP=|\\Psi|^2dV$，而不是单独的 $|\\Psi|^2$。</li><li>对全空间积分得到找到粒子的总概率，归一化后等于1。</li></ol><p class=\"common-error\"><strong>易错点：</strong>波函数本身是概率幅；不能用 $\\int\\Psi dV=1$ 替代归一化。</p>",
+        "en": "<h4>Exam answer</h4><p>$\\rho=|\\Psi|^2$; $\\int_{\\mathbb R^3}|\\Psi|^2dV=1$.</p><h4>Working</h4><ol><li>The probability in $dV$ is $|\\Psi|^2dV$; $|\\Psi|^2$ alone is a density.</li><li>Whole-space integration gives total probability one.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Normalize the squared modulus, not the amplitude integral.</p>"
+      },
+      "sources": [
+        "born"
+      ],
+      "formula": "born",
+      "origin": null,
+      "n": 3
+    },
+    {
+      "section": 1,
+      "local": 4,
+      "title": {
+        "zh": "定态的时间因子",
+        "en": "Time factor of a stationary state"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>若 $\\hat H\\psi=E\\psi$ 且势能不显含时间，相应含时定态可写为（　　　），其几率密度是否随时间变化？（　　　）</p>",
+        "en": "<p>If $\\hat H\\psi=E\\psi$ and the potential is time-independent, the corresponding time-dependent stationary state is (　　　). Does its probability density vary with time? (　　　)</p>"
+      },
+      "hint": {
+        "zh": "<p>时间因子是模长为1的相位。</p>",
+        "en": "<p>The time factor is a phase of unit modulus.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$\\Psi(\\mathbf r,t)=\\psi(\\mathbf r)e^{-iEt/\\hbar}$；不随时间变化。</p><h4>解析</h4><ol><li>分离变量后时间函数满足 $i\\hbar T\\prime=ET$，所以 $T=e^{-iEt/\\hbar}$。</li><li>$|\\Psi|^2=|\\psi|^2|e^{-iEt/\\hbar}|^2=|\\psi|^2$。</li></ol><p class=\"common-error\"><strong>易错点：</strong>定态不是波函数完全不含时间；不随时间变化的是其概率密度等定态统计性质。</p>",
+        "en": "<h4>Exam answer</h4><p>$\\Psi(\\mathbf r,t)=\\psi(\\mathbf r)e^{-iEt/\\hbar}$; no.</p><h4>Working</h4><ol><li>Separation gives $i\\hbar T\\prime=ET$ and $T=e^{-iEt/\\hbar}$.</li><li>The phase has unit modulus, so $|\\Psi|^2=|\\psi|^2$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Stationary does not mean that the wave function has no time factor.</p>"
+      },
+      "sources": [
+        "stationary"
+      ],
+      "formula": "stationary",
+      "origin": null,
+      "n": 4
+    },
+    {
+      "section": 1,
+      "local": 5,
+      "title": {
+        "zh": "局域守恒的方程",
+        "en": "Equation of local conservation"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>以 $\\rho$ 表示几率密度、$\\mathbf j$ 表示几率流密度，局域几率守恒方程为（　　　）。该结论由波函数的（　　　）和薛定谔方程得到。</p>",
+        "en": "<p>Using density $\\rho$ and current $\\mathbf j$, local probability conservation is (　　　). It follows from the wave function’s (　　　) together with the Schrödinger equation.</p>"
+      },
+      "hint": {
+        "zh": "<p>散度描述单位体积的净流出。</p>",
+        "en": "<p>Divergence measures net outward flux per unit volume.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$\\partial_t\\rho+\\nabla\\cdot\\mathbf j=0$；统计解释。</p><h4>解析</h4><ol><li>体积内概率的变化等于流入减去流出；写成微分形式就是连续性方程。</li><li>统计解释令 $\\rho=|\\Psi|^2$；实势能薛定谔方程与其共轭式给出守恒式，因此无需另立一个独立概率守恒假设。</li></ol><p class=\"common-error\"><strong>易错点：</strong>局域守恒不要求 $\\partial_t\\rho=0$，空间流动可以造成局部密度变化。</p>",
+        "en": "<h4>Exam answer</h4><p>$\\partial_t\\rho+\\nabla\\cdot\\mathbf j=0$; statistical interpretation.</p><h4>Working</h4><ol><li>Probability change in a volume is inflow minus outflow, yielding the continuity equation.</li><li>$\\rho=|\\Psi|^2$ comes from the statistical interpretation; the Schrödinger equation for a real potential gives the conservation law.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Local conservation does not require stationary density.</p>"
+      },
+      "sources": [
+        "current"
+      ],
+      "formula": "current",
+      "origin": null,
+      "n": 5
+    },
+    {
+      "section": 1,
+      "local": 6,
+      "title": {
+        "zh": "对易关系的符号与方向",
+        "en": "Order and direction in commutators"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>$[\\hat p_x,\\hat x]=$（　　　）；$[\\hat x,\\hat p_y]=$（　　　）。</p>",
+        "en": "<p>$[\\hat p_x,\\hat x]=$ (　　　); $[\\hat x,\\hat p_y]=$ (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>交换两个算符的次序会改变对易括号的符号；不同方向另作判断。</p>",
+        "en": "<p>Reversing a commutator changes its sign; different Cartesian directions commute.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$-i\\hbar$；$0$。</p><h4>解析</h4><ol><li>由 $[x,p_x]=i\\hbar$ 和反对称性得 $[p_x,x]=-i\\hbar$。</li><li>$\\partial_y x=0$，因此 $x(-i\\hbar\\partial_y f)-(-i\\hbar\\partial_y)(xf)=0$。</li></ol><p class=\"common-error\"><strong>易错点：</strong>正则关系中的 $\\delta_{ij}$ 不能省略后误用到不同方向。</p>",
+        "en": "<h4>Exam answer</h4><p>$-i\\hbar$; $0$.</p><h4>Working</h4><ol><li>Antisymmetry reverses $[x,p_x]=i\\hbar$.</li><li>Since $\\partial_y x=0$, the product rule gives $[x,p_y]f=0$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The Cartesian Kronecker delta matters.</p>"
+      },
+      "sources": [
+        "commutator"
+      ],
+      "formula": "commutator",
+      "origin": null,
+      "n": 6
+    },
+    {
+      "section": 1,
+      "local": 7,
+      "title": {
+        "zh": "力学量算符的条件",
+        "en": "Conditions on an observable operator"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>量子力学中力学量用（　　　）算符表示，以符合态叠加原理；还要求它为（　　　）算符，以保证本征值和平均值为实数。</p>",
+        "en": "<p>An observable operator is (　　　) to respect superposition and (　　　) so that its eigenvalues and expectations are real.</p>"
+      },
+      "hint": {
+        "zh": "<p>一个条件涉及加法与数乘，另一个涉及伴随。</p>",
+        "en": "<p>One condition concerns linear combinations; the other concerns the adjoint.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>线性；厄米。</p><h4>解析</h4><ol><li>线性为 $F(c_1\\psi_1+c_2\\psi_2)=c_1F\\psi_1+c_2F\\psi_2$。</li><li>厄米为 $F^\\dagger=F$（采用适当定义域）。它使可观测量的谱和期望值为实数。</li></ol><p class=\"common-error\"><strong>易错点：</strong>“厄米”与“幺正”不是同一个定义。</p>",
+        "en": "<h4>Exam answer</h4><p>Linear; Hermitian.</p><h4>Working</h4><ol><li>Linearity is $F(c_1\\psi_1+c_2\\psi_2)=c_1F\\psi_1+c_2F\\psi_2$.</li><li>Hermiticity is $F^\\dagger=F$ on a suitable domain and gives real observable eigenvalues and means.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Hermitian and unitary are different conditions.</p>"
+      },
+      "sources": [
+        "linear",
+        "hermitian"
+      ],
+      "formula": "hermitian",
+      "origin": null,
+      "n": 7
+    },
+    {
+      "section": 1,
+      "local": 8,
+      "title": {
+        "zh": "叠加系数与概率",
+        "en": "Superposition coefficients and probabilities"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>$u_1,u_2$ 是某力学量算符不同本征值对应的正交归一本征函数。体系处于 $\\psi=(\\sqrt3/2)u_1+(1/2)u_2$，测得对应第一个本征值的概率为（　　　），第二个为（　　　）。</p>",
+        "en": "<p>Orthonormal $u_1,u_2$ have distinct eigenvalues of an observable. In $\\psi=(\\sqrt3/2)u_1+(1/2)u_2$, the probabilities of the first and second eigenvalues are (　　　) and (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>先确认归一化，再取系数的模平方。</p>",
+        "en": "<p>Check normalization, then square coefficient magnitudes.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$3/4$；$1/4$。</p><h4>解析</h4><ol><li>范数为 $|\\sqrt3/2|^2+|1/2|^2=1$，无需再归一化。</li><li>本征值互异且基函数正交归一，所以测量概率就是相应系数的模平方。</li></ol><p class=\"common-error\"><strong>易错点：</strong>振幅 $\\sqrt3/2$ 本身不是概率。</p>",
+        "en": "<h4>Exam answer</h4><p>$3/4$; $1/4$.</p><h4>Working</h4><ol><li>The squared coefficients sum to one, so the state is normalized.</li><li>For distinct eigenvalues in an orthonormal basis, probabilities are squared coefficient magnitudes.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The amplitude $\\sqrt3/2$ is not itself a probability.</p>"
+      },
+      "sources": [
+        "measurement"
+      ],
+      "formula": "measurement",
+      "origin": null,
+      "n": 8
+    },
+    {
+      "section": 2,
+      "local": 1,
+      "title": {
+        "zh": "温度与峰值波长",
+        "en": "Temperature and peak wavelength"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>黑体温度由 $T$ 变为 $2T$，能量密度按波长分布的峰值波长变为原来的（　　）<div class=\"opts\">A. 2倍<br>B. 4倍<br>C. 1/2倍<br>D. 不变</div></p>",
+        "en": "<p>A black body is heated from $T$ to $2T$. Its peak wavelength becomes:<div class=\"opts\">A. Twice as large<br>B. Four times as large<br>C. One half as large<br>D. Unchanged</div></p>"
+      },
+      "hint": {
+        "zh": "<p>使用峰值波长与温度的乘积为常量。</p>",
+        "en": "<p>Use the constant product of peak wavelength and temperature.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>C。</p><h4>解析</h4><ol><li>$\\lambda_mT=b$，所以 $\\lambda_m(2T)=b/(2T)=\\lambda_m(T)/2$。</li><li>温度升高使波长峰值移向短波；总辐射强度的温度幂次不是本题所问的峰位比例。</li></ol>",
+        "en": "<h4>Exam answer</h4><p>C.</p><h4>Working</h4><ol><li>$\\lambda_mT=b$ gives $\\lambda_m(2T)=\\lambda_m(T)/2$.</li><li>The wavelength peak shifts shorter. Do not confuse the peak location with a power law for total emitted radiation.</li></ol>"
+      },
+      "sources": [
+        "radiation"
+      ],
+      "formula": "wien",
+      "origin": null,
+      "n": 9
+    },
+    {
+      "section": 2,
+      "local": 2,
+      "title": {
+        "zh": "光强与遏止电压",
+        "en": "Intensity and stopping voltage"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>固定金属表面，入射频率高于红限且保持不变。仅增大光强，按通常光电效应模型（　　）<div class=\"opts\">A. 红限频率增大<br>B. 饱和电流增大而遏止电压不变<br>C. 最大初动能增大<br>D. 逸出功增大</div></p>",
+        "en": "<p>For a fixed metal surface and fixed incident frequency above threshold, increasing intensity gives:<div class=\"opts\">A. Higher threshold frequency<br>B. Larger saturation current with unchanged stopping voltage<br>C. Larger maximum kinetic energy<br>D. Larger work function</div></p>"
+      },
+      "hint": {
+        "zh": "<p>单个光子的能量与单位时间的光子数分别由什么控制？</p>",
+        "en": "<p>What controls energy per photon, and what controls photon arrival rate?</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>B。</p><h4>解析</h4><ol><li>频率不变时 $h\\nu$ 不变，表面不变时 $W_0$ 不变，所以 $K_{\\max}=h\\nu-W_0=eU_s$ 不变。</li><li>光强增大意味着单位时间入射光子数增加，在通常模型下逸出电子数和饱和电流增加。</li></ol><p class=\"common-error\"><strong>易错点：</strong>红限 $\\nu_0=W_0/h$ 由材料表面决定。</p>",
+        "en": "<h4>Exam answer</h4><p>B.</p><h4>Working</h4><ol><li>Both $h\\nu$ and $W_0$ stay fixed, so $K_{\\max}=h\\nu-W_0=eU_s$ is unchanged.</li><li>More intense light supplies more photons per unit time, increasing emission rate and saturation current in the usual model.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The threshold $\\nu_0=W_0/h$ is set by the surface.</p>"
+      },
+      "sources": [
+        "photoelectric"
+      ],
+      "formula": "photoelectric",
+      "origin": null,
+      "n": 10
+    },
+    {
+      "section": 2,
+      "local": 3,
+      "title": {
+        "zh": "正确理解定态",
+        "en": "Interpret a stationary state"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>关于 $\\Psi(x,t)=\\psi(x)e^{-iEt/\\hbar}$，正确的是（　　）<div class=\"opts\">A. 波函数完全不含时间<br>B. 粒子位置必有确定值<br>C. 所有定态的概率流必为零<br>D. 该态的能量确定，且概率密度不随时间改变</div></p>",
+        "en": "<p>For $\\Psi(x,t)=\\psi(x)e^{-iEt/\\hbar}$, which is correct?<div class=\"opts\">A. The wave function has no time dependence.<br>B. Position must be definite.<br>C. Every stationary state has zero probability current.<br>D. Energy is definite and probability density is time-independent.</div></p>"
+      },
+      "hint": {
+        "zh": "<p>不要把密度稳定误认为位置确定。</p>",
+        "en": "<p>A stationary density is not a sharp particle position.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>D。</p><h4>解析</h4><ol><li>该式是能量本征态，能量本征值为 $E$，且相位的模方为1。</li><li>位置仍可按 $|\\psi|^2$ 分布；例如实的束缚定态可无流，但自由平面波可具有非零恒定概率流，所以 C 的“所有”错误。</li></ol>",
+        "en": "<h4>Exam answer</h4><p>D.</p><h4>Working</h4><ol><li>This is an energy eigenstate with eigenvalue $E$ and a time phase of unit modulus.</li><li>Position can remain distributed. A real bound stationary state can have zero current, but a traveling plane wave has nonzero constant current, disproving C.</li></ol>"
+      },
+      "sources": [
+        "stationary",
+        "current"
+      ],
+      "formula": "stationary",
+      "origin": null,
+      "n": 11
+    },
+    {
+      "section": 2,
+      "local": 4,
+      "title": {
+        "zh": "求导算符的伴随",
+        "en": "Adjoint of a derivative"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>在使分部积分边界项消失的定义域上，下列算符中厄米的是（　　）<div class=\"opts\">A. $\\partial_x$<br>B. $ix$<br>C. $i\\partial_x$<br>D. $x\\partial_x$</div></p>",
+        "en": "<p>On a domain where integration-by-parts boundary terms vanish, which operator is Hermitian?<div class=\"opts\">A. $\\partial_x$<br>B. $ix$<br>C. $i\\partial_x$<br>D. $x\\partial_x$</div></p>"
+      },
+      "hint": {
+        "zh": "<p>同时对系数取复共轭，并对乘积反转次序。</p>",
+        "en": "<p>Conjugate coefficients and reverse product order in an adjoint.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>C。</p><h4>解析</h4><ol><li>$D^\\dagger=-D$，故 $(iD)^\\dagger=(-i)(-D)=iD$。</li><li>A 为反厄米；B 的伴随为 $-ix$；D 的伴随为 $-Dx=-xD-1$，不等于自身。</li></ol><p class=\"common-error\"><strong>易错点：</strong>带 $i$ 不自动表示厄米；必须连同算符本身一起取伴随。</p>",
+        "en": "<h4>Exam answer</h4><p>C.</p><h4>Working</h4><ol><li>$D^\\dagger=-D$ gives $(iD)^\\dagger=(-i)(-D)=iD$.</li><li>A is anti-Hermitian; B has adjoint $-ix$; D has adjoint $-Dx=-xD-1$, different from itself.</li></ol><p class=\"common-error\"><strong>Common error：</strong>A factor of $i$ alone does not determine Hermiticity.</p>"
+      },
+      "sources": [
+        "hermitian",
+        "commutator"
+      ],
+      "formula": "hermitian",
+      "origin": null,
+      "n": 12
+    },
+    {
+      "section": 3,
+      "local": 1,
+      "title": {
+        "zh": "自由平面波及归一化",
+        "en": "Free plane wave and normalization"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>$\\Psi(x,t)=Ae^{i(kx-\\omega t)}$ 描述怎样的粒子状态？写出它的能量、动量与 $\\omega,k$ 的关系，并说明为什么在全直线上不能普通归一化为1。</p>",
+        "en": "<p>What particle state does $\\Psi(x,t)=Ae^{i(kx-\\omega t)}$ describe? Relate its energy and momentum to $\\omega,k$ and explain why it cannot have ordinary norm one on the whole line.</p>"
+      },
+      "hint": {
+        "zh": "<p>检查模方是否随位置衰减。</p>",
+        "en": "<p>Check whether its modulus squared decays with position.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>它描述能量和动量确定的自由粒子平面波，$E=\\hbar\\omega$、$p=\\hbar k$。当 $A\\ne0$ 时 $|\\Psi|^2=|A|^2$ 在全直线为常数，积分发散，因此不能普通归一化为1。</p><h4>解析</h4><ol><li>分别作用 $i\\hbar\\partial_t$ 和 $-i\\hbar\\partial_x$，得到 $E\\Psi$ 和 $p\\Psi$。</li><li>$\\int_{-\\infty}^{\\infty}|A|^2dx=\\infty$。理想平面波可用δ广义归一化，或在有限周期箱中作箱归一化；实际局域化态用波包描述。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不能通过把 $A$ 随意设得“很小但非零”使无穷区间的常数积分变成1。</p>",
+        "en": "<h4>Exam answer</h4><p>It is a free-particle plane wave with definite $E=\\hbar\\omega$ and $p=\\hbar k$. Its nonzero constant density has a divergent whole-line integral, so ordinary normalization to one is impossible.</p><h4>Working</h4><ol><li>Acting with $i\\hbar\\partial_t$ and $-i\\hbar\\partial_x$ gives the energy and momentum eigenvalues.</li><li>Use delta normalization for ideal waves, a finite periodic box for box normalization, or a wave packet for a localized physical state.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Making a nonzero constant amplitude small does not make its whole-line norm finite.</p>"
+      },
+      "sources": [
+        "matter",
+        "spectrum",
+        "schrodinger"
+      ],
+      "formula": "plane-wave",
+      "origin": null,
+      "n": 13
+    },
+    {
+      "section": 3,
+      "local": 2,
+      "title": {
+        "zh": "含平方坐标的对易子",
+        "en": "Commutator with squared position"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>证明 $[\\hat p_x,x^2]=-2i\\hbar x$。要求写出算符对任意适当函数的作用过程。</p>",
+        "en": "<p>Prove $[\\hat p_x,x^2]=-2i\\hbar x$ by applying the operators to an arbitrary suitable function.</p>"
+      },
+      "hint": {
+        "zh": "<p>乘积求导有两个来自 $x$ 的项。</p>",
+        "en": "<p>The product rule supplies the derivative of $x^2$ as well as that of the test function.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$[\\hat p_x,x^2]=-2i\\hbar x$。</p><h4>解析</h4><ol><li>对任意 $f$，$\\hat p_x(x^2f)=-i\\hbar(2xf+x^2f\\prime)$。</li><li>$x^2\\hat p_xf=-i\\hbar x^2f\\prime$。</li><li>相减得 $[\\hat p_x,x^2]f=-2i\\hbar xf$，因 $f$ 任意即得算符等式。</li></ol><p class=\"common-error\"><strong>易错点：</strong>这是原卷基本对易证明的变式，关键仍是乘积法则，不能把 $x^2$ 当常数。</p>",
+        "en": "<h4>Exam answer</h4><p>$[\\hat p_x,x^2]=-2i\\hbar x$.</p><h4>Working</h4><ol><li>$p_x(x^2f)=-i\\hbar(2xf+x^2f\\prime)$ for arbitrary suitable $f$.</li><li>$x^2p_xf=-i\\hbar x^2f\\prime$.</li><li>Subtract to get $[p_x,x^2]f=-2i\\hbar xf$ and hence the operator identity.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The product rule is essential; $x^2$ is not constant under differentiation.</p>"
+      },
+      "sources": [
+        "commutator"
+      ],
+      "formula": "commutator",
+      "origin": null,
+      "n": 14
+    },
+    {
+      "section": 3,
+      "local": 3,
+      "title": {
+        "zh": "整体相位与相对相位",
+        "en": "Global and relative phase"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>将归一化波函数整体乘以 $i$ 是否改变所描述的量子态？若只给叠加态的一个分量乘以 $i$，是否也一定不改变物理预言？说明理由。</p>",
+        "en": "<p>Does multiplying a normalized wave function by $i$ change its physical state? If only one component of a superposition is multiplied by $i$, are all predictions necessarily unchanged? Explain.</p>"
+      },
+      "hint": {
+        "zh": "<p>比较共同因子能否从整个波函数提出。</p>",
+        "en": "<p>Check whether the phase is a common factor of the entire state.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>整体乘 $i$ 只改变整体相位，物理态和测量概率不变；只改变一个分量通常改变相对相位，物理预言不一定相同。</p><h4>解析</h4><ol><li>整体相位 $e^{i\\alpha}$ 的模长为1：$|e^{i\\alpha}\\psi|^2=|\\psi|^2$，期望值中的相位也相消。</li><li>对 $c_1\\psi_1+c_2\\psi_2$，仅把第二项改为 $ic_2\\psi_2$，会改变交叉项 $2\\operatorname{Re}(c_1^*c_2\\psi_1^*\\psi_2)$，从而可改变干涉图样。</li><li>在原本征基测量的权重 $|c_n|^2$ 可能不变，但不能据此断言所有其他测量也不变。</li></ol><p class=\"common-error\"><strong>易错点：</strong>“相位不影响概率”只能无条件用于整体相位，不能用于任意相对相位变化。</p>",
+        "en": "<h4>Exam answer</h4><p>A global factor $i$ changes only overall phase and leaves the physical state unchanged. Applying it to one component generally changes relative phase and can change predictions.</p><h4>Working</h4><ol><li>A unit-modulus global phase cancels in $|\\psi|^2$ and in expectation values.</li><li>Changing one component alters the interference cross term $2\\operatorname{Re}(c_1^*c_2\\psi_1^*\\psi_2)$ and can change spatial interference.</li><li>Weights in the original eigenbasis may remain unchanged, without making every other measurement unchanged.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Only global phase is universally unobservable; relative phase can matter.</p>"
+      },
+      "sources": [
+        "born",
+        "superposition"
+      ],
+      "formula": "superposition",
+      "origin": null,
+      "n": 15
+    },
+    {
+      "section": 3,
+      "local": 4,
+      "title": {
+        "zh": "厄米算符乘积的条件",
+        "en": "When is a product Hermitian?"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>“两个厄米算符的乘积仍是厄米算符”，这句话是否总成立？在本课程通常假设下给出成立条件和证明。</p>",
+        "en": "<p>Is a product of two Hermitian operators always Hermitian? State and prove the usual course-level condition.</p>"
+      },
+      "hint": {
+        "zh": "<p>取乘积的伴随时要反转次序。</p>",
+        "en": "<p>Taking an adjoint reverses the order of factors.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>不总成立。在乘积及伴随都定义良好的共同定义域上，$AB$ 为厄米的条件是 $AB=BA$。</p><h4>解析</h4><ol><li>由 $A^\\dagger=A$、$B^\\dagger=B$，得 $(AB)^\\dagger=B^\\dagger A^\\dagger=BA$。</li><li>要等于原来的 $AB$，须有 $BA=AB$，即对易。</li><li>例如 $xp_x$ 不厄米，因为其伴随 $p_xx=xp_x-i\\hbar$；对称化 $(xp_x+p_xx)/2$ 在适当域下是厄米形式。</li></ol><p class=\"common-error\"><strong>易错点：</strong>对无界微分算符还需兼容定义域，不能仅凭形式代数断言所有边界下都自伴。</p>",
+        "en": "<h4>Exam answer</h4><p>No. On compatible domains where these products and adjoints are well-defined, $AB$ is Hermitian when $AB=BA$.</p><h4>Working</h4><ol><li>For Hermitian factors, $(AB)^\\dagger=B^\\dagger A^\\dagger=BA$.</li><li>Equality with $AB$ therefore requires commutation.</li><li>For example, $(xp_x)^\\dagger=p_xx=xp_x-i\\hbar$; a symmetrized product $(xp_x+p_xx)/2$ has Hermitian form on a suitable domain.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Unbounded differential operators also require domain compatibility; formal algebra alone does not settle every boundary-value problem.</p>"
+      },
+      "sources": [
+        "hermitian",
+        "commutator"
+      ],
+      "formula": "hermitian",
+      "origin": null,
+      "n": 16
+    },
+    {
+      "section": 4,
+      "local": 1,
+      "title": {
+        "zh": "无限深阱：本征态与区间概率",
+        "en": "Infinite well: eigenstates and an interval probability"
+      },
+      "points": 20,
+      "question": {
+        "zh": "<p>电子处于一维无限深方势阱：$0&lt;x&lt;a$ 时 $V=0$，阱外 $V=\\infty$，$a&gt;0$。<p>（1）求能量本征值及归一化空间波函数。（12分）</p><p>（2）电子处于第一激发态 $n=2$，求 $\\langle x\\rangle$ 及在区间 $[a/4,3a/4]$ 内出现的概率。（8分）</p></p>",
+        "en": "<p>An electron is in an infinite well with $V=0$ for $0&lt;x&lt;a$ and $V=\\infty$ outside, $a&gt;0$.<p>(1) Find the energy eigenvalues and normalized spatial eigenfunctions. (12 points)</p><p>(2) In the first excited state $n=2$, find $\\langle x\\rangle$ and the probability in $[a/4,3a/4]$. (8 points)</p></p>"
+      },
+      "hint": {
+        "zh": "<p>第（1）问用两端零边界；第（2）问先利用密度对称性，再积分，不能把区间概率当成区间长度比例。</p>",
+        "en": "<p>Use zero endpoint conditions. Then exploit reflection symmetry and integrate the density, rather than assuming uniform probability.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$E_n=n^2\\pi^2\\hbar^2/(2m_ea^2)$，$\\psi_n=\\sqrt{2/a}\\sin(n\\pi x/a)$（阱内；阱外为0），$n=1,2,\\ldots$。在 $n=2$ 态，$\\langle x\\rangle=a/2$，$P(a/4\\le x\\le3a/4)=1/2$。</p><h4>解析</h4><ol><li>阱内 $-\\hbar^2\\psi\\prime\\prime/(2m_e)=E\\psi$；通解 $A\\sin kx+B\\cos kx$。由 $\\psi(0)=\\psi(a)=0$ 得 $B=0$、$ka=n\\pi$，排除零函数 $n=0$，得 $E_n$。</li><li>由 $|A|^2\\int_0^a\\sin^2(n\\pi x/a)dx=|A|^2a/2=1$ 得 $A=\\sqrt{2/a}$。</li><li>对 $n=2$，$\\rho_2=(2/a)\\sin^2(2\\pi x/a)$ 关于 $a/2$ 对称，所以 $\\langle x\\rangle=a/2$；也可直接代入 $\\int_0^a x\\rho_2dx$。</li><li>区间概率 $P=(2/a)\\int_{a/4}^{3a/4}\\sin^2(2\\pi x/a)dx=[x/a-\\sin(4\\pi x/a)/(4\\pi)]_{a/4}^{3a/4}=1/2$。</li><li>这里两个端点正弦项恰为零；得到1/2是积分的结果，不是所有半阱宽区间都具有1/2概率。</li></ol><p class=\"common-error\"><strong>易错点：</strong>第一激发态是 $n=2$，不是 $n=1$；位置均值在中心并不要求中心概率密度最大。</p><p>参考分配：方程与边界4、能级4、归一化波函数4；位置均值及理由4、区间概率积分及结果4。</p>",
+        "en": "<h4>Exam answer</h4><p>$E_n=n^2\\pi^2\\hbar^2/(2m_ea^2)$ and $\\psi_n=\\sqrt{2/a}\\sin(n\\pi x/a)$ inside, zero outside, for $n=1,2,\\ldots$. At $n=2$, $\\langle x\\rangle=a/2$ and $P[a/4,3a/4]=1/2$.</p><h4>Working</h4><ol><li>The interior equation is $-\\hbar^2\\psi\\prime\\prime/(2m_e)=E\\psi$, with solution $A\\sin kx+B\\cos kx$. The zero endpoints give $B=0$ and $ka=n\\pi$, excluding $n=0$, yielding the energy levels.</li><li>Normalization gives $|A|^2a/2=1$ and a positive real $A=\\sqrt{2/a}$.</li><li>$\\rho_2=(2/a)\\sin^2(2\\pi x/a)$ is symmetric about $a/2$, giving the mean $a/2$; direct integration agrees.</li><li>$P=(2/a)\\int_{a/4}^{3a/4}\\sin^2(2\\pi x/a)dx=[x/a-\\sin(4\\pi x/a)/(4\\pi)]_{a/4}^{3a/4}=1/2$.</li><li>The sine terms vanish at these particular endpoints; the result does not justify assuming uniform density.</li></ol><p class=\"common-error\"><strong>Common error：</strong>The first excited state has $n=2$. A central mean does not require a density maximum at the center.</p><p>Suggested allocation: equation/boundaries 4, levels 4, normalized functions 4, mean with reasoning 4, probability integral and result 4.</p>"
+      },
+      "sources": [
+        "well",
+        "sine",
+        "book-well"
+      ],
+      "formula": "infinite-well",
+      "origin": null,
+      "n": 17
+    }
+  ],
+  "mock_b": [
+    {
+      "section": 1,
+      "local": 1,
+      "title": {
+        "zh": "玻尔假设与跃迁",
+        "en": "Bohr conditions and transitions"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>玻尔角动量量子化条件为 $L=$（　　　）；原子在能级 $E_i$ 与 $E_f$ 之间辐射或吸收的光子频率为 $\\nu=$（　　　）。</p>",
+        "en": "<p>Bohr’s angular-momentum condition is $L=$ (　　　). For a transition between $E_i,E_f$, photon frequency is $\\nu=$ (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>频率应为非负数，注意能量差的绝对值。</p>",
+        "en": "<p>Frequency is nonnegative; use the magnitude of the energy difference.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$n\\hbar$（$n=1,2,\\ldots$）；$|E_i-E_f|/h$。</p><h4>解析</h4><ol><li>玻尔模型把允许圆轨道的角动量限制为 $n\\hbar$；圆周驻波 $2\\pi r=n\\lambda$ 结合 $p=h/\\lambda$ 可给相同条件。</li><li>跃迁交换的光子能量为 $h\\nu=|E_i-E_f|$；从高能级到低能级为发射，反向为吸收。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不要把玻尔模型的 $n\\hbar$ 与量子力学轨道角动量大小 $\\sqrt{l(l+1)}\\hbar$ 当成同一个公式。</p>",
+        "en": "<h4>Exam answer</h4><p>$n\\hbar$, $n=1,2,\\ldots$; $|E_i-E_f|/h$.</p><h4>Working</h4><ol><li>The Bohr condition can also be obtained from $2\\pi r=n\\lambda$ and $p=h/\\lambda$.</li><li>The exchanged photon has energy $h\\nu=|E_i-E_f|$. A downward transition emits; an upward transition absorbs.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Distinguish Bohr’s orbit condition from quantum orbital magnitude $\\sqrt{l(l+1)}\\hbar$.</p>"
+      },
+      "sources": [
+        "bohr"
+      ],
+      "formula": "bohr",
+      "origin": null,
+      "n": 1
+    },
+    {
+      "section": 1,
+      "local": 2,
+      "title": {
+        "zh": "光电红限与遏止电压",
+        "en": "Photoelectric threshold and stopping voltage"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>金属逸出功为 $W_0$，红限频率为（　　　）。当入射频率 $\\nu&gt;\\nu_0$ 时，遏止电压的大小 $U_s=$（　　　），其中 $e&gt;0$ 为电子电荷量的大小。</p>",
+        "en": "<p>A surface has work function $W_0$. Its threshold frequency is (　　　). For $\\nu&gt;\\nu_0$, the stopping-voltage magnitude is $U_s=$ (　　　), with charge magnitude $e&gt;0$.</p>"
+      },
+      "hint": {
+        "zh": "<p>先写最大动能，再写反向电场使它降为零所需的功。</p>",
+        "en": "<p>Write the maximum kinetic energy and the retarding electrical work.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$\\nu_0=W_0/h$；$U_s=(h\\nu-W_0)/e$。</p><h4>解析</h4><ol><li>红限处最大动能恰为0，故 $h\\nu_0=W_0$。</li><li>高于红限，$K_{\\max}=h\\nu-W_0=eU_s$；这里电压使用非负大小。</li></ol><p class=\"common-error\"><strong>易错点：</strong>若低于红限，不能把式子算出的负动能当成真实光电子动能。</p>",
+        "en": "<h4>Exam answer</h4><p>$\\nu_0=W_0/h$; $U_s=(h\\nu-W_0)/e$.</p><h4>Working</h4><ol><li>At threshold the maximum kinetic energy is zero, giving $h\\nu_0=W_0$.</li><li>Above threshold $K_{\\max}=h\\nu-W_0=eU_s$, using a nonnegative voltage magnitude.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Below threshold the model predicts no emitted photoelectrons, not negative kinetic energy.</p>"
+      },
+      "sources": [
+        "photoelectric"
+      ],
+      "formula": "photoelectric",
+      "origin": null,
+      "n": 2
+    },
+    {
+      "section": 1,
+      "local": 3,
+      "title": {
+        "zh": "高斯波函数归一化",
+        "en": "Normalize a Gaussian"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>全直线上 $\\psi(x)=Ae^{-\\alpha x^2/2}$，$\\alpha&gt;0$，取 $A&gt;0$。已知 $\\int_{-\\infty}^{\\infty}e^{-\\alpha x^2}dx=\\sqrt{\\pi/\\alpha}$，则归一化系数 $A=$（　　　）。</p>",
+        "en": "<p>On the whole line $\\psi(x)=Ae^{-\\alpha x^2/2}$, $\\alpha&gt;0$, with $A&gt;0$. Given $\\int_{-\\infty}^{\\infty}e^{-\\alpha x^2}dx=\\sqrt{\\pi/\\alpha}$, find the normalization amplitude $A=$ (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>归一化时指数要先取模平方。</p>",
+        "en": "<p>Square the modulus before integrating.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$A=(\\alpha/\\pi)^{1/4}$。</p><h4>解析</h4><ol><li>$|\\psi|^2=A^2e^{-\\alpha x^2}$，故 $1=A^2\\sqrt{\\pi/\\alpha}$。</li><li>$A^2=\\sqrt{\\alpha/\\pi}$，再取正平方根得到四次方根。</li></ol><p class=\"common-error\"><strong>易错点：</strong>漏掉波函数模平方会错误地保留指数中的 $1/2$；归一化方程先解出 $A^2$，不是直接解出 $A$。</p>",
+        "en": "<h4>Exam answer</h4><p>$A=(\\alpha/\\pi)^{1/4}$.</p><h4>Working</h4><ol><li>$|\\psi|^2=A^2e^{-\\alpha x^2}$, so $1=A^2\\sqrt{\\pi/\\alpha}$.</li><li>Thus $A^2=\\sqrt{\\alpha/\\pi}$; the positive square root gives the fourth root.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Do not integrate the unsquared wave function, and do not mistake the result for $A^2$ as $A$.</p>"
+      },
+      "sources": [
+        "gaussian",
+        "born"
+      ],
+      "formula": "gaussian",
+      "origin": null,
+      "n": 3
+    },
+    {
+      "section": 1,
+      "local": 4,
+      "title": {
+        "zh": "周期箱中的动量谱",
+        "en": "Momentum in a periodic box"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>长度为 $L$ 的一维周期箱满足 $\\psi(x+L)=\\psi(x)$。动量本征值 $p_n=$（　　　），相邻本征值间隔 $\\Delta p=$（　　　），其中 $n$ 为整数。</p>",
+        "en": "<p>A periodic interval has length $L$ and $\\psi(x+L)=\\psi(x)$. Momentum eigenvalues are $p_n=$ (　　　), with adjacent spacing $\\Delta p=$ (　　　), for integer $n$.</p>"
+      },
+      "hint": {
+        "zh": "<p>平面波绕一周相位必须增加 $2\\pi$ 的整数倍。</p>",
+        "en": "<p>The phase change around the interval must be an integer multiple of $2\\pi$.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$2\\pi\\hbar n/L$；$2\\pi\\hbar/L$。</p><h4>解析</h4><ol><li>将 $\\psi=Ce^{ipx/\\hbar}$ 代入边界，得 $e^{ipL/\\hbar}=1$，即 $pL/\\hbar=2\\pi n$。</li><li>因此相邻动量差 $2\\pi\\hbar/L$；当 $L\\to\\infty$ 时差值趋于0，恢复连续谱极限。</li></ol><p class=\"common-error\"><strong>易错点：</strong>周期箱不同于两端波函数为零的无限深阱，不能把两种边界条件得到的波数混用。</p>",
+        "en": "<h4>Exam answer</h4><p>$2\\pi\\hbar n/L$; $2\\pi\\hbar/L$.</p><h4>Working</h4><ol><li>Insert $Ce^{ipx/\\hbar}$ into periodicity: $e^{ipL/\\hbar}=1$, giving $pL/\\hbar=2\\pi n$.</li><li>The spacing tends to zero as $L\\to\\infty$, approaching the continuous spectrum.</li></ol><p class=\"common-error\"><strong>Common error：</strong>A periodic box is different from a Dirichlet infinite well.</p>"
+      },
+      "sources": [
+        "spectrum"
+      ],
+      "formula": "periodic-box",
+      "origin": null,
+      "n": 4
+    },
+    {
+      "section": 1,
+      "local": 5,
+      "title": {
+        "zh": "角动量本征值",
+        "en": "Angular-momentum eigenvalues"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>球谐函数 $Y_{lm}$ 满足 $\\hat L^2Y_{lm}=$（　　　）$Y_{lm}$，$\\hat L_zY_{lm}=$（　　　）$Y_{lm}$。</p>",
+        "en": "<p>Spherical harmonics satisfy $\\hat L^2Y_{lm}=$ (　　　)$Y_{lm}$ and $\\hat L_zY_{lm}=$ (　　　)$Y_{lm}$.</p>"
+      },
+      "hint": {
+        "zh": "<p>分别区分角动量平方与一个分量。</p>",
+        "en": "<p>Distinguish squared magnitude from one component.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$l(l+1)\\hbar^2$；$m\\hbar$。</p><h4>解析</h4><ol><li>轨道角量子数 $l=0,1,2,\\ldots$，磁量子数 $m=-l,-l+1,\\ldots,l$。</li><li>本题第一个量是 $L^2$，不是 $L$ 的大小；后者为 $\\sqrt{l(l+1)}\\hbar$。</li></ol><p class=\"common-error\"><strong>易错点：</strong>此处 $m$ 是磁量子数，不是电子质量。</p>",
+        "en": "<h4>Exam answer</h4><p>$l(l+1)\\hbar^2$; $m\\hbar$.</p><h4>Working</h4><ol><li>Orbital $l$ is a nonnegative integer and $m=-l,\\ldots,l$.</li><li>The first quantity is $L^2$, not magnitude $L=\\sqrt{l(l+1)}\\hbar$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Here $m$ is a magnetic quantum number, not a mass.</p>"
+      },
+      "sources": [
+        "angular"
+      ],
+      "formula": "angular-momentum",
+      "origin": null,
+      "n": 5
+    },
+    {
+      "section": 1,
+      "local": 6,
+      "title": {
+        "zh": "不确定度的下界",
+        "en": "Lower bound on momentum spread"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>一维归一化态满足 $\\Delta x=\\sigma&gt;0$，则坐标—动量不确定关系要求 $\\Delta p_x\\ge$（　　　）。这里 $\\Delta x$ 指测量结果的（　　　）。</p>",
+        "en": "<p>A normalized one-dimensional state has $\\Delta x=\\sigma&gt;0$. Then $\\Delta p_x\\ge$ (　　　). Here $\\Delta x$ is the (　　　) of measurement outcomes.</p>"
+      },
+      "hint": {
+        "zh": "<p>不确定度是统计分布的宽度，不是仪器刻度。</p>",
+        "en": "<p>Uncertainty describes statistical spread rather than scale markings on an instrument.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$\\hbar/(2\\sigma)$；标准差（均方根偏差）。</p><h4>解析</h4><ol><li>由 $\\Delta x\\Delta p_x\\ge\\hbar/2$ 直接除以正数 $\\sigma$。</li><li>$\\Delta x=\\sqrt{\\langle x^2\\rangle-\\langle x\\rangle^2}$，与平均位置的大小不是同一个量。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不能直接用 $\\sqrt{\\langle x^2\\rangle}$，除非已经证明 $\\langle x\\rangle=0$。</p>",
+        "en": "<h4>Exam answer</h4><p>$\\hbar/(2\\sigma)$; standard deviation.</p><h4>Working</h4><ol><li>Divide $\\Delta x\\Delta p_x\\ge\\hbar/2$ by positive $\\sigma$.</li><li>$\\Delta x=\\sqrt{\\langle x^2\\rangle-\\langle x\\rangle^2}$, distinct from the mean position.</li></ol><p class=\"common-error\"><strong>Common error：</strong>$\\sqrt{\\langle x^2\\rangle}$ equals the spread only when the mean is zero.</p>"
+      },
+      "sources": [
+        "uncertainty"
+      ],
+      "formula": "uncertainty",
+      "origin": null,
+      "n": 6
+    },
+    {
+      "section": 1,
+      "local": 7,
+      "title": {
+        "zh": "δ分布的缩放",
+        "en": "Scaling a delta distribution"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>计算 $\\displaystyle\\int_{-\\infty}^{\\infty}f(x)\\delta(3x-6)dx=$（　　　），其中 $f$ 在相关点连续。</p>",
+        "en": "<p>Evaluate $\\int_{-\\infty}^{\\infty}f(x)\\delta(3x-6)dx=$ (　　　), for $f$ continuous at the relevant point.</p>"
+      },
+      "hint": {
+        "zh": "<p>找出δ自变量的零点，并处理缩放系数。</p>",
+        "en": "<p>Locate the root of the argument and include its scaling factor.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$f(2)/3$。</p><h4>解析</h4><ol><li>$3x-6=3(x-2)$，所以 $\\delta(3x-6)=\\delta(x-2)/3$。</li><li>再由筛选性质 $\\int f(x)\\delta(x-2)dx=f(2)$ 得结果。</li></ol><p class=\"common-error\"><strong>易错点：</strong>找根只给 $f(2)$，还必须除以斜率的绝对值3。</p>",
+        "en": "<h4>Exam answer</h4><p>$f(2)/3$.</p><h4>Working</h4><ol><li>$\\delta(3(x-2))=\\delta(x-2)/3$.</li><li>The sifting property then gives $f(2)/3$.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Locating the root is not enough; include the absolute slope factor.</p>"
+      },
+      "sources": [
+        "delta"
+      ],
+      "formula": "delta",
+      "origin": null,
+      "n": 7
+    },
+    {
+      "section": 1,
+      "local": 8,
+      "title": {
+        "zh": "平面波的概率流",
+        "en": "Probability current of a plane wave"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>在周期箱 $0\\le x\\le L$ 内，$\\psi=L^{-1/2}e^{ipx/\\hbar}$（$p$ 取允许的周期动量）。粒子质量为 $m$，其一维几率流密度 $j=$（　　　）。</p>",
+        "en": "<p>In a periodic box $0\\le x\\le L$, let $\\psi=L^{-1/2}e^{ipx/\\hbar}$ with allowed periodic momentum $p$ and mass $m$. Its one-dimensional probability current is $j=$ (　　　).</p>"
+      },
+      "hint": {
+        "zh": "<p>将 $\\partial_x\\psi=ip\\psi/\\hbar$ 代入概率流公式。</p>",
+        "en": "<p>Insert $\\partial_x\\psi=ip\\psi/\\hbar$ into the current formula.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$j=p/(mL)$。</p><h4>解析</h4><ol><li>$j=\\frac{\\hbar}{2mi}(\\psi^*\\psi\\prime-\\psi\\psi^{*\\prime})$，而 $\\psi\\prime=ip\\psi/\\hbar$、$\\psi^{*\\prime}=-ip\\psi^*/\\hbar$。</li><li>代入得 $j=(p/m)|\\psi|^2=p/(mL)$；符号反映流动方向。</li></ol><p class=\"common-error\"><strong>易错点：</strong>概率密度不随时间变化仍可有非零恒定流；不应把“定态”理解成“所有流都为零”。</p>",
+        "en": "<h4>Exam answer</h4><p>$j=p/(mL)$.</p><h4>Working</h4><ol><li>Use $j=\\hbar(\\psi^*\\psi\\prime-\\psi\\psi^{*\\prime})/(2mi)$, with derivatives $\\pm ip/\\hbar$.</li><li>Then $j=(p/m)|\\psi|^2=p/(mL)$. Its sign gives the direction of flow.</li></ol><p class=\"common-error\"><strong>Common error：</strong>A time-independent density can support nonzero constant current.</p>"
+      },
+      "sources": [
+        "current",
+        "spectrum"
+      ],
+      "formula": "current",
+      "origin": null,
+      "n": 8
+    },
+    {
+      "section": 2,
+      "local": 1,
+      "title": {
+        "zh": "测量值不是平均值",
+        "en": "Outcomes versus a mean"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>$u_1,u_2$ 是 $\\hat F$ 的正交归一本征态，本征值分别为1和3。态 $\\psi=(u_1+iu_2)/\\sqrt2$ 中单次测量 $F$（　　）<div class=\"opts\">A. 必定得到2<br>B. 得到1或3，概率振幅分别为1/2<br>C. 可能得到任意介于1和3之间的实数<br>D. 得到1或3，概率各为1/2</div></p>",
+        "en": "<p>Orthonormal $u_1,u_2$ have $F$ eigenvalues 1 and 3. In $\\psi=(u_1+iu_2)/\\sqrt2$, one measurement gives:<div class=\"opts\">A. Always 2<br>B. 1 or 3 with amplitudes 1/2<br>C. Any real value between 1 and 3<br>D. 1 or 3 with probabilities 1/2 each</div></p>"
+      },
+      "hint": {
+        "zh": "<p>先列允许的本征值，再算系数模方。</p>",
+        "en": "<p>List eigenvalues first, then take squared coefficient magnitudes.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>D。</p><h4>解析</h4><ol><li>测量结果只能是本征值1或3，$|1/\\sqrt2|^2=|i/\\sqrt2|^2=1/2$。</li><li>期望值 $\\langle F\\rangle=(1+3)/2=2$，但2不在本题本征值集合中。B把概率振幅与概率混用，振幅实际为 $1/\\sqrt2,i/\\sqrt2$。</li></ol>",
+        "en": "<h4>Exam answer</h4><p>D.</p><h4>Working</h4><ol><li>The only outcomes are eigenvalues 1 and 3, each with squared coefficient magnitude $1/2$.</li><li>The expectation is 2, not a possible outcome here. B confuses amplitudes with probabilities; the amplitudes are $1/\\sqrt2,i/\\sqrt2$.</li></ol>"
+      },
+      "sources": [
+        "measurement"
+      ],
+      "formula": "measurement",
+      "origin": null,
+      "n": 9
+    },
+    {
+      "section": 2,
+      "local": 2,
+      "title": {
+        "zh": "能谱的类型",
+        "en": "Types of energy spectra"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>关于本征值谱，下列说法正确的是（　　）<div class=\"opts\">A. 只要算符厄米，本征值必分立<br>B. 一切体系的能量都只有分立谱<br>C. 同一哈密顿量可以同时有离散束缚谱和连续电离谱<br>D. 动量在任何边界条件下都只有连续谱</div></p>",
+        "en": "<p>Which spectral statement is correct?<div class=\"opts\">A. Hermiticity requires a discrete spectrum.<br>B. Every energy spectrum is purely discrete.<br>C. One Hamiltonian may have both discrete bound and continuous ionization spectra.<br>D. Momentum is continuous under every boundary condition.</div></p>"
+      },
+      "hint": {
+        "zh": "<p>考虑氢原子和有限周期箱这两个反例。</p>",
+        "en": "<p>Consider hydrogen and a finite periodic box.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>C。</p><h4>解析</h4><ol><li>氢原子哈密顿量具有束缚态离散能级和电离连续谱。</li><li>厄米性保证本征值实，而不保证离散；自由粒子能量可连续；周期箱动量可离散。</li></ol><p class=\"common-error\"><strong>易错点：</strong>谱的分类必须连同物理空间、势能和边界条件讨论。</p>",
+        "en": "<h4>Exam answer</h4><p>C.</p><h4>Working</h4><ol><li>Hydrogen has discrete bound energies and a continuous ionization spectrum.</li><li>Hermiticity implies real values, not discreteness. Free-particle energy can be continuous and periodic-box momentum discrete.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Include space, potential and boundary conditions when classifying a spectrum.</p>"
+      },
+      "sources": [
+        "spectrum",
+        "measurement"
+      ],
+      "formula": "periodic-box",
+      "origin": null,
+      "n": 10
+    },
+    {
+      "section": 2,
+      "local": 3,
+      "title": {
+        "zh": "构造厄米形式",
+        "en": "Construct a Hermitian combination"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>$A,B$ 为厄米算符，相关乘积定义良好。下列在适当共同定义域下总具有厄米形式的是（　　）<div class=\"opts\">A. $AB$<br>B. $[A,B]$<br>C. $(AB+BA)/2$<br>D. $i(A+B)$</div></p>",
+        "en": "<p>Let Hermitian $A,B$ have well-defined products on a suitable common domain. Which combination always has Hermitian form?<div class=\"opts\">A. $AB$<br>B. $[A,B]$<br>C. $(AB+BA)/2$<br>D. $i(A+B)$</div></p>"
+      },
+      "hint": {
+        "zh": "<p>分别取伴随，乘积次序反转。</p>",
+        "en": "<p>Take adjoints and reverse product order.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>C。</p><h4>解析</h4><ol><li>$[(AB+BA)/2]^\\dagger=(BA+AB)/2$，等于原式。</li><li>$AB$ 需额外对易条件；$[A,B]^\\dagger=-[A,B]$；$[i(A+B)]^\\dagger=-i(A+B)$。后两者一般为反厄米形式。</li></ol><p class=\"common-error\"><strong>易错点：</strong>对实际无界算符还须检查定义域；题设已经把共同域作为前提。</p>",
+        "en": "<h4>Exam answer</h4><p>C.</p><h4>Working</h4><ol><li>The adjoint is $(BA+AB)/2$, equal to the original combination.</li><li>$AB$ needs commutation. The commutator and $i(A+B)$ are generally anti-Hermitian forms.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Actual unbounded operators also need compatible domains, assumed here.</p>"
+      },
+      "sources": [
+        "hermitian"
+      ],
+      "formula": "hermitian",
+      "origin": null,
+      "n": 11
+    },
+    {
+      "section": 2,
+      "local": 4,
+      "title": {
+        "zh": "实波函数的位置均值",
+        "en": "Position mean of a real wave function"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>归一化波函数 $\\psi(x)=Ae^{-\\alpha(x-x_0)^2/2}$ 为实函数，$\\alpha&gt;0$、$x_0\\ne0$，定义在全直线上。下列正确的是（　　）<div class=\"opts\">A. 只因波函数实，就必有 $\\langle x\\rangle=0$<br>B. $\\langle x\\rangle=x_0$，$\\langle p\\rangle=0$<br>C. $\\Delta x=0$<br>D. $\\langle p\\rangle=\\hbar\\sqrt{\\alpha}$</div></p>",
+        "en": "<p>A normalized real state is $\\psi(x)=Ae^{-\\alpha(x-x_0)^2/2}$, $\\alpha&gt;0$, $x_0\\ne0$, on the whole line. Which is correct?<div class=\"opts\">A. Reality alone implies $\\langle x\\rangle=0$.<br>B. $\\langle x\\rangle=x_0$, $\\langle p\\rangle=0$.<br>C. $\\Delta x=0$.<br>D. $\\langle p\\rangle=\\hbar\\sqrt{\\alpha}$.</div></p>"
+      },
+      "hint": {
+        "zh": "<p>密度关于哪个位置对称？动量平均值必须使用求导算符。</p>",
+        "en": "<p>Where is the density centered? Momentum requires its derivative operator.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>B。</p><h4>解析</h4><ol><li>密度关于 $x_0$ 对称，令 $u=x-x_0$ 得 $\\langle x\\rangle=x_0$。</li><li>实且衰减时 $\\langle p\\rangle=-i\\hbar\\int\\psi\\psi\\prime dx=-i\\hbar[\\psi^2]_{-\\infty}^{\\infty}/2=0$。</li><li>高斯有非零宽度，$(\\Delta x)^2=1/(2\\alpha)$；不是位置本征态。</li></ol><p class=\"common-error\"><strong>易错点：</strong>实函数不保证密度关于原点对称。</p>",
+        "en": "<h4>Exam answer</h4><p>B.</p><h4>Working</h4><ol><li>The density is centered at $x_0$, so the substitution $u=x-x_0$ gives $\\langle x\\rangle=x_0$.</li><li>For a real decaying state, $\\langle p\\rangle=-i\\hbar[\\psi^2]_{-\\infty}^{\\infty}/2=0$.</li><li>The finite-width Gaussian has $(\\Delta x)^2=1/(2\\alpha)$, not zero.</li></ol><p class=\"common-error\"><strong>Common error：</strong>A real function need not have density symmetric about the origin.</p>"
+      },
+      "sources": [
+        "gaussian",
+        "measurement"
+      ],
+      "formula": "gaussian",
+      "origin": null,
+      "n": 12
+    },
+    {
+      "section": 3,
+      "local": 1,
+      "title": {
+        "zh": "线性和厄米性的物理作用",
+        "en": "Physical roles of linearity and Hermiticity"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>写出线性算符和厄米算符的定义，并说明为什么量子力学中的可观测力学量采用线性厄米算符表示。</p>",
+        "en": "<p>Define linear and Hermitian operators and explain their use for quantum observables.</p>"
+      },
+      "hint": {
+        "zh": "<p>将每个定义与一项物理要求对应。</p>",
+        "en": "<p>Connect each definition with its physical requirement.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>线性：$F(c_1\\psi_1+c_2\\psi_2)=c_1F\\psi_1+c_2F\\psi_2$。厄米：适当定义域上 $F^\\dagger=F$，等价于内积关系 $\\langle u,Fv\\rangle=\\langle Fu,v\\rangle$。前者与态叠加原理一致，后者保证测量本征值和平均值为实数。</p><h4>解析</h4><ol><li>态可线性叠加，算符的作用也应按线性组合展开。</li><li>对归一化本征态 $F\\phi=f\\phi$，厄米性给 $f=f^*$；对任意适当态，$\\langle F\\rangle^*=\\langle F\\rangle$。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不要只背“厄米等于实函数”。微分算符的厄米性还需要边界和定义域。</p>",
+        "en": "<h4>Exam answer</h4><p>Linearity is $F(c_1\\psi_1+c_2\\psi_2)=c_1F\\psi_1+c_2F\\psi_2$. Hermiticity is $F^\\dagger=F$ on a suitable domain, equivalently $\\langle u,Fv\\rangle=\\langle Fu,v\\rangle$. Linearity respects superposition; Hermiticity gives real measurement eigenvalues and expectations.</p><h4>Working</h4><ol><li>A linear combination of states must transform consistently under the observable operator.</li><li>For $F\\phi=f\\phi$, Hermiticity gives $f=f^*$. It likewise makes every appropriate expectation real.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Hermitian does not mean merely a real-valued function; boundary conditions and domains matter for derivatives.</p>"
+      },
+      "sources": [
+        "linear",
+        "hermitian"
+      ],
+      "formula": "hermitian",
+      "origin": null,
+      "n": 13
+    },
+    {
+      "section": 3,
+      "local": 2,
+      "title": {
+        "zh": "概率流与局域守恒",
+        "en": "Current and local conservation"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>写出概率守恒的微分形式和对有限区域的积分形式，并解释概率流密度的物理意义。为什么概率守恒不是独立基本假设？</p>",
+        "en": "<p>Write differential and finite-region integral forms of probability conservation, interpret the current, and explain why this is not an independent postulate.</p>"
+      },
+      "hint": {
+        "zh": "<p>区域内概率减少应对应边界净流出为正。</p>",
+        "en": "<p>A positive net outward boundary flux means decreasing probability in the region.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$\\partial_t\\rho+\\nabla\\cdot\\mathbf j=0$；$\\frac{d}{dt}\\int_\\Omega\\rho dV=-\\oint_{\\partial\\Omega}\\mathbf j\\cdot d\\mathbf S$。概率流的法向分量表示单位时间通过单位面积的概率通量；守恒由统计解释与实势能薛定谔方程推出。</p><h4>解析</h4><ol><li>对微分式在 $\\Omega$ 积分，再用高斯定理，把散度体积分变为向外表面积分。</li><li>负号表示净流出时区域内概率减小，不要求局部密度处处不变。</li><li>用 $\\rho=|\\Psi|^2$ 和 $\\mathbf j=\\hbar(\\Psi^*\\nabla\\Psi-\\Psi\\nabla\\Psi^*)/(2mi)$，由含时方程与其共轭式相减即可得到微分式。</li></ol><p class=\"common-error\"><strong>易错点：</strong>总概率守恒还需适当边界条件，使全空间的净边界通量为零。</p>",
+        "en": "<h4>Exam answer</h4><p>$\\partial_t\\rho+\\nabla\\cdot\\mathbf j=0$ and $d\\int_\\Omega\\rho dV/dt=-\\oint_{\\partial\\Omega}\\mathbf j\\cdot d\\mathbf S$. The normal current component is probability crossing unit area per unit time. Conservation follows from statistical interpretation and the Schrödinger equation for a real potential.</p><h4>Working</h4><ol><li>Integrate the differential equation and apply the divergence theorem.</li><li>The minus sign means outward net flux reduces probability in the region; density need not be locally stationary.</li><li>Insert $\\rho=|\\Psi|^2$ and $\\mathbf j=\\hbar(\\Psi^*\\nabla\\Psi-\\Psi\\nabla\\Psi^*)/(2mi)$; subtracting the Schrödinger equation and its conjugate produces continuity.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Constant total probability additionally requires suitable zero-net-flux boundary conditions.</p>"
+      },
+      "sources": [
+        "current",
+        "book-current"
+      ],
+      "formula": "current",
+      "origin": null,
+      "n": 14
+    },
+    {
+      "section": 3,
+      "local": 3,
+      "title": {
+        "zh": "力学量完全集",
+        "en": "A complete set of commuting observables"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>什么是力学量完全集？分别给出三维自由粒子和不考虑自旋的氢原子的常用例子，并说明为什么氢原子不能只用能量唯一标记状态。</p>",
+        "en": "<p>What is a complete set of commuting observables? Give standard examples for a three-dimensional free particle and spinless hydrogen, and explain why energy alone does not uniquely label a hydrogen state.</p>"
+      },
+      "hint": {
+        "zh": "<p>关键是共同本征值能否消除剩余简并。</p>",
+        "en": "<p>Ask whether the joint eigenvalues remove remaining degeneracy.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>能完全标定态的一组两两对易的力学量算符称为力学量完全集。自由粒子可取 $p_x,p_y,p_z$；无自旋氢原子常取 $H,L^2,L_z$。氢原子同一能量下存在不同角动量量子数和磁量子数，单独的能量标签不够。</p><h4>解析</h4><ol><li>自由粒子三个动量分量共同确定平面波的波矢，能量可由 $p^2/(2m)$ 得出，无需另增一个独立标签。</li><li>氢原子以 $(n,l,m)$ 共同标记：能量区分 $n$，角动量大小和一个分量进一步区分剩余态。</li><li>“完全集”要求整体共同标签足够；不要求其中每个算符单独都无简并。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不能把“有简并的算符不能属于完全集”作为定义；课件的氢原子例子正相反。</p>",
+        "en": "<h4>Exam answer</h4><p>A complete set is a set of pairwise commuting observable operators whose joint eigenvalues fully label the states. Use $p_x,p_y,p_z$ for a free particle and $H,L^2,L_z$ for spinless hydrogen. Hydrogen states of different angular labels can share one energy.</p><h4>Working</h4><ol><li>Three momentum components fix the free plane wave; energy then follows from $p^2/(2m)$.</li><li>Hydrogen uses joint labels $(n,l,m)$, resolving degeneracy left by energy alone.</li><li>The complete set as a whole resolves degeneracy; each member need not be individually nondegenerate.</li></ol><p class=\"common-error\"><strong>Common error：</strong>A degenerate operator can belong to a complete set.</p>"
+      },
+      "sources": [
+        "angular",
+        "measurement"
+      ],
+      "formula": "measurement",
+      "origin": null,
+      "n": 15
+    },
+    {
+      "section": 3,
+      "local": 4,
+      "title": {
+        "zh": "零点能的简短推理",
+        "en": "A short zero-point-energy argument"
+      },
+      "points": 5,
+      "question": {
+        "zh": "<p>为什么一维谐振子的最低能量不能为0？利用坐标—动量不确定关系估计其最低能量，并说明所得下限能否达到。</p>",
+        "en": "<p>Why can an oscillator’s lowest energy not be zero? Estimate it using position–momentum uncertainty and explain whether the lower bound is attainable.</p>"
+      },
+      "hint": {
+        "zh": "<p>把能量写成关于 $(\\Delta x)^2$ 的两项，再用极小值或均值不等式。</p>",
+        "en": "<p>Express energy as two terms in $(\\Delta x)^2$ and minimize, or use the arithmetic–geometric mean bound.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>若动能与势能都为0，则坐标、动量同时无分散，违背 $\\Delta x\\Delta p\\ge\\hbar/2$。最低能量为 $E_0=\\hbar\\omega/2$，高斯基态达到此下限。</p><h4>解析</h4><ol><li>对任意适当态，$\\langle H\\rangle\\ge (\\Delta p)^2/(2m)+m\\omega^2(\\Delta x)^2/2$，平均位置与平均动量的平方项只会增加能量。</li><li>令 $y=(\\Delta x)^2&gt;0$，不确定关系给 $\\langle H\\rangle\\ge\\hbar^2/(8my)+m\\omega^2y/2\\ge2\\sqrt{\\hbar^2\\omega^2/16}=\\hbar\\omega/2$。</li><li>当 $\\langle x\\rangle=\\langle p\\rangle=0$、$y=\\hbar/(2m\\omega)$，且不确定关系取等号时可达到；归一化高斯基态正满足这些条件。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不等式只先给下限；要把它认作精确基态能量，还需说明可达性。</p>",
+        "en": "<h4>Exam answer</h4><p>Zero kinetic and potential energies would require both position and momentum to have zero spread, violating $\\Delta x\\Delta p\\ge\\hbar/2$. The minimum is $E_0=\\hbar\\omega/2$, attained by a Gaussian ground state.</p><h4>Working</h4><ol><li>For any suitable state, $\\langle H\\rangle\\ge(\\Delta p)^2/(2m)+m\\omega^2(\\Delta x)^2/2$; nonzero mean contributions add nonnegative energy.</li><li>With $y=(\\Delta x)^2$, $\\langle H\\rangle\\ge\\hbar^2/(8my)+m\\omega^2y/2\\ge\\hbar\\omega/2$ by the arithmetic–geometric mean inequality.</li><li>Equality requires zero means, $y=\\hbar/(2m\\omega)$ and minimum uncertainty; the normalized Gaussian satisfies them.</li></ol><p class=\"common-error\"><strong>Common error：</strong>A lower bound becomes the exact ground-state energy only after showing it is attained.</p>"
+      },
+      "sources": [
+        "zero-point",
+        "uncertainty"
+      ],
+      "formula": "zero-point",
+      "origin": null,
+      "n": 16
+    },
+    {
+      "section": 4,
+      "local": 1,
+      "title": {
+        "zh": "球谐函数叠加态的测量",
+        "en": "Measurements of a spherical-harmonic superposition"
+      },
+      "points": 20,
+      "question": {
+        "zh": "<p>空间转子处于 $\\Psi=C(\\sqrt3Y_{1,0}+iY_{2,1})$，取 $C&gt;0$。已知 $Y_{lm}$ 正交归一，$\\hat L^2Y_{lm}=l(l+1)\\hbar^2Y_{lm}$、$\\hat L_zY_{lm}=m\\hbar Y_{lm}$。<p>（1）求 $C$。（4分）</p><p>（2）判断是否为 $L^2$、$L_z$ 的本征态，并说明理由。（4分）</p><p>（3）分别测量 $L^2$、$L_z$，列出可能结果及概率。（8分）</p><p>（4）求 $\\langle L^2\\rangle$、$\\langle L_z\\rangle$。（4分）</p></p>",
+        "en": "<p>A rotor is in $\\Psi=C(\\sqrt3Y_{1,0}+iY_{2,1})$, with $C&gt;0$. The harmonics are orthonormal and satisfy $\\hat L^2Y_{lm}=l(l+1)\\hbar^2Y_{lm}$, $\\hat L_zY_{lm}=m\\hbar Y_{lm}$.<p>(1) Find $C$. (4 points)</p><p>(2) Is this an $L^2$ or $L_z$ eigenstate? Explain. (4 points)</p><p>(3) List outcomes and probabilities for separate measurements of each observable. (8 points)</p><p>(4) Find both expectations. (4 points)</p></p>"
+      },
+      "hint": {
+        "zh": "<p>正交性消去交叉项；先归一化、再求系数模方，最后按本征值加权。</p>",
+        "en": "<p>Orthogonality removes cross terms. Normalize, square coefficient magnitudes, then weight eigenvalues.</p>"
+      },
+      "answer": {
+        "zh": "<h4>可直接作答</h4><p>$C=1/2$；两个算符的本征态都不是。$L^2$ 的结果为 $2\\hbar^2$（概率 $3/4$）、$6\\hbar^2$（概率 $1/4$）；$L_z$ 的结果为0（概率 $3/4$）、$\\hbar$（概率 $1/4$）。$\\langle L^2\\rangle=3\\hbar^2$，$\\langle L_z\\rangle=\\hbar/4$。</p><h4>解析</h4><ol><li>归一化 $1=\\langle\\Psi|\\Psi\\rangle=C^2(3+1)$，因两个球谐函数正交，交叉项为0，故 $C=1/2$。每个 $Y_{lm}$ 自身的范数仍为1。</li><li>归一化系数为 $c_1=\\sqrt3/2$、$c_2=i/2$，概率 $P_1=|c_1|^2=3/4$、$P_2=|c_2|^2=1/4$，其和为1。</li><li>$Y_{1,0}$ 的 $(L^2,L_z)$ 值为 $(2\\hbar^2,0)$；$Y_{2,1}$ 的值为 $(6\\hbar^2,\\hbar)$。两个分量在每个算符下的本征值均不同，所以叠加态都不是本征态。</li><li>分别测量的结果与概率由上两项直接列出；此处指在相同制备的样本上分别测量，不把一次结果误当成平均值。</li><li>$\\langle L^2\\rangle=(3/4)(2\\hbar^2)+(1/4)(6\\hbar^2)=3\\hbar^2$；$\\langle L_z\\rangle=(3/4)0+(1/4)\\hbar=\\hbar/4$。</li><li>系数中的 $i$ 不改变这两个本征基测量的概率，因为 $|i|^2=1$；但不表示相对相位对一切观测都无影响。</li></ol><p class=\"common-error\"><strong>易错点：</strong>不把系数直接当概率，不把每个球谐函数的范数改写成3/4或1/4，也不把期望值列为本题的单次测量结果。</p><p>覆盖依据：课件第71–74页已有同类叠加态测量计算；本题沿用“归一化—判断—概率—平均值”的短步骤考法，扩展原卷未直接计算的角动量内容。</p>",
+        "en": "<h4>Exam answer</h4><p>$C=1/2$. It is neither an $L^2$ nor an $L_z$ eigenstate. $L^2$ gives $2\\hbar^2$ with probability $3/4$ and $6\\hbar^2$ with $1/4$; $L_z$ gives 0 with $3/4$ and $\\hbar$ with $1/4$. The means are $3\\hbar^2$ and $\\hbar/4$.</p><h4>Working</h4><ol><li>Orthogonality gives $1=C^2(3+1)$, so positive $C=1/2$. Each normalized spherical harmonic still has norm one.</li><li>The coefficients $\\sqrt3/2,i/2$ have squared magnitudes $3/4,1/4$, summing to one.</li><li>$Y_{1,0}$ has values $(L^2,L_z)=(2\\hbar^2,0)$; $Y_{2,1}$ has $(6\\hbar^2,\\hbar)$. Since both observable eigenvalues differ between components, neither operator yields one common eigenvalue on the superposition.</li><li>These pairs directly provide the separate-measurement outcome distributions for identically prepared samples.</li><li>$\\langle L^2\\rangle=(3/4)2\\hbar^2+(1/4)6\\hbar^2=3\\hbar^2$ and $\\langle L_z\\rangle=(1/4)\\hbar$.</li><li>The factor $i$ does not change these eigenbasis probabilities, but relative phase can matter for other observables.</li></ol><p class=\"common-error\"><strong>Common error：</strong>Do not use amplitudes as probabilities, reassign the norms of the harmonics, or list these mean values as possible individual outcomes.</p><p>This mirrors the slide example on PDF pp. 71–74, using short normalization, eigenstate, probability and expectation steps to cover a topic not directly calculated in the source paper.</p>"
+      },
+      "sources": [
+        "angular",
+        "measurement"
+      ],
+      "formula": "angular-momentum",
+      "origin": null,
+      "n": 17
+    }
+  ]
+}

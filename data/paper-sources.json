@@ -1,0 +1,114 @@
+{
+  "radiation": {
+    "zh": "Chapter 01，PDF 第15–18页：黑体辐射、维恩位移与普朗克假设。",
+    "en": "Chapter 01, PDF pp. 15–18: black-body radiation, Wien displacement and Planck quantization."
+  },
+  "photon": {
+    "zh": "Chapter 01，PDF 第19、26–27页：光子能量、动量及相对论关系。",
+    "en": "Chapter 01, PDF pp. 19, 26–27: photon energy, momentum and relativity."
+  },
+  "photoelectric": {
+    "zh": "Chapter 01，PDF 第21–25页：光电效应、遏止电压与红限。",
+    "en": "Chapter 01, PDF pp. 21–25: photoelectric effect, stopping voltage and threshold."
+  },
+  "matter": {
+    "zh": "Chapter 01，PDF 第41–48页：物质波与电子衍射；Chapter 02，第3页：自由粒子平面波。",
+    "en": "Chapter 01, PDF pp. 41–48: matter waves and electron diffraction; Chapter 02, p. 3: free-particle plane waves."
+  },
+  "bohr": {
+    "zh": "Chapter 01，PDF 第30–33、49页：氢光谱、玻尔假设与圆周驻波。",
+    "en": "Chapter 01, PDF pp. 30–33, 49: hydrogen spectra, Bohr postulates and circular standing waves."
+  },
+  "born": {
+    "zh": "Chapter 02，PDF 第9–15页：统计解释、概率密度、归一化与标准条件。",
+    "en": "Chapter 02, PDF pp. 9–15: statistical interpretation, density, normalization and regularity conditions."
+  },
+  "sine": {
+    "zh": "Chapter 02，PDF 第16–19页：正弦波函数的归一化、概率和平均值。",
+    "en": "Chapter 02, PDF pp. 16–19: normalization, probabilities and moments for a sine wave function."
+  },
+  "superposition": {
+    "zh": "Chapter 02，PDF 第24–30页：态叠加与干涉。",
+    "en": "Chapter 02, PDF pp. 24–30: state superposition and interference."
+  },
+  "complete": {
+    "zh": "Chapter 02，PDF 第37页：波函数确定后，力学量平均值及可能值的几率分布均确定。",
+    "en": "Chapter 02, PDF p. 37: a wave function determines expectations and distributions of measurement outcomes."
+  },
+  "schrodinger": {
+    "zh": "Chapter 02，PDF 第39–43页：薛定谔方程与能量、动量算符。",
+    "en": "Chapter 02, PDF pp. 39–43: Schrödinger equation, energy and momentum operators."
+  },
+  "current": {
+    "zh": "Chapter 02，PDF 第47–51页：几率流、连续性方程及“几点讨论”。第51页明确列出原题所用结论。",
+    "en": "Chapter 02, PDF pp. 47–51: probability current and continuity; p. 51 states the conclusions used in the source question."
+  },
+  "stationary": {
+    "zh": "Chapter 02，PDF 第53–59页：定态、能量本征方程与不随时间变的密度。",
+    "en": "Chapter 02, PDF pp. 53–59: stationary states, energy eigenvalue equation and stationary density."
+  },
+  "well": {
+    "zh": "Chapter 02，PDF 第61–64页：一维无限深势阱的模型与求解步骤；第16–19页补充归一化和平均值的积分方法。",
+    "en": "Chapter 02, PDF pp. 61–64: the infinite-well model and solution procedure; pp. 16–19 supply normalization and moment integrals."
+  },
+  "delta": {
+    "zh": "Chapter 03，PDF 第5–6、15–18页：δ分布的筛选、缩放性质与练习。",
+    "en": "Chapter 03, PDF pp. 5–6, 15–18: delta sifting, scaling and practice."
+  },
+  "linear": {
+    "zh": "Chapter 03，PDF 第37–40、61–63页：线性算符、力学量算符与基本假设。",
+    "en": "Chapter 03, PDF pp. 37–40, 61–63: linear operators, observables and postulates."
+  },
+  "commutator": {
+    "zh": "Chapter 03，PDF 第45–49页：对易括号定义、坐标—动量对易关系及运算规则。",
+    "en": "Chapter 03, PDF pp. 45–49: commutator definition, coordinate–momentum relation and algebra."
+  },
+  "hermitian": {
+    "zh": "Chapter 03，PDF 第53–56、61–63页：厄米算符、伴随运算和可观测量。微分算符的结论取决于定义域与边界条件。",
+    "en": "Chapter 03, PDF pp. 53–56, 61–63: Hermitian operators, adjoints and observables. Differential operators require specified domains and boundary conditions."
+  },
+  "measurement": {
+    "zh": "Chapter 03，PDF 第63–70页：本征函数展开、测量概率、连续/离散谱与平均值。",
+    "en": "Chapter 03, PDF pp. 63–70: eigenfunction expansion, probabilities, continuous/discrete spectra and expectations."
+  },
+  "spectrum": {
+    "zh": "Chapter 03，PDF 第68页：离散谱和连续谱可同时出现；第79–82页：周期边界条件下的箱归一化。",
+    "en": "Chapter 03, PDF p. 68: discrete and continuous spectra may coexist; pp. 79–82: periodic-box normalization."
+  },
+  "angular": {
+    "zh": "Chapter 03，PDF 第71–74页：球谐函数叠加态的测量例题；第75–77页：完全集与量子数；第83–86页：角动量算符及本征方程。",
+    "en": "Chapter 03, PDF pp. 71–74: spherical-harmonic measurement example; pp. 75–77: complete sets and quantum numbers; pp. 83–86: angular-momentum operators and eigenvalue equations."
+  },
+  "uncertainty": {
+    "zh": "Chapter 03，PDF 第88–91页：不确定关系的定义与物理意义。",
+    "en": "Chapter 03, PDF pp. 88–91: uncertainty relations and their physical meaning."
+  },
+  "zero-point": {
+    "zh": "Chapter 03，PDF 第92–94页：由不确定关系估计谐振子零点能。",
+    "en": "Chapter 03, PDF pp. 92–94: oscillator zero-point energy from uncertainty."
+  },
+  "book-light": {
+    "zh": "教材辅助：周世勋原著、陈灏修订《量子力学教程》第3版，§1.2，书内第4页（PDF第13页），介绍康普顿效应及光子动量。此题见拼卷，未在此前提供的三章课件中定位到康普顿内容。",
+    "en": "Textbook supplement: Zhou Shixun, revised by Chen Hao, Quantum Mechanics, 3rd ed., §1.2, printed p. 4 (PDF p. 13), Compton scattering and photon momentum. Compton appears in the supplied paper but was not located in the three slide decks."
+  },
+  "book-wave": {
+    "zh": "教材辅助：§1.4，书内第8页（PDF第17页），实余弦波与复指数波，并说明量子自由粒子采用复数形式。",
+    "en": "Textbook supplement: §1.4, printed p. 8 (PDF p. 17), real cosine and complex exponential waves; the quantum free-particle state uses the complex form."
+  },
+  "book-current": {
+    "zh": "教材辅助：§2.4，书内第19–20页（PDF第28–29页），概率流与连续性方程；推导采用实势能。",
+    "en": "Textbook supplement: §2.4, printed pp. 19–20 (PDF pp. 28–29), current and continuity, derived for a real potential."
+  },
+  "book-well": {
+    "zh": "教材辅助：§2.6，书内第22–24页（PDF第31–33页），无限深势阱的本征值、归一化波函数与边界条件。",
+    "en": "Textbook supplement: §2.6, printed pp. 22–24 (PDF pp. 31–33), infinite-well eigenvalues, normalized functions and boundaries."
+  },
+  "book-measurement": {
+    "zh": "教材辅助：§3.5–3.7，书内第62–69页（PDF第71–78页），算符与测量、共同确定值及不确定关系。",
+    "en": "Textbook supplement: §§3.5–3.7, printed pp. 62–69 (PDF pp. 71–78), operators, measurements, compatibility and uncertainty."
+  },
+  "gaussian": {
+    "zh": "Chapter 02，PDF第20–21页：高斯型波函数的归一化、密度与最大值位置。本题是其参数或中心平移的变式。",
+    "en": "Chapter 02, PDF pp. 20–21: Gaussian normalization, density and maximum. The question varies its parameter or shifts its center."
+  }
+}

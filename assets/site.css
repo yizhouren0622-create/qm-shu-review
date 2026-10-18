@@ -298,3 +298,24 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{border-bottom:1p
 @media(max-width:600px){.site-tools{gap:7px;padding-top:12px}.site-tools a{margin-left:0;flex-basis:100%;font-size:.8rem}.exam-page,.study-page{padding:16px 10px 40px}.exam-paper,.study-paper{padding:22px 16px 32px}.exam-paper h1{font-size:1.4rem}.question h3{gap:6px}.exam-actions button{flex:1;min-width:125px}.reveal summary{flex-wrap:wrap;gap:.35em}.reveal-body{padding:.3em .75em .8em}.parallel>[data-lang="en"]{font-size:.94em}.study-paper table{min-width:650px}}
 @media print{body{padding:0;background:#fff}.site-top,.site-tools,.site-footer,.exam-actions,.exam-toc,.topic-links{display:none!important}.exam-page,.study-page{padding:0;max-width:none}.exam-paper,.study-paper{padding:0;border:0}.exam-paper h1{font-size:18pt}.question{padding:.6em 0;break-inside:auto}.question h3{break-after:avoid}.reveal{display:none!important}body.print-solutions .reveal{display:block!important;border-color:#ccc}body.print-solutions .reveal-body{display:block}.question-body{margin-bottom:1.2em}.math-display{overflow:visible}.layout{display:block;padding:0}.layout>nav{display:none}article{padding:0!important;border:0!important}.demo{break-inside:avoid}a{color:inherit}}
 .lesson-figure{margin:1em 0}.lesson-figure .cap p{margin:.35em 0;font-size:.9rem;color:var(--muted)}
+/* Source-paper references and school-style papers, using the existing paper theme. */
+.paper-tabs{position:static;max-height:none;display:flex;gap:10px;flex-wrap:wrap;border:0;border-bottom:1px solid var(--line);padding:0 0 14px;margin:0 0 24px;background:none;font-size:.86rem}
+.paper-tabs a{padding:.25em .7em;border:1px solid var(--line);border-radius:7px;text-decoration:none;background:#fbf8f2}
+.paper-tabs a [data-lang="en"]{display:block;font-size:.85em}
+.question-origin{font-size:.8rem;color:var(--muted);margin:-.35em 0 .8em}
+.question-origin [data-lang="en"]{margin-left:.5em}
+.question h3 small [data-lang="en"]::before{content:' / '}
+html[data-view="en"] .question h3 small [data-lang="en"]::before{content:''}
+.paper-guide,.archive-links{margin:1.1em 0;font-size:.9rem;border:1px solid var(--line);border-radius:8px;padding:.65em .9em;background:#fbf8f2}
+.paper-guide summary,.archive-links summary,.source-details summary{cursor:pointer;color:var(--accent)}
+.paper-guide [data-lang="en"],.archive-links summary [data-lang="en"]{margin-left:.4em}
+.paper-guide>div>[data-lang="en"]{margin: .5em 0 0}
+.reveal-body h4{font-size:.95rem;color:#5c4a32;margin:1.1em 0 .45em}
+.common-error{background:#f7f1e7;padding:.65em .8em;border-left:3px solid #c4a574}
+.source-details{border-top:1px dashed var(--line);padding:.75em 0 .25em;margin-top:1em;font-size:.83rem;color:var(--muted)}
+.source-details ul{padding-left:1.25em}.source-details li{margin:.6em 0}.source-details [data-lang="en"]{margin-top:.35em}
+.paper-download{border:1px solid var(--line);border-radius:7px;padding:.5em .75em;font-size:.8rem;text-decoration:none;display:flex;align-items:center;gap:.5em}
+@media(max-width:600px){.paper-tabs{gap:7px}.paper-tabs a{flex:1;padding:.4em .45em;text-align:center}.source-details{font-size:.8rem}.paper-download{width:100%;justify-content:center}}
+@media print{.paper-tabs,.paper-guide,.archive-links,.paper-download{display:none!important}.question-origin{font-size:9pt}.source-details{font-size:8pt}.common-error{background:#fff;border-left:1px solid #aaa}.source-details ul{display:block}}
+.source-details[open]>summary::before{content:'−'}
+@media(max-width:600px){.exam-paper .math-inline{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle;-webkit-overflow-scrolling:touch}}
